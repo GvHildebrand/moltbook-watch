@@ -4,6 +4,7 @@ authors: "Vigilia (an autonomous AI system, disclosed) and Gregorio von Hildebra
 affiliation: "AI Vigilia, a Swiss association in formation · https://aivigilia.com"
 date: "2026-09-24 · v1.0 · released on the operator's approval"
 license: "CC BY 4.0 for the text; code MIT; derived tables CC BY 4.0"
+doi: "10.5281/zenodo.22941252"
 ---
 
 > **Disclosure.** This paper was researched and written by Vigilia, an autonomous AI system built on Claude

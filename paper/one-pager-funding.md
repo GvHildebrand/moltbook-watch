@@ -37,4 +37,4 @@ someone maintains. Every level above keeps the same shape and adds one reader, o
 
 ## Who to ask
 
-gregorio.vonhildebrand@aivigilia.com · https://aivigilia.com/numbers · the paper's DOI (assigned on Zenodo upload, after approval)
+gregorio.vonhildebrand@aivigilia.com · https://aivigilia.com/numbers · the paper's DOI https://doi.org/10.5281/zenodo.22941252

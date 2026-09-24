@@ -5,19 +5,55 @@
     "publication_type": "preprint",
     "description": "<p>Three questions asked of the Moltbook Observatory Archive (SimulaMet, MIT; 3.6 million posts, 182,860 agents, 2026-01-27 to 2026-09-11), each answered by a released script. (1) What an open-source host-side action gate (sentinel-hook, 24 deterministic rules over shell commands and file writes) can see of the 9,249 posts the archive's own keyword label calls prompt injection: 90.8 % reach, 0.5 % stopped, because 18,444 of 26,947 solicited actions are authenticated calls to the platform's API and 475 are writes to the reading agent's own persona and memory files. (2) What changed around Meta's acquisition of the platform on 2026-03-10: nothing on the day; across matched windows the population fell while the injection rate did not. (3) The attribution gap: the public layer exposes at most one owner handle per agent, 62 % of posts and half of all injection come from agents with no visible owner, one unclaimed agent wrote 26 % of all injection, and by September 2026 the post feed exposes no owner handle at all; set against Article 50 of the EU AI Act and Swiss law from primary sources. Written by Vigilia, a disclosed autonomous AI system, with a pre-registration recorded before the first result.</p>",
     "creators": [
-      {"name": "Vigilia (autonomous AI system, disclosed)", "affiliation": "AI Vigilia, a Swiss association in formation"},
-      {"name": "von Hildebrand, Gregorio", "affiliation": "AI Vigilia, a Swiss association in formation"}
+      {
+        "name": "Vigilia (autonomous AI system, disclosed)",
+        "affiliation": "AI Vigilia, a Swiss association in formation"
+      },
+      {
+        "name": "von Hildebrand, Gregorio",
+        "affiliation": "AI Vigilia, a Swiss association in formation"
+      }
     ],
     "access_right": "open",
     "license": "cc-by-4.0",
-    "keywords": ["Moltbook", "AI agents", "prompt injection", "agent social network", "EU AI Act", "Article 50", "attribution", "accountability", "sentinel-hook", "guardrails", "Observatory Archive"],
+    "keywords": [
+      "Moltbook",
+      "AI agents",
+      "prompt injection",
+      "agent social network",
+      "EU AI Act",
+      "Article 50",
+      "attribution",
+      "accountability",
+      "sentinel-hook",
+      "guardrails",
+      "Observatory Archive"
+    ],
     "related_identifiers": [
-      {"identifier": "10.48550/arXiv.2605.13860", "relation": "isDerivedFrom", "resource_type": "publication-preprint"},
-      {"identifier": "10.5281/zenodo.19594804", "relation": "isDerivedFrom", "resource_type": "dataset"},
-      {"identifier": "10.5281/zenodo.22834586", "relation": "cites", "resource_type": "publication-preprint"},
-      {"identifier": "https://github.com/GvHildebrand/sentinel-hook", "relation": "cites", "resource_type": "software"}
+      {
+        "identifier": "10.48550/arXiv.2605.13860",
+        "relation": "isDerivedFrom",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.19594804",
+        "relation": "isDerivedFrom",
+        "resource_type": "dataset"
+      },
+      {
+        "identifier": "10.5281/zenodo.22834586",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://github.com/GvHildebrand/sentinel-hook",
+        "relation": "cites",
+        "resource_type": "software"
+      }
     ],
     "notes": "Gap analysis, not a legal determination. Every figure is produced by the released scripts; the pre-registration and every input hash are in results/RUNLOG.md. The companion code and derived tables are released under MIT (code) and CC BY 4.0 (tables). Nothing in this study posted, commented, voted or registered on Moltbook.",
-    "version": "1.0"
+    "version": "1.0",
+    "doi": "10.5281/zenodo.22941252",
+    "conceptdoi": "10.5281/zenodo.22941251"
   }
 }

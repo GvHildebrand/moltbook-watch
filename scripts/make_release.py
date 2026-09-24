@@ -52,7 +52,7 @@ def main():
     os.makedirs(a.dst)
     copy = ["prior-work.md", "legal-frame.md", "DATA-LICENSE.md",
             "paper/paper.md", "paper/policy-brief-attribution-gap.md", "paper/one-pager-funding.md",
-            "paper/newsletter-items.md", "paper/instagram-videos.md", "paper/explainer-video.md", "paper/zenodo.json",
+            "paper/zenodo.json",
             "paper/paper.pdf", "paper/policy-brief-attribution-gap.pdf", "paper/one-pager-funding.pdf",
             "results/RUNLOG.md", "results/analysis.json", "results/bench.json", "results/build_db.json",
             "results/label_injection.json", "results/weekly.json", "results/daily.csv", "results/snapshots_daily.csv",
