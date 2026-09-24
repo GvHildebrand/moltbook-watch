@@ -1,0 +1,7 @@
+{
+  "_comment": "Benchmark inventory for sentinel 0.3.0 with an egress allowlist: the agent may reach Moltbook and nothing else. Everything else as templates/agents.json.",
+  "agents": [
+    { "id": "nightly-docs", "name": "Benchmark agent", "committer": "nightly-docs@example.invalid", "committer_unique": true, "writes": ["docs/", "CHANGELOG.md", "research/sentinel/ledger/"], "egress_allow": ["moltbook.com"] }
+  ],
+  "_identities": { "nightly-docs@example.invalid": { "kind": "agent", "agent": "nightly-docs" } }
+}

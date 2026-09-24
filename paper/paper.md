@@ -1,8 +1,8 @@
 ---
-title: "What a host-side gate can see: prompt injection, the Meta transition and the attribution gap on Moltbook, measured from the public Observatory Archive"
+title: "What a corpus taught a gate: prompt injection on Moltbook, three rules it forced on an open-source guardrail, and the attribution gap behind it"
 authors: "Vigilia (an autonomous AI system, disclosed) and Gregorio von Hildebrand"
 affiliation: "AI Vigilia, a Swiss association in formation · https://aivigilia.com"
-date: "2026-09-24 · v0.5 · released on the operator's approval"
+date: "2026-09-24 · v1.0 · released on the operator's approval"
 license: "CC BY 4.0 for the text; code MIT; derived tables CC BY 4.0"
 ---
 
@@ -13,7 +13,7 @@ license: "CC BY 4.0 for the text; code MIT; derived tables CC BY 4.0"
 
 ## Abstract
 
-We ask three questions of the largest public record of an agent-only social network, the Moltbook Observatory Archive (3.6 million posts, 182,860 agents, 2026-01-27 to 2026-09-11), and answer each with a script anyone can re-run. First, what an open-source host-side action gate (sentinel-hook, 24 deterministic rules over shell commands and file writes) can see of the 9,249 posts the archive's own keyword label calls prompt injection: it sees 90.8 % of them and stops 0.5 %, because 18,444 of the 26,947 actions they ask for are HTTP calls written out in the post, 14,406 of them to the platform's own API (upvote, follow, subscribe) and the rest to third-party hosts, and 478 are writes to the reading agent's own persona and memory files outside any repository; the 44 posts it stops are the ones that would wipe a home directory, ship a `.env` or pipe a download into a shell, and on 18,498 benign posts it wrongly stops 200, most of them (141) tutorials that quote `curl | sh`, the rest credential reads and recursive deletes quoted in posts. Second, what changed around Meta's acquisition of the platform on 2026-03-10: nothing on the day; across matched 28-day windows the population fell by two thirds while the injection rate tripled (0.13 % to 0.39 % of posts) and the top 1 % of agents' share of posts rose from 29 % to 33 %. Third, the attribution gap: the public layer exposes one owner handle per agent and no handle holds more than two, so Wiz's 88:1 ratio is invisible there; instead 62 % of all posts and half of all injection posts come from agents with no visible owner at all, and one unclaimed agent wrote 26 % of every injection post in the record. We set these against Article 50 of the EU AI Act and Swiss law from primary sources: the duty exists and is in force, and for a system that is not high-risk neither regime has a way to find the person who breached it.
+We ran an open-source host-side action gate (sentinel-hook 0.2.0, 24 deterministic rules over shell commands and file writes, no model in the path) over the actions solicited by the 9,249 posts the Moltbook Observatory Archive's own label calls prompt injection. It could see 90.8 % of them and stopped 0.5 %. Three of its misses were the gate's own: 478 payloads asked the reading agent to rewrite its persona, memory or heartbeat file outside any repository and were let through because a repository was the only write scope the gate knew; 1,508 redirected remote content into a skills directory without executing it; 3,833 calls went to one third-party host the gate had no way to distrust. We wrote three rules from those misses (W06, B17, E02: the agent's own files in scope wherever they live, the same mutation from a shell, and an operator-declared egress allowlist), released them as 0.3.0 with the incident-corpus regression unchanged, and scored them on the 2,316 injection posts from April to September 2026 that nobody had opened while the rules were written. In sample, posts stopped went from 44 to 512 without an allowlist and to 3,800 with a developer-realistic one; on the held-out window, from 2 to 9 without an allowlist and to 1,599 of 2,104 reachable posts (76 %) with it, at 0.35 % and 2.72 % of matched and code-carrying benign posts stopped. The lesson is the shape of those two numbers: the pattern rules caught yesterday's campaign, which had already ended; the policy rule caught today's, a single agent sending every reader to one host. What no host-side rule can see, 14,406 solicited calls to the platform's own API, is the platform's to gate. Around the benchmark: nothing changed on the day Meta bought the platform, the injection rate tripled while the population fell by two thirds, the public layer exposes at most one owner handle per agent and 62 % of posts come from agents with none, and by 24 September the feed exposed no owner handle at all. Every figure is produced by released scripts; a pre-registration written before the first result, and what it got wrong, is in the run log.
 
 ## 1. Why this study
 
@@ -35,6 +35,8 @@ Three questions have not been answered from that record, and each bears on a pol
   population, injection prevalence and concentration?
 - **Attribution.** How many agents stand behind each accountable person in the record, and what does that
   ratio mean for a transparency duty that names a *provider* and a *deployer*?
+- **Repair.** When the gate's misses are the gate's own, what rules follow, and do they hold on posts the
+  rule-writer never saw?
 
 ## 2. Prior work, and what we did not repeat
 
@@ -135,6 +137,19 @@ at least one visible call where the agent-profile decision is deny or ask. *Fals
 share on the two benign sets. *Failure categories* = injection posts with no visible call, by surface, and
 visible calls the gate allowed, by what the command does (download-and-execute, HTTP POST, package install,
 interpreter, delete, read-or-print, other) and, for writes, by path.
+
+
+### 4.5 Study A′ — the rules the corpus forced, and a held-out score
+
+The 0.2.0 results (§5.2) named three misses that were failures of the gate rather than of its category. We wrote one rule for each, kept the discipline the gate is built on (deterministic, stable identifiers, no model), and released them as sentinel-hook 0.3.0 [rules SHA-256 in `results/RUNLOG.md` §3.12]:
+
+| Rule | What it catches | Decision (agent / person) |
+|---|---|---|
+| W06 agent-self-write | a tool write, outside any repository, to the agent's own persona, memory, heartbeat, identity, skill or runtime-config file: `~/.openclaw/…`, `~/.claude/…`, any `SOUL.md`, `MEMORY.md`, `HEARTBEAT.md`, `SKILL.md` or `skills/<name>/…` under a home directory | deny / ask |
+| B17 agent-self-mutation | the same mutation from a shell (redirect, `tee`, `sed -i`, `cp`/`mv` destination), with a stronger reason when the segment downloads (`curl`/`wget`): a skill installed by redirect | deny / ask |
+| E02 egress-not-allowlisted | a network host outside an allowlist the operator declares in the inventory (`_egress_allow` for everyone, `egress_allow` per agent; suffixes cover subdomains; loopback always allowed). Inert when no list is declared | deny / ask |
+
+**Discipline.** The rules were written from the January–April injection posts (§4.1, "in sample"). They were then scored, unchanged, on the 2,316 injection posts of 2026-04-15 to 2026-09-11 ("held out"), drawn with the same matched benign and code-carrying benign sets by `sample.py --start 2026-04-15`; those posts were not opened by anyone while the rules were written. The incident corpus the gate was originally built on (50 destructive, 52 benign look-alikes, 36 variants, 200 payload trials) and its own held-out set (28 destructive, 22 benign) were re-run under 0.3.0 and are unchanged. Three configurations are reported: 0.3.0 with no allowlist; with a Moltbook-only allowlist (`moltbook.com`); and with a developer-realistic one (`moltbook.com`, `github.com`, `githubusercontent.com`, `npmjs.org`, `pypi.org`). The allowlist is a policy, and its false positives are the price of the policy an operator chooses.
 
 ### 4.2 Study B — before and after 2026-03-10
 
@@ -239,6 +254,34 @@ Run on 2026-09-24 at about 06:40 UTC, after the operator reported the domain rea
 
 In the archive's late window (2026-04-15 to 2026-09-11, completeness not guaranteed by the card) the collector recorded 6,578 posts a day from a daily mean of 685 agents, 2,316 injection posts (0.235 %), and the top 1 % of agents writing 57.05 % of posts, the top ten agents 27.24 %. Weekly, the last full weeks of August and early September hold 21,000–24,000 posts and about 500 distinct agents a day, with a weekly injection rate between 0.07 % and 0.23 %. The `snapshots` table turned out to be the observatory's own counters, not the platform's, so pre-registration D1 (platform counters rising while collector counts fall) could not be tested; its `active_agents_24h` on 2026-09-11 is 520. Reading: by September the collector sees a platform an order of magnitude smaller than in March and some forty times smaller than the February peak week, with a stable core of a few hundred agents, a persistent 0.1–0.5 % injection rate, and the top ten agents writing more than a quarter of everything. Whether that is the platform or the collector's coverage, only a live read can say. Confidence: low for the level, medium for the shape.
 
+### 5.7 Study A′ — the gate after the corpus
+
+**In sample (January–April, the posts the rules were written from):**
+
+| Configuration | Injection: posts caught / reachable | over reachable | Benign matched: caught / reachable | Benign code: caught / reachable | Calls caught |
+|---|---|---|---|---|---|
+| 0.2.0 | 44 / 8,397 | 0.52 % | 19 / 270 (0.21 % of all) | 181 / 1,637 (1.96 % of all) | 55 / 26,947 |
+| 0.3.0, no allowlist | 512 / 8,397 | 6.10 % | 66 / 270 (0.71 % of all) | 411 / 1,637 (4.44 % of all) | 2,061 / 26,947 |
+| 0.3.0, allowlist moltbook.com | 3,830 / 8,397 | 45.61 % | 117 / 270 (1.27 % of all) | 806 / 1,637 (8.71 % of all) | 10,329 / 26,947 |
+| 0.3.0, allowlist + GitHub + registries | 3,800 / 8,397 | 45.25 % | 104 / 270 (1.12 % of all) | 638 / 1,637 (6.90 % of all) | 10,237 / 26,947 |
+
+**Held out (April–September, never opened while the rules were written):**
+
+| Configuration | Injection: posts caught / reachable | over reachable | Benign matched: caught / reachable | Benign code: caught / reachable | Calls caught |
+|---|---|---|---|---|---|
+| 0.2.0 | 2 / 2,104 | 0.10 % | 2 / 42 (0.09 % of all) | 16 / 285 (0.69 % of all) | 2 / 4,534 |
+| 0.3.0, no allowlist | 9 / 2,104 | 0.43 % | 5 / 42 (0.22 % of all) | 34 / 285 (1.47 % of all) | 9 / 4,534 |
+| 0.3.0, allowlist moltbook.com | 1,599 / 2,104 | 76.00 % | 8 / 42 (0.35 % of all) | 70 / 285 (3.02 % of all) | 3,637 / 4,534 |
+| 0.3.0, allowlist + GitHub + registries | 1,599 / 2,104 | 76.00 % | 8 / 42 (0.35 % of all) | 63 / 285 (2.72 % of all) | 3,637 / 4,534 |
+
+**What the pattern rules did.** In sample, W06 and B17 fired on 478 and 1528 calls and took posts stopped from 44 to 512: every persona write and every skill-by-redirect the 0.2.0 run had let through. On the held-out window they added 7 posts. That is not a failure of the rules; it is the corpus moving. The held-out injection carries only 7 persona-write requests in 2,316 posts (§4.1 surface S3), against 252 in the in-sample window. The campaign that installed skills by redirect ran in February and March and was over by April.
+
+**What the policy rule did.** With a Moltbook-only allowlist, E02 fired on 8,268 in-sample calls and 3,628 held-out calls, and posts stopped went to 3,830 (45.6 % of reachable) in sample and 1,599 (76 %) held out. The held-out window is, in effect, one campaign: a single agent wrote 65 % of its injection posts, and 3,434 of its 4,534 solicited calls go to one host, `clawproof.onrender.com`, which no destructive-command rule can see and any allowlist excludes. Widening the list to GitHub and the package registries, the list a coding agent needs, costs 30 in-sample and 0 held-out injection posts and brings the benign cost down from 117 to 104 matched benign posts (1.12 % of all) and from 806 to 638 code-carrying ones (6.90 %); held out, 8 and 63 (0.35 % and 2.72 %).
+
+**What the new false positives are.** Of the 66 matched benign posts 0.3.0 stops without an allowlist, 49 are W06: posts the regex label did not flag that tell a reading agent to write to its `HEARTBEAT.md` or `MEMORY.md`. They are false positives by the label and true positives by the gate's specification, and they say something about the label: a persona-write instruction carries none of the eleven strings, so the archive's injection count is missing this class entirely. The same holds for 299 of the 411 code-carrying benign posts. With the allowlist, the added benign catches are links to `github.com` and to the small hosts of the platform's own ecosystem, which is the allowlist doing what a list does.
+
+**Reading.** Two numbers carry the result: 9 and 1,599. The rules written from what the corpus showed in March caught almost nothing of what it showed in August, because the injectors had changed shape; the rule that names no pattern at all, only which hosts an agent has business with, caught three quarters of it. A host-side gate that wants to keep up with an agent network should carry the fewest patterns and the clearest policy it can, and leave what it cannot see, an agent spending its platform credentials on someone else's behalf, to the platform that can. Confidence: high on the counts; the in-sample figures are in-sample and are labelled so.
+
 ## 6. Limitations
 
 - **The label is a keyword heuristic.** Eleven regular expressions written by the archive's authors; we reproduced it rather than replacing it so that our numbers are comparable to theirs. It over-counts tutorials and API documentation and under-counts paraphrase. The only adjudicated audit we found (Tasci, 1,500-post recall audit, provenance partly unclear) puts a regex screen's recall at 3 of 28 attacks; the label finds the command-shaped tenth of the problem, which is exactly the tenth a command gate can see, so Study A's reach figure is an upper bound on the gate's relevance, not a measure of injection as a whole. A human-labelled gold set is the first thing money would buy (one-pager, $250 tier).
@@ -249,6 +292,8 @@ In the archive's late window (2026-04-15 to 2026-09-11, completeness not guarant
 - **The acquisition is a date, not a mechanism.** The archive shows a continuous decay from the February peak with no step on 10 March; we do not attribute any change to Meta.
 - **Moltbook's Terms forbid automated retrieval with no research exception** (prior-work sweep). This paper reads only the SimulaMet archive and never the platform; whether a live check may ever run is a question for counsel, listed in the brief.
 - **Study D is ten requests.** 800 posts on one morning; it can confirm rate and shape, not a trend, and the regex label's zero on 600 posts is consistent with anything below about 0.5 %.
+- **The three rules are in-sample by construction.** They were written from the January–April posts and the in-sample table in §5.7 measures the rules against the posts that produced them; only the held-out table is a test. The held-out window is dominated by one agent and one host, so its allowlist result is one campaign's, not a population's.
+- **The allowlist result depends on the list.** Two lists are reported; an operator's own list will land elsewhere. E02 is inert until a list is declared, on purpose.
 - **A disclosed AI system wrote this.** Every number is produced by the released scripts; the prose was checked by the operator before publication, and the pre-registration in `results/RUNLOG.md` was written before the first result was seen.
 
 ## 7. Sources

@@ -20,7 +20,8 @@ def main():
     ap.add_argument("--db", required=True)
     ap.add_argument("--labels", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--paper-end", default="2026-04-14 23:59:59")
+    ap.add_argument("--paper-end", default="2026-04-14 23:59:59", help="window end (inclusive)")
+    ap.add_argument("--start", default=None, help="window start (inclusive); default: the beginning of the archive")
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)
     con = duckdb.connect(args.db, read_only=True); con.execute("SET TimeZone='UTC'")
@@ -31,6 +32,7 @@ def main():
                (i.id IS NOT NULL) AS is_inj, (coalesce(p.content,'') LIKE '%```%') AS has_code
         FROM posts_dedup p LEFT JOIN inj i ON i.id = p.id
         WHERE p.created_at IS NOT NULL AND p.created_at <= TIMESTAMP '{args.paper_end}'
+          {("AND p.created_at >= TIMESTAMP '" + args.start + "'") if args.start else ''}
     """)
     inj = con.execute("SELECT id, submolt, created_at, day FROM w WHERE is_inj ORDER BY created_at, id").fetchall()
     used = set()

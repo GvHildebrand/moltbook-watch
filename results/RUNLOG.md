@@ -90,3 +90,9 @@ a79b60afb3e667aaad45641d3fc0d74c2aa395b7b127bcffb725d8a95d5e1486  results/sample
 
 ### 3.11 Adversarial number check (07:50Z)
 - An independent agent re-derived every own figure in the paper and brief from the result files and the DuckDB: 12 corrections applied (persona writes 478 not 475; subscribe 1,893; upvote 2,234 incl. 1,947 placeholder-id; 14,406 of 18,444 S2 calls to moltbook.com, the rest third-party; 141 of 200 benign catches are B10; the top injector posts since 2026-02-26, profile captured 03-27; `created_at` is populated for 70.7 % of agents and every claimed one, so m5 is zero for lack of fleets, not of data; "forty times" not "two orders"; no post rows were duplicated in this export). One checker claim was itself wrong and rejected: the rules file carries 24 rule ids, verified by grep.
+
+### 3.12 Study A′ — sentinel 0.3.0 (09:10–09:50Z)
+- Rules W06, B17, E02 written from the in-sample findings; sentinel-hook 0.3.0 committed `a0bddb7`, tag v0.3.0, rules.mjs sha256 `64585d2a527ddabdf15f7c7b317dbd241c08720057d26585e7117a1ebb465247`. Tests 24/24; incident corpus regression unchanged (50/50 deny, 0 FP, variants 34/36, 200 payload trials 0 flips; held-out 12/28, 0 FP).
+- Held-out draw: `sample.py --start 2026-04-15 --paper-end 2026-09-11` → `results/samples-heldout/` (2,316 / 2,316 / 2,316; matching 1,530 same day+submolt, 266 ±3 d, 520 same day any); `extract_payloads.py` ×3 → 4,534 / 47 / 411 calls.
+- `sentinel-bench.mjs` under four configurations (0.2.0 rules from git HEAD~; 0.3.0; 0.3.0 + `inventory-allowlist.json`; 0.3.0 + `inventory-allowlist-dev.json`) on both splits → `results/bench-{samples,samples-heldout}-{0.2,0.3,0.3-allow,0.3-allowdev}.json`.
+- The rules were NOT pre-registered; they are the response to §3.7. The held-out split is the control.

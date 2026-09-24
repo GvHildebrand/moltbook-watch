@@ -57,7 +57,9 @@ def main():
             "results/RUNLOG.md", "results/analysis.json", "results/bench.json", "results/build_db.json",
             "results/label_injection.json", "results/weekly.json", "results/daily.csv", "results/snapshots_daily.csv",
             "results/prior-work.raw.json", "results/legal-frame.raw.json", "results/live/live_check.json",
-            "results/samples/summary.json", "results/samples/injection.ids", "results/samples/benign.ids", "results/samples/benign_code.ids"]
+            "results/samples/summary.json", "results/samples/injection.ids", "results/samples/benign.ids", "results/samples/benign_code.ids",
+            "results/samples-heldout/summary.json", "results/samples-heldout/injection.ids", "results/samples-heldout/benign.ids", "results/samples-heldout/benign_code.ids",
+            "results/inventory-allowlist.json", "results/inventory-allowlist-dev.json"] + [f"results/bench-{sp}-{cfg}.json" for sp in ("samples", "samples-heldout") for cfg in ("0.2", "0.3", "0.3-allow", "0.3-allowdev")]
     for rel in copy:
         s = os.path.join(a.src, rel)
         if not os.path.exists(s):
@@ -68,11 +70,13 @@ def main():
         if f.endswith((".py", ".mjs")):
             shutil.copy2(os.path.join(a.src, "scripts", f), os.path.join(a.dst, "scripts", f) if os.path.isdir(os.path.join(a.dst, "scripts")) else (os.makedirs(os.path.join(a.dst, "scripts"), exist_ok=True) or os.path.join(a.dst, "scripts", f)))
     counts = {}
-    for st in ("injection", "benign", "benign_code"):
-        for kind in ("calls", "decisions", "posts"):
-            s = os.path.join(a.src, "results", "samples", f"{st}.{kind}.jsonl")
-            if os.path.exists(s):
-                counts[f"{st}.{kind}"] = redact_jsonl(s, os.path.join(a.dst, "results", "samples", f"{st}.{kind}.jsonl"))
+    for split in ("samples", "samples-heldout"):
+        os.makedirs(os.path.join(a.dst, "results", split), exist_ok=True)
+        for st in ("injection", "benign", "benign_code"):
+            for kind in ("calls", "decisions", "decisions-0.2", "decisions-0.3", "decisions-0.3-allow", "decisions-0.3-allowdev", "posts"):
+                s = os.path.join(a.src, "results", split, f"{st}.{kind}.jsonl")
+                if os.path.exists(s):
+                    counts[f"{split}/{st}.{kind}"] = redact_jsonl(s, os.path.join(a.dst, "results", split, f"{st}.{kind}.jsonl"))
     os.makedirs(os.path.join(a.dst, "data"), exist_ok=True)
     open(os.path.join(a.dst, "data", "README.md"), "w").write("Raw data is not part of this release. Download the Moltbook Observatory Archive (MIT) from https://huggingface.co/datasets/SimulaMet/moltbook-observatory-archive as the top-level README says; the snapshot used is dump_date 2026-09-11 (Zenodo 10.5281/zenodo.19594804 holds the 2026-04-15 freeze).\n")
     print(json.dumps({"copied": len(copy), "redacted_jsonl": counts}, indent=1))

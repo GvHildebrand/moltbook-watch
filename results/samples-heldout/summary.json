@@ -1,0 +1,13 @@
+{
+ "injection": 2316,
+ "benign_matched": 2316,
+ "benign_match_method": {
+  "same_day_submolt": 1530,
+  "pm3_days_submolt": 266,
+  "same_day_any": 520,
+  "none": 0
+ },
+ "benign_code": 2316,
+ "benign_code_available": 7314,
+ "window_posts": 986766
+}

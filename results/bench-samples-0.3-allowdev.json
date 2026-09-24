@@ -1,0 +1,256 @@
+{
+ "sets": {
+  "benign": {
+   "posts": 9249,
+   "posts_with_visible_call": 270,
+   "reach_pct": 2.92,
+   "posts_caught": 104,
+   "posts_deny": 104,
+   "posts_ask_only": 0,
+   "rate_over_visible_pct": 38.52,
+   "rate_over_all_pct": 1.12,
+   "surface_counts": {
+    "S0": 8326,
+    "S1": 202,
+    "S2": 33,
+    "S3": 44,
+    "S4": 631,
+    "S5": 42,
+    "S6": 34
+   },
+   "calls_total": 458,
+   "calls_caught": 132,
+   "calls_by_surface": {
+    "S1": {
+     "total": 359,
+     "caught": 53
+    },
+    "S2": {
+     "total": 50,
+     "caught": 30
+    },
+    "S3": {
+     "total": 49,
+     "caught": 49
+    }
+   },
+   "rules_fired": {
+    "E02.egress-not-allowlisted": 58,
+    "W06.agent-self-write": 49,
+    "B10.remote-code-execution": 13,
+    "B14.credential-read": 8,
+    "B17.agent-self-mutation": 3,
+    "B07.git-history-or-remote-destruction": 1
+   },
+   "allowed_call_kinds": {
+    "other": 125,
+    "package-install": 83,
+    "read-or-print": 40,
+    "http-post": 22,
+    "http-get": 21,
+    "interpreter": 20,
+    "git": 11,
+    "delete": 4
+   },
+   "caught_call_kinds": {
+    "http-get": 32,
+    "http-post": 24,
+    "write:~/.openclaw/workspace/HEARTBEAT.md": 20,
+    "write:~/.openclaw/workspace/MEMORY.md": 19,
+    "download-and-execute": 13,
+    "read-or-print": 7,
+    "write:~/.openclaw/workspace/SOUL.md": 7,
+    "other": 6,
+    "write:~/.openclaw/workspace/AGENTS.md": 2,
+    "git": 1,
+    "write:~/.openclaw/workspace/config.json": 1
+   },
+   "no_visible_call_by_surface": {
+    "S0": 8326,
+    "S4": 588,
+    "S5": 28,
+    "S6": 20,
+    "S4+S6": 10,
+    "S4+S5": 7
+   }
+  },
+  "benign_code": {
+   "posts": 9249,
+   "posts_with_visible_call": 1637,
+   "reach_pct": 17.7,
+   "posts_caught": 638,
+   "posts_deny": 638,
+   "posts_ask_only": 0,
+   "rate_over_visible_pct": 38.97,
+   "rate_over_all_pct": 6.9,
+   "surface_counts": {
+    "S0": 6760,
+    "S1": 1409,
+    "S2": 81,
+    "S3": 220,
+    "S4": 941,
+    "S5": 68,
+    "S6": 95
+   },
+   "calls_total": 3035,
+   "calls_caught": 865,
+   "calls_by_surface": {
+    "S1": {
+     "total": 2607,
+     "caught": 454
+    },
+    "S2": {
+     "total": 121,
+     "caught": 104
+    },
+    "S3": {
+     "total": 307,
+     "caught": 307
+    }
+   },
+   "rules_fired": {
+    "E02.egress-not-allowlisted": 347,
+    "W06.agent-self-write": 299,
+    "B10.remote-code-execution": 129,
+    "B17.agent-self-mutation": 32,
+    "B14.credential-read": 27,
+    "B01.rm-recursive-catastrophic": 10,
+    "W04.persistence-write": 6,
+    "B16.persistence-mutation": 5,
+    "B07.git-history-or-remote-destruction": 3,
+    "B09.infrastructure-destruction": 2,
+    "B03.find-delete-catastrophic": 2,
+    "W03.credential-file-write": 2,
+    "B11.decode-and-execute": 1
+   },
+   "allowed_call_kinds": {
+    "other": 741,
+    "package-install": 559,
+    "read-or-print": 329,
+    "interpreter": 254,
+    "git": 141,
+    "http-get": 122,
+    "http-post": 13,
+    "delete": 11
+   },
+   "caught_call_kinds": {
+    "http-get": 262,
+    "download-and-execute": 127,
+    "write:~/.openclaw/workspace/HEARTBEAT.md": 126,
+    "write:~/.openclaw/workspace/SOUL.md": 79,
+    "http-post": 79,
+    "write:~/.openclaw/workspace/MEMORY.md": 78,
+    "other": 39,
+    "read-or-print": 30,
+    "interpreter": 10,
+    "write:~/.openclaw/workspace/AGENTS.md": 10,
+    "delete": 6,
+    "write:~/.openclaw/workspace/config.json": 5,
+    "git": 4,
+    "write:~/.openclaw/.env": 2,
+    "write:/var/spool/cron/crontab": 2,
+    "write:~/.claude/CLAUDE.md": 2,
+    "write:~/.claude/settings.json": 2,
+    "write:~/.openclaw/workspace/config.yaml": 1,
+    "package-install": 1
+   },
+   "no_visible_call_by_surface": {
+    "S0": 6760,
+    "S4": 736,
+    "S6": 63,
+    "S5": 33,
+    "S4+S6": 12,
+    "S4+S5": 6,
+    "S5+S6": 1,
+    "S4+S5+S6": 1
+   }
+  },
+  "injection": {
+   "posts": 9249,
+   "posts_with_visible_call": 8397,
+   "reach_pct": 90.79,
+   "posts_caught": 3800,
+   "posts_deny": 3800,
+   "posts_ask_only": 0,
+   "rate_over_visible_pct": 45.25,
+   "rate_over_all_pct": 41.09,
+   "surface_counts": {
+    "S0": 159,
+    "S1": 4006,
+    "S2": 7947,
+    "S3": 252,
+    "S4": 4092,
+    "S5": 1678,
+    "S6": 403
+   },
+   "calls_total": 26947,
+   "calls_caught": 10237,
+   "calls_by_surface": {
+    "S1": {
+     "total": 8021,
+     "caught": 5832
+    },
+    "S2": {
+     "total": 18444,
+     "caught": 3923
+    },
+    "S3": {
+     "total": 482,
+     "caught": 482
+    }
+   },
+   "rules_fired": {
+    "E02.egress-not-allowlisted": 8176,
+    "B17.agent-self-mutation": 1528,
+    "W06.agent-self-write": 478,
+    "B13.credential-exfiltration": 20,
+    "B10.remote-code-execution": 10,
+    "B14.credential-read": 9,
+    "B01.rm-recursive-catastrophic": 8,
+    "B16.persistence-mutation": 4,
+    "W04.persistence-write": 3,
+    "W03.credential-file-write": 1
+   },
+   "allowed_call_kinds": {
+    "http-post": 13395,
+    "http-get": 2783,
+    "other": 318,
+    "read-or-print": 84,
+    "package-install": 55,
+    "interpreter": 36,
+    "git": 27,
+    "delete": 9,
+    "download-and-execute": 3
+   },
+   "caught_call_kinds": {
+    "http-post": 7373,
+    "http-get": 2304,
+    "write:~/.openclaw/workspace/HEARTBEAT.md": 262,
+    "write:~/.openclaw/workspace/MEMORY.md": 182,
+    "other": 43,
+    "write:~/.openclaw/workspace/SOUL.md": 28,
+    "read-or-print": 15,
+    "download-and-execute": 8,
+    "delete": 8,
+    "write:/var/spool/cron/crontab": 3,
+    "write:~/.openclaw/workspace/AGENTS.md": 3,
+    "git": 3,
+    "write:~/.openclaw/workspace/config.json": 3,
+    "write:~/.openclaw/.env": 1,
+    "package-install": 1
+   },
+   "no_visible_call_by_surface": {
+    "S4": 326,
+    "S6": 280,
+    "S0": 159,
+    "S5": 34,
+    "S4+S6": 32,
+    "S5+S6": 14,
+    "S4+S5": 4,
+    "S4+S5+S6": 3
+   }
+  }
+ },
+ "rules": {},
+ "surfaces": {}
+}

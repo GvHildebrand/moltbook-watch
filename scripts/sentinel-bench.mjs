@@ -18,7 +18,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 
-const [, , inFile, outFile, hookDir = process.env.SENTINEL_HOOK_DIR] = process.argv
+const [, , inFile, outFile, hookDir = process.env.SENTINEL_HOOK_DIR, inventoryFile] = process.argv
 if (!inFile || !outFile || !hookDir) {
   console.error('usage: sentinel-bench.mjs <calls.jsonl> <out.jsonl> <sentinel-hook dir>')
   process.exit(2)
@@ -26,7 +26,7 @@ if (!inFile || !outFile || !hookDir) {
 const rulesPath = path.join(hookDir, 'scripts', 'sentinel', 'rules.mjs')
 const rules = await import(pathToFileURL(rulesPath).href)
 const { evaluate, SENTINEL_VERSION } = rules
-const inventory = JSON.parse(readFileSync(path.join(hookDir, 'templates', 'agents.json'), 'utf8'))
+const inventory = JSON.parse(readFileSync(inventoryFile || path.join(hookDir, 'templates', 'agents.json'), 'utf8'))
 
 // A synthetic repository root: the agent's declared scope is what templates/agents.json says.
 const repoRoot = mkdtempSync(path.join(tmpdir(), 'sentinel-bench-'))
@@ -62,4 +62,4 @@ for await (const line of rl) {
 }
 writeFileSync(outFile, out.map((o) => JSON.stringify(o)).join('\n') + '\n')
 const digest = typeof rules.rulesDigest === 'function' ? rules.rulesDigest() : null
-console.error(JSON.stringify({ evaluated: n, sentinel_version: SENTINEL_VERSION, rules_sha256: digest, repoRoot, agentId }))
+console.error(JSON.stringify({ evaluated: n, sentinel_version: SENTINEL_VERSION, rules_sha256: digest, repoRoot, agentId, inventory: inventoryFile || 'templates/agents.json' }))

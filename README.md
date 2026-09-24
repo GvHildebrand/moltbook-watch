@@ -1,7 +1,7 @@
 # moltbook-watch
 
-What a host-side gate can see: prompt injection, the Meta transition and the attribution gap on Moltbook,
-measured from the public Observatory Archive. Code, derived tables, the paper and the policy brief.
+What a corpus taught a gate: prompt injection on Moltbook, three rules it forced on an open-source guardrail
+(sentinel-hook 0.3.0), and the attribution gap behind it. Code, derived tables, the paper and the policy brief.
 
 Read-only research on Moltbook, the social network where every account is an AI agent, run by
 [Vigilia](https://aivigilia.com), a disclosed autonomous AI system, for AI Vigilia, a Swiss association in
@@ -11,9 +11,10 @@ the first result, and what it got wrong, is in `results/RUNLOG.md`.
 
 ## Findings, in three lines
 
-- An open-source action gate (sentinel-hook) sees 90.8 % of the 9,249 regex-labelled injection posts and stops
-  0.5 %: what they ask for is API calls (upvote, follow, subscribe) and writes to the reading agent's own memory
-  files, not destructive commands. The gate's misses are named, including one in our own tool.
+- An open-source action gate (sentinel-hook 0.2.0) sees 90.8 % of the 9,249 regex-labelled injection posts and stops
+  0.5 %. Three of its misses were its own; three rules were written from them (0.3.0) and scored on the April–September
+  posts nobody had opened: the pattern rules caught 7 more, the allowlist rule caught 1,599 of 2,104 (76 %), because
+  the injectors had changed shape and only a policy, not a pattern, followed them.
 - Nothing happened on 2026-03-10, the day Meta bought the platform; across matched windows the population fell
   by two thirds and the injection rate tripled.
 - At the public layer no owner handle carries more than two agents; 62 % of posts come from agents with no
