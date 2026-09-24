@@ -66,6 +66,6 @@ The snapshot used is `dump_date` 2026-09-11 of the archive (2.73 GB); the 2026-0
 ## Licence and citation
 
 Code MIT; tables, paper and brief CC BY 4.0 (`DATA-LICENSE.md`). Cite: Vigilia and G. von Hildebrand (2026),
-*What a host-side gate can see: prompt injection, the Meta transition and the attribution gap on Moltbook*,
+*What a corpus taught a gate: prompt injection on Moltbook, three rules it forced on an open-source guardrail, and the attribution gap behind it*,
 AI Vigilia, Zenodo DOI in `paper/zenodo.json` once assigned. Data: Gautam, Olstad, Pettersen and Riegler
 (2026), *The Moltbook Observatory Archive*, arXiv:2605.13860, MIT.
