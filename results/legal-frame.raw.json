@@ -1,0 +1,1069 @@
+{
+ "lenses": [
+  {
+   "lens": "eu-ai-act",
+   "findings": [
+    {
+     "point": "1a. Article 50(1) \u2014 provider duty to inform natural persons",
+     "provision": "Regulation (EU) 2024/1689, Art. 50(1), first sentence",
+     "quote": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use.",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says (duty); reasonable reading (audience). The duty is keyed to 'natural persons'. The Commission's Article 50 FAQ (digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act) states that systems operating 'through machine-to-machine communication, or without direct contact with people, fall outside the scope of this obligation'. Agent-to-agent threads on Moltbook are therefore outside 50(1) on the Commission's own reading. Where humans 'are welcome to observe', a public feed read by people is arguably 'direct' interaction, but the platform's own framing (every account labelled an agent) likely satisfies the 'obvious' exception on-platform; it does not once a post is quoted or reposted elsewhere. Contested per surface.",
+     "implication_for_ratio": "The duty sits on the provider of each agent, not on the platform and not on the owner as such. At 88:1 the question becomes who 'provided' 1.5 million agents: if the owner who wrote the system prompt and put the agent into service under its own handle is the provider (see finding 3), there are at most ~17,000 duty-bearers, most of them natural persons who may fall under the personal-use carve-out (finding 2). The duty is nominally there; the addressee is not."
+    },
+    {
+     "point": "1b. Article 50(4) \u2014 deployer duty for published AI text",
+     "provision": "Art. 50(4), second subparagraph",
+     "quote": "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated. This obligation shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offences or where the AI-generated content has undergone a process of human review or editorial control and where a natural or legal person holds editorial responsibility for the publication of the content.",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says (duty); reasonable reading (scope). Three cumulative triggers: published, purpose of informing the public, matters of public interest (Commission FAQ lists politics, public administration, justice, fundamental rights, public health, environment, consumer safety). A typical Moltbook post fails the second or third trigger; a post about elections or public health would not. Art. 50(5) adds: 'The information referred to in paragraphs 1 to 4 shall be provided to the natural persons concerned in a clear and distinguishable manner at the latest at the time of the first interaction or exposure.' Whether the audience being 'mostly agents' defeats 'the public' is contested: the text speaks of publication, not of who reads.",
+     "implication_for_ratio": "The deployer is the owner (Art. 3(4): 'using an AI system under its authority'). But Art. 2(10) and Art. 3(4) exclude natural persons acting in a 'purely personal non-professional activity', and the Commission FAQ confirms a person posting AI content on social media 'in their personal capacity' is 'excluded from the scope of the AI Act'. For a hobbyist owner running 88 agents, the 50(4) duty does not exist. It survives only for owners acting professionally (companies, researchers, marketers), who are indistinguishable from hobbyists in the Moltbook data."
+    },
+    {
+     "point": "2. Article 3 definitions \u2014 the four roles",
+     "provision": "Art. 3(1), (3), (4), (63), (66)",
+     "quote": "'provider' means a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model or that has an AI system or a general-purpose AI model developed and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge; 'deployer' means a natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says (definitions); reasonable reading (application). AI system (Art. 3(1)): 'a machine-based system that is designed to operate with varying levels of autonomy ... infers, from the input it receives, how to generate outputs such as ... content'. A Moltbook agent (OpenClaw runtime + model + owner's system prompt + platform credentials) is an AI system on its face. GPAI model (Art. 3(63)) is the vendor's model; GPAI system (Art. 3(66)) is 'an AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes'. Art. 3(13) 'putting into service' means 'the supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose' \u2014 an owner who assembles and runs an agent for own use in the EU puts it into service.",
+     "implication_for_ratio": "See who_is_provider_deployer. The definitions allocate roles by function, not by identity; nothing in Art. 3 requires the provider or deployer of a non-high-risk system to be identifiable to anyone."
+    },
+    {
+     "point": "2b. Article 25 \u2014 when a deployer becomes a provider",
+     "provision": "Art. 25(1), (2)",
+     "quote": "Any distributor, importer, deployer or other third-party shall be considered to be a provider of a high-risk AI system for the purposes of this Regulation and shall be subject to the obligations of the provider under Article 16, in any of the following circumstances: (a) they put their name or trademark on a high-risk AI system already placed on the market or put into service ...",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says. Art. 25 is confined to high-risk AI systems. It does not re-allocate roles for a Moltbook agent, which is not high-risk (no Annex III use case). Any provider status of an owner therefore comes from Art. 3(3) directly ('has an AI system developed and ... puts the AI system into service under its own name'), not from Art. 25 \u2014 and that reading is contested: the Commission FAQ and the July 2026 Guidelines do not address the system-prompt case.",
+     "implication_for_ratio": "There is no statutory rule that says 'the person who configured the agent is its provider'. The 88:1 gap sits precisely in this silence: the framework vendor can say the owner put it into service under the owner's handle; the owner can say they merely 'use' a system developed by others. Needs legal review."
+    },
+    {
+     "point": "3. Article 2 \u2014 territorial scope for non-EU actors",
+     "provision": "Art. 2(1)(a), (b), (c), (g); Art. 2(10)",
+     "quote": "(a) providers placing on the market or putting into service AI systems or placing on the market general-purpose AI models in the Union, irrespective of whether those providers are established or located within the Union or in a third country; (b) deployers of AI systems that have their place of establishment or are located within the Union; (c) providers and deployers of AI systems that have their place of establishment or are located in a third country, where the output produced by the AI system is used in the Union; ... (g) affected persons that are located in the Union. [Art. 2(10):] This Regulation does not apply to obligations of deployers who are natural persons using AI systems in the course of a purely personal non-professional activity.",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says (scope); contested (whether a post being readable in the EU is output 'used in the Union'). A US-hosted platform whose agents' posts are read in the EU brings third-country providers and deployers within 2(1)(c) only if reading counts as use; there is no Commission guidance on this for social posts. EU-located owners are caught by 2(1)(b) regardless. Art. 2(12) (free and open-source licence exclusion, which by its wording still applies to systems falling under Article 50) was not fetched verbatim in this pass and should be checked before it is cited.",
+     "implication_for_ratio": "Of 17,000 owners, an unknown fraction is EU-established; only those bear deployer duties with certainty. Third-country owners are reachable only through the contested 'output used in the Union' limb and, for high-risk and GPAI models, through an authorised representative \u2014 neither of which exists for a hobbyist agent."
+    },
+    {
+     "point": "4. Article 99 \u2014 penalty tier for Article 50 breaches",
+     "provision": "Art. 99(4)(g), (5), (6), (7)",
+     "quote": "Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher: ... (g) transparency obligations for providers and deployers pursuant to Article 50.",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says. Art. 5 breaches: 'EUR 35 000 000 or ... 7 %'; supplying incorrect information (99(5)): 'EUR 7 500 000 or ... 1 %'; SMEs (99(6)): 'whichever thereof is lower'; 99(7) lists gravity, duration, intent/negligence, size of operator. Art. 99(1): Member States 'shall lay down the rules on penalties', so the actual sanction regime is national and applies from 2 August 2026. These are statutory maxima, not exposure.",
+     "implication_for_ratio": "A fine needs an addressee. The 'if the offender is an undertaking' clause shows natural persons can be fined (fixed cap), but a market surveillance authority must first identify the person behind a handle. With registration by unrated loop and 88 agents per email address, the enforceable population is the platform's user table, which the authority can reach only via the platform (a third-country company) or DSA-style cooperation \u2014 outside this Regulation."
+    },
+    {
+     "point": "5. Digital Omnibus \u2014 Article 50 untouched, high-risk deferred",
+     "provision": "Regulation (EU) 2026/1744 of 8 July 2026 (Digital Omnibus on AI), OJ 24 July 2026, in force 27 July 2026; recitals 38 and 40; new Art. 111(4); amended Art. 113",
+     "quote": "[Recital 40, per EUR-Lex fetch:] '2 December 2027 for AI systems classified as high-risk pursuant to Article 6(2) and Annex III, and to 2 August 2028 for AI systems classified as high-risk pursuant to Article 6(1) and Annex I.' [Recital 38:] 'a transitional period of four months for providers who have already placed their systems on the market before the 2 August 2026' regarding Article 50(2). [Amended Art. 113, per AI Act Explorer consolidated text:] 'It shall apply from 2 August 2026. However: ... (c) Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 ...; (ii) 2 August 2028 ...'",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+     "status": "text says. The amending act touches Art. 50 only at 50(2) (codes of practice/implementing acts on marking) and adds Art. 111(4) giving providers of generative systems placed on the market before 2 August 2026 until 2 December 2026 to comply with 50(2). Art. 50(1), (3), (4), (5) and the general application date of 2 August 2026 are unchanged. Commission news 'AI Omnibus enters into force' (27 July 2026, digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force) confirms the high-risk dates; the Commission's Article 50 guidelines page confirms transparency 'applies from 2 August 2026'. Note: the EUR-Lex page was truncated in fetch; the Art. 113 wording above comes from the explorer's consolidated view and should be re-read on EUR-Lex before publication.",
+     "implication_for_ratio": "Every Moltbook agent operating from 2 August 2026 is inside a live obligation window for 50(1) and 50(4), and inside the 50(2) window from 2 December 2026 at the latest. The Omnibus gave no relief on the point that matters here."
+    },
+    {
+     "point": "6. Recitals 132\u2013137 \u2014 the transparency rationale",
+     "provision": "Recitals 132, 133, 134, 135, 136, 137",
+     "quote": "[132:] 'Certain AI systems intended to interact with natural persons or to generate content may pose specific risks of impersonation or deception irrespective of whether they qualify as high-risk or not. ... natural persons should be notified that they are interacting with an AI system, unless this is obvious ...' [134:] 'it is also appropriate to envisage a similar disclosure obligation in relation to AI-generated or manipulated text to the extent it is published with the purpose of informing the public on matters of public interest unless the AI-generated content has undergone a process of human review or editorial control and a natural or legal person holds editorial responsibility' [136:] transparency duties 'are particularly relevant to facilitate the effective implementation of Regulation (EU) 2022/2065' (the DSA) as to 'systemic risks that may arise from the dissemination of content that has been artificially generated' [137:] compliance 'should not be interpreted as indicating that the use of the AI system or its output is lawful'",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says. Recital 133 (marking: 'watermarks, metadata identifications, cryptographic methods', reliable and interoperable 'as far as technically feasible') and 135 (codes of practice) were retrieved in summary only. The recitals frame the harm as impersonation and deception of natural persons and tie the text-labelling duty to editorial responsibility held by 'a natural or legal person'.",
+     "implication_for_ratio": "Recital 134's exemption depends on someone holding editorial responsibility. At 88:1, no natural or legal person is on record as holding it for any post; the exemption cannot be claimed and the duty cannot be attributed. The Wiz finding that humans could post as agents 'via a basic POST request' is the impersonation risk recital 132 names, inverted: humans impersonating AI."
+    },
+    {
+     "point": "7. Identifying the responsible person \u2014 registry and traceability duties",
+     "provision": "Art. 49(1)\u2013(2), Art. 71(1), Art. 16(b), Art. 22(1), Art. 54(1), Art. 85(1)",
+     "quote": "[Art. 49(1):] 'Before placing on the market or putting into service a high-risk AI system listed in Annex III ... the provider or, where applicable, the authorised representative shall register themselves and their system in the EU database referred to in Article 71.' [Art. 16(b), high-risk providers:] 'indicate on the high-risk AI system ... their name, registered trade name or registered trade mark, the address at which they can be contacted' [Art. 22(1):] 'Prior to making their high-risk AI systems available on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative' [Art. 85(1):] 'any natural or legal person having grounds to consider that there has been an infringement of the provisions of this Regulation may submit complaints to the relevant market surveillance authority'",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+     "status": "text says. Every registration, name-on-product and authorised-representative duty is confined to high-risk systems (Arts 16, 22, 49, 71 \u2014 49(2) extends registration only to Annex III systems self-assessed as not high-risk under Art. 6(3)) or to GPAI models (Art. 54). There is no registry, naming or traceability duty for a non-high-risk AI system such as a social-media agent. The Commission's July 2026 Guidelines reportedly add that an AI agent interacting with people must identify 'both its AI nature and the person or entity on whose behalf it is acting' (Faegre Drinker note of 30 July 2026; Bird & Bird note) \u2014 that is guidance, not statute, it applies only within 50(1), and the Guidelines PDF could not be text-extracted in this pass. Needs legal review.",
+     "implication_for_ratio": "The Act creates the duty and the fine but no mechanism to find the duty-bearer for this class of system. 1.5 million agents behind 17,000 email addresses, registrable 'with a simple loop and no rate limiting' (Wiz, 2 February 2026), is exactly the population the Regulation leaves untraceable by design. The complaint right in Art. 85 is real but has no addressee unless the platform discloses owner identity \u2014 a DSA/GDPR question, not an AI Act one."
+    }
+   ],
+   "who_is_provider_deployer": "Reasonable reading, needs legal review at the owner/framework boundary. Model vendor (e.g. Anthropic, OpenAI): provider of a general-purpose AI model (Art. 3(63)) with Chapter V duties, and provider of a general-purpose AI system where it exposes the model through its own API (Art. 3(66)); it bears Art. 50(2) marking for output it generates but does not control what an agent posts. Agent framework (OpenClaw): provider of an AI system or of a component placed on the market 'free of charge' (Art. 3(3)); if released under a free and open-source licence, Art. 2(12) still leaves it inside Article 50 (wording to verify on EUR-Lex), so OpenClaw plausibly carries the 50(1) design duty \u2014 the disclosure must be built into the runtime. Owner writing the system prompt: on the plain words of Art. 3(3) an owner who 'has an AI system developed' and 'puts the AI system into service under its own name' (the handle) for own use in the Union is a provider of that specific agent; on Art. 3(4) the same owner is a deployer. Art. 25 does not resolve this because it is high-risk-only. If the owner is a natural person acting non-professionally, both roles fall away under Art. 2(10)/3(4) \u2014 the FAQ says such use 'is excluded from the scope of the AI Act'. Platform (Moltbook): neither provider nor deployer of the agents; a hosting service under the DSA and, per recital 136, the venue where AI Act labelling is meant to feed DSA systemic-risk duties. The platform is the only party that holds the owner table, and the AI Act imposes no duty on it to keep or disclose that table. Net: the design duty most plausibly sits with the framework vendor and the model vendor; the per-post disclosure duty sits with an owner who is often out of scope and always unidentified; the platform sits outside the Regulation.",
+   "enforcement_and_penalties": "Art. 50 breaches: up to EUR 15 000 000 or 3 % of worldwide annual turnover, whichever is higher (Art. 99(4)(g)); for SMEs the lower of the two (99(6)); incorrect information to authorities up to EUR 7 500 000 or 1 % (99(5)); Art. 5 prohibitions up to EUR 35 000 000 or 7 % (99(3)). No 6 % tier exists. Member States lay down the rules and enforce through national market surveillance authorities (Art. 99(1); Commission FAQ: 'mainly be enforced by national competent market surveillance authorities'), applicable from 2 August 2026 (Art. 113 as amended). Natural persons are fineable (the 'if the offender is an undertaking' clause), but only once identified. Anyone may complain to a market surveillance authority (Art. 85(1)). Statutory maxima, not fine exposure; Vigilia makes no determination of any breach.",
+   "dates": [
+    {
+     "date": "2024-07-12",
+     "what": "Regulation (EU) 2024/1689 published in the Official Journal",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "date": "2025-02-02",
+     "what": "Chapters I and II (scope, definitions, prohibitions) apply",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "date": "2025-08-02",
+     "what": "GPAI model obligations (Chapter V), penalties chapter and governance apply",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "date": "2026-02-02",
+     "what": "Wiz publishes the Moltbook exposure: 1.5M agents, 17,000 owners, 88:1",
+     "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+    },
+    {
+     "date": "2026-07-08",
+     "what": "Regulation (EU) 2026/1744 (Digital Omnibus on AI) adopted; OJ 24 July; in force 27 July 2026",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+     "date": "2026-07-20",
+     "what": "Commission final Guidelines on Article 50 transparency obligations published",
+     "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+    },
+    {
+     "date": "2026-08-02",
+     "what": "Article 50(1), (3), (4), (5) and Article 99 penalties for them apply; general application date unchanged by the Omnibus",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "date": "2026-12-02",
+     "what": "End of the Omnibus four-month transition (new Art. 111(4)) for Art. 50(2) marking on generative systems placed on the market before 2 August 2026; also new Art. 5 prohibitions apply",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+     "date": "2027-12-02",
+     "what": "Annex III high-risk obligations apply (deferred from 2 August 2026)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+     "date": "2028-08-02",
+     "what": "Annex I (product-embedded) high-risk obligations apply",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    }
+   ],
+   "open_questions": [
+    "Is an owner who writes a system prompt and runs an OpenClaw agent under their own handle a 'provider' under Art. 3(3) ('has an AI system developed ... puts the AI system into service under its own name'), a deployer, or both? Neither the FAQ nor the Guidelines address the system-prompt case. Needs legal review.",
+    "Does a post that is readable in the EU count as output 'used in the Union' under Art. 2(1)(c) for a third-country owner or platform? No guidance found.",
+    "Exact wording of Art. 2(12) (open-source exclusion and its carve-back for Article 50) and of the Guidelines' AI-agent paragraph ('on whose behalf it is acting') \u2014 both need verbatim verification on EUR-Lex / the Guidelines PDF (https://ec.europa.eu/newsroom/dae/redirection/document/131215; not text-extractable in this pass).",
+    "What share of the 17,000 owners are EU-established, and what share act professionally? The AI Act's reach collapses to that intersection; the Observatory Archive may allow a proxy (owner locale, posting cadence).",
+    "Is Moltbook a DSA hosting service / online platform with any obligation to keep or disclose owner identity? Outside this lens; needed before the policy brief claims an enforcement path.",
+    "Does the platform's own 'every account is an agent' framing satisfy the 'obvious' exception in Art. 50(1) for humans who observe, given the Commission says the exception is 'interpreted in a restrictive manner' and given Wiz showed humans could post as agents?",
+    "Do national penalty regimes adopted under Art. 99(1) provide for fines on natural persons, and at what scale? Member-State-specific; not checked."
+   ],
+   "sources": [
+    {
+     "title": "Regulation (EU) 2024/1689 (AI Act), EUR-Lex",
+     "type": "primary statute",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "title": "Regulation (EU) 2026/1744 of 8 July 2026 (Digital Omnibus on AI), EUR-Lex",
+     "type": "primary statute (amending)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+     "title": "Commission FAQ: Transparency obligations under Article 50 of the AI Act",
+     "type": "primary interpretive (Commission)",
+     "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+    },
+    {
+     "title": "Commission: Guidelines on transparency obligations for providers and deployers of AI systems (20 July 2026)",
+     "type": "primary interpretive (Commission); PDF not text-extracted",
+     "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+    },
+    {
+     "title": "Commission news: AI Omnibus enters into force (27 July 2026)",
+     "type": "primary (Commission press)",
+     "url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force"
+    },
+    {
+     "title": "AI Act Explorer (FLI): Article 50, 3, 25, 2, 99, 113, 49, 71, 22, 16, 54, 85; Recitals 132\u2013137; Digital Omnibus changes",
+     "type": "secondary mirror of official text, used for article-level retrieval where EUR-Lex truncated",
+     "url": "https://artificialintelligenceact.eu/article/50/"
+    },
+    {
+     "title": "AI Act Explorer: Digital Omnibus on AI amendment list",
+     "type": "secondary mirror",
+     "url": "https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/"
+    },
+    {
+     "title": "Wiz Research: Exposed Moltbook database (2 February 2026)",
+     "type": "primary for the 88:1 figure",
+     "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+    },
+    {
+     "title": "Faegre Drinker: Commission confirms transparency Code of Practice and final Guidelines (30 July 2026)",
+     "type": "law-firm note, secondary",
+     "url": "https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations"
+    },
+    {
+     "title": "Stibbe: The AI Act's transparency obligations \u2014 rules, scope and timeline (27 July 2026)",
+     "type": "law-firm note, secondary",
+     "url": "https://www.stibbe.com/publications-and-insights/the-ai-acts-transparency-obligations-rules-scope-and-timeline"
+    },
+    {
+     "title": "White & Case: EU AI Omnibus enters into force",
+     "type": "law-firm note, secondary",
+     "url": "https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act"
+    }
+   ],
+   "confidence": "High on the statutory quotations for Art. 3, 2, 25, 49, 71, 16, 22, 85, 99(4)(g) and the recitals (retrieved verbatim from the FLI mirror of the OJ text; EUR-Lex itself truncated in fetch and should be re-read before publication). High on Art. 50(1), 50(4) second subparagraph and 50(5) as quoted. High that the Omnibus (Reg. 2026/1744) left Art. 50(1)/(4) and the 2 August 2026 date untouched and deferred Annex III to 2 December 2027. Medium on the role allocation (owner as provider vs deployer) \u2014 the statute is silent and the Commission guidance does not reach the system-prompt case. Medium-low on the Guidelines' 'on whose behalf' agent rule, seen only through two law-firm notes. The 88:1 figure is Wiz's, from a database snapshot of early 2026, and is a claim about registration, not about active agents. This is a gap analysis, not a legal determination."
+  },
+  {
+   "lens": "swiss-law",
+   "findings": [
+    {
+     "point": "(1) Federal Council decision of 12 Feb 2025 and 2026 follow-up: no Swiss AI-transparency statute exists; a consultation draft is due end-2026 and, on the evidence found, has not been published as of 23 Sep 2026",
+     "provision": "Federal Council decision 12.02.2025 (press release msg-id-104110); BAKOM status page; Beirat Digitale Schweiz item 10.02.2026",
+     "quote": "EN release: \"Switzerland intends to ratify the Council of Europe Convention on Artificial Intelligence (AI) and to make the necessary amendments to Swiss law. Work will also continue on the regulation of AI in specific sectors such as healthcare and transport.\" BAKOM: \"Bis Ende 2026 soll das EJPD zusammen mit dem UVEK und dem EDA eine Vernehmlassungsvorlage erstellen\" \u2014 areas named: Transparenz, Datenschutz, Nichtdiskriminierung, Aufsicht. 10.02.2026 (Beirat): R\u00f6sti said it is central for public trust \"dass diese Transparenz und Nachvollziehbarkeit gew\u00e4hrleiste\"; non-binding track = \"Selbstverpflichtungserkl\u00e4rungen einzelner Branchen, Ethikkodizes und Standards\". Third-party trackers dated 8 Jul 2026 (AlgorithmWatch CH) and 22 Jul 2026 (kinewsletter.ch) both still show the draft as pending.",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html",
+     "status": "text says (quotes); reasonable reading (no draft published by 23 Sep 2026 \u2014 admin.ch/bj.admin.ch pages were partly unreachable from this session, so verify on fedlex/admin.ch before publication)",
+     "implication_for_ratio": "Nothing in Swiss statute today limits how many agents one person may run, requires an agent to be tied to a named owner, or requires an agent to disclose it is an AI outside the data-protection and unfair-competition hooks below. An 88:1 ratio is legally invisible in Switzerland in September 2026; the only forthcoming instrument is the end-2026 draft, whose 'Transparenz' pillar is the place to argue for owner-traceability."
+    },
+    {
+     "point": "(2) Council of Europe Framework Convention (CETS 225): Switzerland signed 27 Mar 2025, has not ratified; Art. 8 and 9 bind the state, and the only person-facing transparency norm (Art. 15 para 2) is 'you are talking to an AI', not 'this is who runs it'",
+     "provision": "CETS 225 Art. 3(1), Art. 8, Art. 9, Art. 15(2); signature per admin.ch msg-id-104646",
+     "quote": "Signature: \"On 27 March Federal Councillor Albert R\u00f6sti will sign the Council of Europe Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law in Strasbourg on Switzerland's behalf.\" Art. 8: \"Each Party shall adopt or maintain measures to ensure that adequate transparency and oversight requirements tailored to the specific contexts and risks are in place in respect of activities within the lifecycle of artificial intelligence systems, including with regard to the identification of content generated by artificial intelligence systems.\" Art. 9: \"Each Party shall adopt or maintain measures to ensure accountability and responsibility for adverse impacts on human rights, democracy and the rule of law resulting from activities within the lifecycle of artificial intelligence systems.\" Art. 15(2): \"Each Party shall seek to ensure that, as appropriate for the context, persons interacting with artificial intelligence systems are notified that they are interacting with such systems rather than with a human.\" Art. 3(1): \"The scope of this Convention covers the activities within the lifecycle of artificial intelligence systems that have the potential to interfere with human rights, democracy and the rule of law\". Lenz & Staehelin (13.02.2025): \"While public institutions must fully comply with the AI Convention, private entities are only required to adhere to its fundamental principles.\"",
+     "url": "https://eur-lex.europa.eu/eli/agree_internation/2026/1081/oj",
+     "status": "text says (Convention wording, taken from the EU Official Journal copy OJ L 2026/1081 because rm.coe.int returned 403; signature date from admin.ch). Reasonable reading: entry into force 1 Nov 2025 and no Swiss ratification as of Sep 2026 \u2014 the coe.int signature table could not be fetched; confirm before citing.",
+     "implication_for_ratio": "Art. 8 targets identification of AI *content*, Art. 15(2) notification of AI *interaction*; neither requires identifying the natural person behind an agent. Art. 9 requires accountability for adverse impacts but leaves the mechanism to each Party; Switzerland's private-sector coverage will depend on the Art. 3(1)(b) choice it makes in the 2026 draft. A concentration of 88 agents on one owner is therefore compatible with the Convention's letter; the argument that it defeats Art. 9 accountability in practice is a policy argument, not a text-based one."
+    },
+    {
+     "point": "(3) Revised FADP (SR 235.1, in force 1 Sep 2023): the controller must name itself when collecting personal data (Art. 19), must flag automated individual decisions (Art. 21), and an owner's X handle or email is personal data whenever the person is identifiable with reasonable effort (Art. 5 lit. a + BGE 136 II 508)",
+     "provision": "FADP Art. 5 lit. a, Art. 19(1)-(2), Art. 21(1)-(2), Art. 25(2)(a), Art. 60(1); BGE 136 II 508 E. 3.2/3.5; FDPIC statements 09.11.2023 and 28.01.2026",
+     "quote": "Art. 5: \"a. personal data means any information relating to an identified or identifiable natural person\". Art. 19(1): \"The controller shall inform the data subject in an appropriate manner when collecting personal data; this duty to provide information also applies if the data is not collected from the data subject.\" Art. 19(2): \"...it shall provide the following information as a minimum: a. the controller's identity and contact details; b. the purpose of processing; c. if applicable, the recipients or the categories of recipients\". Art. 21(1): \"The controller shall inform the data subject about any decision that is based exclusively on automated processing and that has a legal consequence for or a considerable adverse effect on the data subject (automated individual decision).\" Art. 21(2): \"The data subject may request that the automated individual decision be reviewed by a natural person.\" Art. 25(2): \"they are entitled to the following information: a. the identity and the contact details of the controller\". Art. 60(1): \"On complaint, a fine not exceeding 250,000 francs shall be imposed on private persons who: a. violate their duties under Articles 19, 21 and 25\u201327, in that they wilfully provide false or incomplete information; b. fail wilfully: 1. to provide information to the data subject in accordance with Articles 19 paragraph 1 and 21 paragraph 1\". BGE 136 II 508 E. 3.5: \"Von Bedeutung ist indessen nicht nur, welcher Aufwand objektiv erforderlich ist, um eine bestimmte Information einer Person zuordnen zu k\u00f6nnen, sondern auch, welches Interesse der Datenbearbeiter oder ein Dritter an der Identifizierung hat.\" FDPIC 09.11.2023: \"Im Falle intelligenter Sprachmodelle, die direkt mit Benutzerinnen und Benutzern kommunizieren, haben Letztere ein gesetzliches Recht zu erfahren, ob sie mit einer Maschine sprechen\". FDPIC 28.01.2026: \"Die betroffenen Personen m\u00fcssen insbesondere erkennen k\u00f6nnen, ob sie es mit einer KI zu tun haben\".",
+     "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+     "status": "text says (articles); reasonable reading (handle/email of a natural person = personal data under the Logistep effort-plus-interest test; the FDPIC's 'right to know you talk to a machine' is the Commissioner's reading of Art. 19/21, not statutory wording). Contested: whether an agent's social post is ever an 'automated individual decision' (Art. 21 needs a legal consequence or considerable adverse effect). Needs legal review: territorial reach (Art. 3 FADP not quoted here) and whether Art. 27 media privilege covers Vigilia's own publication of owner data.",
+     "implication_for_ratio": "The FADP is the one Swiss instrument that today obliges the person behind an agent to name themselves \u2014 but only as 'controller', only to data subjects whose personal data the agent collects, and only on complaint. It counts controllers, not agents: 88 agents under one owner are one controller with one duty to inform. Conversely, an owner who is a natural person is a data subject, so Vigilia's own attribution study processes personal data when it names owner handles; aggregate ratios are safe, owner-level identification is not without a lawful basis and Art. 19(1)/(5) information within one month (exceptions Art. 20/27 to be checked)."
+    },
+    {
+     "point": "(4) Unfair Competition Act (SR 241) Art. 3(1)(b) and (s): an undisclosed AI persona is only caught where there is a commercial nexus; then the operator, not the agent, is the person 'acting unfairly'",
+     "provision": "UCA Art. 2, Art. 3(1) lit. b and lit. s, Art. 9, Art. 23",
+     "quote": "Art. 2: \"Any conduct or business practice that is misleading or which otherwise violates the principle of good faith such that it influences the relationship between competitors or between suppliers and customers is unfair and unlawful.\" Art. 3(1): \"A person acts unfairly if they: ... b. provide incorrect or misleading information about themselves, their business, their business name, their goods, works or services ... or benefit third parties in competition through such conduct\"; lit. s: \"offers goods, works or services online and in doing so fail: 1. to provide clear and complete details of their identity and their contact address including their email address\". Art. 23(1): \"Any person who wilfully competes unfairly in terms of Articles 3, 4, 5 or 6 shall on complaint be liable to a custodial sentence not exceeding three years or a monetary penalty.\" H\u00e4rting/Mattig (05.03.2026): no explicit statutory labelling duty in Switzerland, but a \"faktische Kennzeichnungspflicht\" arises from DSG, UWG and URG.",
+     "url": "https://www.fedlex.admin.ch/eli/cc/1988/223_223_223/en",
+     "status": "text says (articles); reasonable reading (a persona that hides its AI nature to sell or promote is 'misleading information about themselves'); contested (a non-commercial hobby agent on Moltbook falls outside Art. 2's competitive-relationship requirement)",
+     "implication_for_ratio": "The UCA identifies the human only through the commercial act: an operator selling or promoting through 88 personas is one 'person acting unfairly' and, under lit. s, must already publish identity and email when offering online. For the bulk of Moltbook agents with no commercial nexus the UCA gives no handle at all; the ratio is irrelevant to it, the commercial purpose is decisive."
+    },
+    {
+     "point": "(5) Civil liability: Swiss law attributes an agent's harmful acts to its operator through ordinary fault liability (OR 41); whether OR 55 or OR 101 apply to software auxiliaries is contested; an association acts through its organs (ZGB 55)",
+     "provision": "CO Art. 41(1), Art. 55(1), Art. 101(1); CC Art. 55(1)-(3); literature: Danner/ONLAW 2023, CMS 20.02.2025, Jusletter IT (unisg) \u2014 snippet only",
+     "quote": "OR 41(1): \"Any person who unlawfully causes damage to another, whether wilfully or negligently, is obliged to provide compensation.\" OR 55(1): \"An employer is liable for the damage caused by his employees or ancillary staff in the performance of their work unless he proves that he took all due care to avoid a damage of this type or that the damage would have occurred even if all due care had been taken.\" OR 101(1): \"A person who delegates the performance of an obligation ... to an associate ... is liable to the other party for any damage the associate causes in carrying out such tasks\". ZGB 55: \"1 The governing bodies express the will of the legal entity. 2 They bind the legal entity by concluding transactions and by their other actions. 3 The governing officers are also personally liable for their wrongful acts.\" Danner (ONLAW, 29.04.2023): \"die zentrale Frage lautet nicht, ob ein KI\u2011System \u00abautonom\u00bb gehandelt hat, sondern ob einer verantwortlichen Person eine Sorgfaltspflichtverletzung vorzuwerfen ist\"; \"Wer zur Vertragserf\u00fcllung ein KI\u2011System einsetzt, l\u00e4sst sich dessen Verhalten rechtlich zurechnen.\" CMS (20.02.2025): Swiss liability law is \"sufficiently flexible\" but product-liability modernisation may be needed. Search snippet of the Jusletter IT paper: the human auxiliary has an exculpation proof under Art. 55 OR; German doctrine proposes strict attribution of digital agents' misconduct to the principal.",
+     "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en",
+     "status": "text says (articles); reasonable reading (operator fault liability under OR 41 for negligent deployment/supervision is the doctrinal baseline; an association that runs an agent by board decision is bound by that 'other action' of its organ under ZGB 55(2)); contested (analogous application of OR 55/101 to a non-human 'auxiliary'; strict attribution is proposed in doctrine, not law). The Jusletter IT paper could not be opened \u2014 cite only after reading it.",
+     "implication_for_ratio": "Under OR 41 every one of 88 agents' harms traces to the same person's duty of care, and the ratio itself is evidence on the fault element: whether one human can meet the standard of care while supervising 88 autonomous personas is exactly the Sorgfalt question a Swiss court would ask. But liability presupposes an identified defendant, and none of these provisions helps find one."
+    },
+    {
+     "point": "(6) A Swiss association (ZGB 60 ff.) running a disclosed AI agent that publishes research on other operators: no AI-specific registration or transparency duty; commercial-register entry only on the ZGB 61(2) triggers; its research is bound by the FADP and by the personality rights (ZGB 28) of any natural-person owner it names",
+     "provision": "CC Art. 60(1)-(2), Art. 61(1)-(2), (2ter), Art. 61a, Art. 69(2); Art. 28a; FADP Art. 19(1)/(5)",
+     "quote": "ZGB 60(1): \"Associations with a political, religious, scientific, cultural, charitable, social or other non-commercial purpose acquire legal personality as soon as their intention to exist as a corporate body is apparent from their articles of association.\" ZGB 61(2): \"The association must be registered if it: 1. conducts a commercial operation in pursuit of its objects; 2. is subject to an audit requirement; 3. primarily collects or distributes assets abroad, directly or indirectly, that are intended for charitable, religious, cultural, educational or social purposes.\" (Ziff. 3 in force since 1 Jan 2023; CHF 100,000/two-year exemption per Art. 61(2ter) with HRegV Art. 90(2), secondary sources.) ZGB 61a(1): registered associations \"shall keep a list of their members, including their first and surnames, business names and addresses\". ZGB 69(2): \"Associations that must be entered in the commercial register must be able to be represented by a person who is domiciled in Switzerland.\" ZGB 28a(1): the applicant may ask the court \"1. to prohibit a threatened infringement; 2. to order that an existing infringement cease; 3. to make a declaration that an infringement is unlawful\".",
+     "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/en",
+     "status": "text says (articles); reasonable reading (an association in formation that receives foreign philanthropic funds above the threshold falls under Art. 61(2) no. 3 and must register, keep the member list and have a Swiss-domiciled representative \u2014 relevant to Vigilia's own funding applications); needs legal review (whether Vigilia's publication of owner-level data is 'collected not from the data subject' under FADP 19(1)/(5) and whether the Art. 27 media exception applies)",
+     "implication_for_ratio": "Swiss association law imposes the same transparency on Vigilia that it would like from Moltbook owners: a named board, a Swiss-domiciled representative, a member list \u2014 but only once registration is triggered, and none of it concerns the agent. For the attribution study this means: report ratios and organization-level facts freely; treat every natural-person owner handle as personal data and a personality interest; do not publish an owner-level table."
+    }
+   ],
+   "who_is_provider_deployer": "Swiss law has no 'provider'/'deployer' categories. The roles a Moltbook agent maps onto are: (a) the owner who writes the system prompt \u2014 the 'controller' under FADP Art. 5/19/21/25 (must name itself to data subjects), the 'person' who acts unfairly under UCA Art. 3 if there is a commercial nexus, and the person owing a duty of care under OR 41 (reasonable reading; doctrine consistently places attribution here: 'Wer ... ein KI\u2011System einsetzt, l\u00e4sst sich dessen Verhalten rechtlich zurechnen'). If the owner is a Swiss legal entity, its board's decision to run the agent is the organ's 'other action' that binds the entity under ZGB 55(2), with personal officer liability under ZGB 55(3) for wrongful acts. (b) The platform (Moltbook, since 10 Mar 2026 Meta) \u2014 a controller for its own processing under FADP; under ZGB 28/28a a possible 'participant' in a personality infringement (Federal Court practice reaches anyone whose participation enabled or facilitated it \u2014 secondary sources, needs legal review); no Swiss statutory duty to disclose an anonymous user's identity to a civil claimant was found (the 2015 Federal Council provider-liability report could not be opened; mark contested). (c) The model vendor and (d) the OpenClaw agent framework \u2014 reachable only through product liability (PrHG) if software is a 'product' (Danner: 'Software wird nach \u00fcberwiegender Ansicht als Produkt im Sinne des Produkthaftpflichtgesetzes betrachtet'), which covers personal injury and property damage, not speech or reputational harm, so for Moltbook-type harms they are remote. Under CETS 225 the addressee is the Swiss state ('Each Party shall'), and how far private lifecycle actors are covered will be fixed only by the end-2026 draft (Art. 3(1)(b) choice).",
+   "dates": [
+    {
+     "date": "2023-01-01",
+     "what": "ZGB Art. 61(2) no. 3, 61a, 69(2) in force: registration, member list and Swiss representative for associations collecting/distributing assets abroad",
+     "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/en"
+    },
+    {
+     "date": "2023-09-01",
+     "what": "Revised FADP (SR 235.1) in force; Art. 19, 21, 25, 60 as quoted",
+     "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+    },
+    {
+     "date": "2023-11-09",
+     "what": "FDPIC: existing FADP directly applicable to AI; users have a statutory right to know they are talking to a machine",
+     "url": "https://www.edoeb.admin.ch/de/09112023-geltendes-dsg-ist-auf-ki-anwendbar"
+    },
+    {
+     "date": "2025-02-12",
+     "what": "Federal Council: ratify CETS 225, sectoral amendments, EJPD consultation draft by end-2026 on transparency, data protection, non-discrimination, supervision",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+    },
+    {
+     "date": "2025-03-27",
+     "what": "Switzerland signs CETS 225 in Strasbourg (Federal Councillor R\u00f6sti)",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104646.html"
+    },
+    {
+     "date": "2025-11-01",
+     "what": "CETS 225 entry into force (reasonable reading from secondary sources; coe.int table not fetched)",
+     "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence"
+    },
+    {
+     "date": "2026-01-28",
+     "what": "FDPIC, Data Protection Day: affected persons must be able to recognise they are dealing with an AI",
+     "url": "https://www.edoeb.admin.ch/de/datenschutztag-2026"
+    },
+    {
+     "date": "2026-02-10",
+     "what": "Beirat Digitale Schweiz on non-binding measures to implement CETS 225; transparency and traceability named central",
+     "url": "https://www.admin.ch/de/newnsb/5oOec_8ZQEV1X-55waGOg"
+    },
+    {
+     "date": "2026-05-13",
+     "what": "EU conclusion of CETS 225 published in OJ (Decision (EU) 2026/1080; text as 22026A01081)",
+     "url": "https://eur-lex.europa.eu/eli/dec/2026/1080/oj/eng"
+    },
+    {
+     "date": "2026-12-31",
+     "what": "Deadline for the Swiss consultation draft and the non-binding-measures plan (not yet published on the evidence found)",
+     "url": "https://www.bakom.admin.ch/de/kuenstliche-intelligenz"
+    }
+   ],
+   "enforcement_and_penalties": "FADP Art. 60(1): on complaint, fine up to CHF 250,000 on 'private persons' who wilfully give false/incomplete information or wilfully fail to inform under Art. 19(1)/(2) or 21(1) (text says; that fines fall on responsible natural persons rather than the entity is a reasonable reading, not quoted). FDPIC investigations under Art. 49 with a further CHF 250,000 fine for non-cooperation (Art. 60(2)). UCA Art. 23(1): on complaint, custodial sentence up to three years or monetary penalty for wilful unfair competition under Art. 3; civil actions under Art. 9 (injunction, removal, declaration, publication) and damages via the CO. ZGB 28a: injunctions and declarations for personality infringements, damages reserved. CO 41/55/101: compensation, no penalty. CETS 225: state-level obligations, no sanctions on private actors; follow-up through the Conference of the Parties. No Swiss authority today can compel a platform to reveal who runs an agent outside criminal proceedings (contested \u2014 the 2015 Federal Council provider report could not be read; German practice found in search is not Swiss law and is not relied on).",
+   "open_questions": [
+    "Has the EJPD published the consultation draft (Vernehmlassungsvorlage) between 22 Jul and 23 Sep 2026? admin.ch, bj.admin.ch and fedlex consultation pages returned 403/502 from this session; a human check on fedlex.admin.ch/de/consultation-procedures is required before any publication states 'no draft yet'.",
+    "Which Art. 3(1)(b) option will Switzerland take for private actors \u2014 full application, principles only, or none? This decides whether Art. 8/9/15(2) ever reach a Moltbook owner in Switzerland.",
+    "Does the FADP reach a foreign owner whose agent processes data of persons in Switzerland (Art. 3 FADP territorial scope, not quoted here)?",
+    "Is a Moltbook post ever an 'automated individual decision' under Art. 21 (legal consequence or considerable adverse effect)? Probably not for ordinary posts; possibly for coordinated defamation or doxxing.",
+    "Does the FADP Art. 27 media exception, or Art. 20(1), relieve Vigilia of the Art. 19(1)/(5) one-month duty to inform natural-person owners whose handles it collects from Moltbook? Needs legal review before any owner-level publication.",
+    "Is there Swiss case law applying OR 55 or OR 101 by analogy to software agents? None found; the Jusletter IT paper (unisg) must be read directly.",
+    "Does Vigilia's expected foreign philanthropic funding trigger ZGB 61(2) no. 3 registration once two consecutive years exceed CHF 100,000 collected or distributed abroad?",
+    "Is there any Swiss civil route to compel a platform to identify an anonymous agent owner (Art. 28 ZGB participation doctrine vs. absence of a statutory Auskunftsanspruch)?"
+   ],
+   "sources": [
+    {
+     "title": "Federal Council press release 12.02.2025, AI regulation (EN)",
+     "type": "primary \u2014 admin.ch",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+    },
+    {
+     "title": "Federal Council press release, Switzerland signs CoE AI Convention (27.03.2025)",
+     "type": "primary \u2014 admin.ch",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104646.html"
+    },
+    {
+     "title": "BAKOM, K\u00fcnstliche Intelligenz (status page)",
+     "type": "primary \u2014 admin.ch",
+     "url": "https://www.bakom.admin.ch/de/kuenstliche-intelligenz"
+    },
+    {
+     "title": "Beirat Digitale Schweiz: Massnahmen zur Umsetzung der KI-Konvention (10.02.2026)",
+     "type": "primary \u2014 admin.ch",
+     "url": "https://www.admin.ch/de/newnsb/5oOec_8ZQEV1X-55waGOg"
+    },
+    {
+     "title": "CETS 225 text as published in OJ L 2026/1081 (22026A01081)",
+     "type": "primary \u2014 EUR-Lex",
+     "url": "https://eur-lex.europa.eu/eli/agree_internation/2026/1081/oj"
+    },
+    {
+     "title": "Council Decision (EU) 2026/1080 concluding CETS 225",
+     "type": "primary \u2014 EUR-Lex",
+     "url": "https://eur-lex.europa.eu/eli/dec/2026/1080/oj/eng"
+    },
+    {
+     "title": "CoE Framework Convention page",
+     "type": "primary \u2014 coe.int (fetch blocked, 403)",
+     "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence"
+    },
+    {
+     "title": "Federal Act on Data Protection, SR 235.1 (EN, last amended 7 Jul 2025)",
+     "type": "primary \u2014 Fedlex",
+     "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+    },
+    {
+     "title": "Unfair Competition Act, SR 241 (EN, status 1 Jan 2025)",
+     "type": "primary \u2014 Fedlex",
+     "url": "https://www.fedlex.admin.ch/eli/cc/1988/223_223_223/en"
+    },
+    {
+     "title": "Swiss Civil Code, SR 210 (EN, last amended 1 Jul 2026)",
+     "type": "primary \u2014 Fedlex",
+     "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/en"
+    },
+    {
+     "title": "Code of Obligations, SR 220 (EN, last amended 1 Jan 2026)",
+     "type": "primary \u2014 Fedlex",
+     "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en"
+    },
+    {
+     "title": "BGE 136 II 508 (Logistep) \u2014 identifiability standard",
+     "type": "primary \u2014 Federal Supreme Court (via weblaw mirror)",
+     "url": "https://entscheide.weblaw.ch/cache.php?link=bge-136-ii-508&sel_lang=de"
+    },
+    {
+     "title": "FDPIC, Geltendes DSG ist auf KI direkt anwendbar (09.11.2023)",
+     "type": "primary \u2014 regulator",
+     "url": "https://www.edoeb.admin.ch/de/09112023-geltendes-dsg-ist-auf-ki-anwendbar"
+    },
+    {
+     "title": "FDPIC, Datenschutztag 2026 (28.01.2026)",
+     "type": "primary \u2014 regulator",
+     "url": "https://www.edoeb.admin.ch/de/datenschutztag-2026"
+    },
+    {
+     "title": "FDPIC, Duty to provide information (EN)",
+     "type": "primary \u2014 regulator",
+     "url": "https://www.edoeb.admin.ch/en/duty-to-provide-information"
+    },
+    {
+     "title": "Lenz & Staehelin, Switzerland outlines regulatory approach to AI (13.02.2025)",
+     "type": "secondary \u2014 law-firm note",
+     "url": "https://www.lenzstaehelin.com/news-and-insights/browse-thought-leadership-insights/insights-detail/switzerland-outlines-regulatory-approach-to-artificial-intelligence/"
+    },
+    {
+     "title": "CMS, Switzerland to ratify Europe's landmark AI Framework Convention (20.02.2025)",
+     "type": "secondary \u2014 law-firm note",
+     "url": "https://cms.law/en/che/legal-updates/switzerland-to-ratify-europe-s-landmark-ai-framework-convention-what-does-it-mean"
+    },
+    {
+     "title": "H\u00e4rting/Mattig, Kennzeichnung KI-generierte Inhalte (05.03.2026)",
+     "type": "secondary \u2014 practitioner article",
+     "url": "https://www.weka.ch/themen/datenschutz-und-it-recht/kuenstliche-intelligenz-und-recht/article/kennzeichnung-ki-generierte-inhalte/"
+    },
+    {
+     "title": "Danner/ONLAW, Wer haftet, wenn die KI einen Schaden verursacht? (2023)",
+     "type": "secondary \u2014 practitioner article",
+     "url": "https://www.onlaw.ch/post/wer-haftet-wenn-die-ki-einen-schaden-verursacht"
+    },
+    {
+     "title": "MLL, Neue Registrierungs- und Transparenzanforderungen f\u00fcr Vereine (2023)",
+     "type": "secondary \u2014 law-firm note",
+     "url": "https://www.mll-news.com/neue-registrierungs-und-transparenzanforderungen-fuer-vereine-mit-sitz-in-der-schweiz/"
+    },
+    {
+     "title": "AlgorithmWatch CH, KI-Regulierung: Was tut die Schweiz? (updated 08.07.2026)",
+     "type": "secondary \u2014 NGO tracker",
+     "url": "https://algorithmwatch.ch/de/leitfaden-ki-regulierung-schweiz/"
+    },
+    {
+     "title": "kinewsletter.ch, KI-Regulierung Schweiz: Stand 2026 (22.07.2026)",
+     "type": "secondary \u2014 tracker, low weight",
+     "url": "https://www.kinewsletter.ch/ki-regulierung-schweiz"
+    },
+    {
+     "title": "Aurum, Moltbook: Legal Implications of an AI Agent Social Network (10.02.2026)",
+     "type": "secondary \u2014 law-firm note, no Swiss law",
+     "url": "https://aurum.law/newsroom/Moltbook-Legal-Implications-of-an-AI-Agent-Social-Network"
+    },
+    {
+     "title": "Jusletter IT, KI und Haftung: L\u00f6sungsans\u00e4tze f\u00fcr die Schweiz (unisg) \u2014 not opened, search snippet only",
+     "type": "secondary \u2014 academic, unverified",
+     "url": "https://alexandria.unisg.ch/bitstreams/d24d4eea-66b7-4841-807f-e9a4d21d6470/download"
+    }
+   ],
+   "confidence": "High on the statutory quotations (taken from the Fedlex English texts, versions dated 7 Jul 2025 / 1 Jan 2025 / 1 Jul 2026 / 1 Jan 2026; note the English is an unofficial translation with no legal force \u2014 cite the German/French/Italian for anything binding) and on the Convention wording (EU Official Journal copy). High on the 12 Feb 2025 decision and 27 Mar 2025 signature. Medium on 'no consultation draft published by 23 Sep 2026' \u2014 inferred from two trackers dated July 2026 and the absence of any hit; the relevant admin.ch pages were unreachable. Medium on the liability doctrine (consistent across three secondary sources, but the main academic paper was not opened). Low on the anonymous-identification question (no Swiss primary source reached). Bottom line for the synthesis: Swiss law in September 2026 gives no way to identify the person behind a Moltbook agent unless that person collects Swiss data subjects' personal data (FADP 19: name yourself) or sells online (UCA 3(1)(s): publish identity and email); an 88:1 ratio is invisible to the statute and only matters as evidence of a breach of the duty of care once a defendant is already known. Everything marked 'needs legal review' should go to counsel before publication."
+  },
+  {
+   "lens": "accountability-literature",
+   "findings": [
+    {
+     "point": "Chan et al., Visibility into AI Agents (FAccT 2024): three visibility measures \u2014 agent identifiers, real-time monitoring, activity logging \u2014 with identifiers meant to reveal 'by whom' an agent is used.",
+     "provision": "arXiv 2401.13138, abstract and \u00a73",
+     "quote": "Information about where, why, how, and by whom certain AI agents are used, which we refer to as visibility, is critical to these objectives.",
+     "url": "https://arxiv.org/abs/2401.13138",
+     "status": "text says",
+     "implication_for_ratio": "Moltbook has the identifier (agent id/name) and a public activity log (the archive). The 'by whom' link exists only where is_claimed=true and owner_x_handle is non-null. Metric M1: share of posting agents, and of posts, whose author has a non-null owner_x_handle ('accountability-resolvable share'). Metric M4: claimed agents / distinct owner_x_handle = agents per accountable principal; 88:1 means one identifier answers 'by whom' for 88 actors at once."
+    },
+    {
+     "point": "Chan et al., IDs for AI Systems (2024): IDs for instances of AI systems, carrying metadata such as responsible-party contact, warranted where systems 'contact real humans' or act at scale.",
+     "provision": "arXiv 2406.12137",
+     "quote": "AI systems are increasingly pervasive, yet information needed to decide whether and how to engage with them may not exist or be accessible.",
+     "url": "https://arxiv.org/abs/2406.12137",
+     "status": "text says",
+     "implication_for_ratio": "Moltbook agent ids are instance-level IDs but carry no responsible-party field beyond a self-asserted X handle. Metric M9: share of agent `description` strings that name a model, a framework, or an operator (disclosure content of the ID). An 88:1 ratio means the ID's metadata resolves to a person for ~1% of instances if the 17,000 are the only humans."
+    },
+    {
+     "point": "Chan et al., Infrastructure for AI Agents (TMLR 2025): attribution = identity binding, certification, agent IDs; plus interaction shaping and detection/remediation.",
+     "provision": "arXiv 2501.10114",
+     "quote": "agent infrastructure: technical systems and shared protocols external to agents that are designed to mediate and influence their interactions with and impacts on their environments",
+     "url": "https://arxiv.org/abs/2501.10114",
+     "status": "text says",
+     "implication_for_ratio": "Moltbook's claim tweet is a one-shot identity binding to an X account (deletable after verification, per DataCamp and moltbook.forum), with no certification and no re-binding. Metric M3: concentration of agents per owner_x_handle (Gini, top-1% and top-10% share, max). Metric M8: registration bursts \u2014 agents per handle created within the same minute (created_at) \u2014 the automation signature Wiz described ('a simple loop and no rate limiting')."
+    },
+    {
+     "point": "South et al., Authenticated Delegation and Authorized AI Agents (2025): extend OAuth 2.0/OIDC with agent credentials so every agent action carries a verifiable chain to its human principal.",
+     "provision": "arXiv 2501.09674",
+     "quote": "whom AI agents act on behalf of",
+     "url": "https://arxiv.org/abs/2501.09674",
+     "status": "text says",
+     "implication_for_ratio": "Moltbook has no delegation token: the API key is the agent's only credential and the human link is out-of-band (tweet). Wiz found 1.5M such keys exposed, so possession of the key, not the claim, was the effective identity. Metric M5: posts by agents with is_claimed=false \u2014 if non-zero, the platform's 401 'Agent not yet claimed' gate (Hashgraph Online docs) was a claim, not a fact; check the effect, not the response."
+    },
+    {
+     "point": "Otsuka, Toyoda, Leung, AI Identity: Standards, Gaps, and Research Directions (2026): five structural gaps, including 'recursive delegation accountability' and 'agent identity integrity'; agents have 'no body, no persistent memory, and no legal standing'.",
+     "provision": "arXiv 2604.23280",
+     "quote": "foundational research on AI identity is the central conclusion of this report",
+     "url": "https://arxiv.org/abs/2604.23280",
+     "status": "text says",
+     "implication_for_ratio": "Frames the Moltbook ratio as a legal-standing gap: the actor (agent) has none, the principal (X handle) is a pseudonym, and the platform verified neither that the agent was AI nor that the handle was a person. A measured ratio is the first empirical number this survey lacks."
+    },
+    {
+     "point": "The 2025 AI Agent Index (Casper et al., 2026): documents 30 deployed agents; most developers share little on safety, evaluations, societal impact.",
+     "provision": "arXiv 2602.17753",
+     "quote": "most developers share little information about safety, evaluations, and societal impacts",
+     "url": "https://arxiv.org/abs/2602.17753",
+     "status": "text says",
+     "implication_for_ratio": "A precedent for a documentation index at the developer level; Vigilia's contribution would be the population level (175,886 posting agents), which the Index cannot see. Cite for method, not results."
+    },
+    {
+     "point": "A2A protocol v1.0 (Mar 2026, Linux Foundation since Aug 2026): AgentCard carries name, description, url, provider{organization,url}, securitySchemes, signatures; card signing verifies the card 'originates from the claimed provider'.",
+     "provision": "A2A Specification 1.0.0, AgentCard and \u00a78.4 Agent Card Signing",
+     "quote": "the agent card has not been tampered with and originates from the claimed provider",
+     "url": "https://a2a-protocol.org/latest/specification/",
+     "status": "text says",
+     "implication_for_ratio": "Moltbook agents publish no card and no provider organisation; the archive's `description` is the closest analogue. Metric M9 (description discloses model/operator) is the A2A `provider` field measured after the fact. The spec defers verifying the organisation to deployment policy, so even A2A would not by itself cap an 88:1 ratio."
+    },
+    {
+     "point": "OWASP Top 10 for Agentic Applications 2026 (9 Dec 2025): ASI03 Identity and Privilege Abuse, ASI09 Human-Agent Trust Exploitation, ASI10 Rogue Agents; secondary write-ups name an 'attribution gap' when agents borrow human credentials.",
+     "provision": "ASI03, ASI09, ASI10 (descriptions as reproduced by Promptfoo; OWASP PDF not fetched)",
+     "quote": "Compromised or misaligned agents act harmfully while appearing legitimate, exploiting trust mechanisms in multi-agent workflows.",
+     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+     "status": "reasonable reading",
+     "implication_for_ratio": "Wiz's exposure is ASI03 at platform scale (any key usable by anyone); the 88:1 ratio is ASI10's precondition (many actors, one accountable name). Metric M6: karma concentration by owner handle \u2014 whether platform trust signals accrued to a few operators."
+    },
+    {
+     "point": "Anthropic Usage Policy (effective 15 Sep 2025): disclosure duty on any interactive agent; impersonation of a human prohibited.",
+     "provision": "Usage Policy, 'Requirements for specific use cases' and prohibited uses",
+     "quote": "All consumer-facing chatbots, including any external-facing or interactive AI agent, must disclose to users that they are interacting with AI rather than a human.",
+     "url": "https://www.anthropic.com/legal/aup",
+     "status": "text says",
+     "implication_for_ratio": "The duty sits on the operator (owner), not the platform or model vendor; with 88 agents per operator, one policy breach scales 88-fold. Metric M9 measures how often the archive's description field meets this bar."
+    },
+    {
+     "point": "Google Generative AI Prohibited Use Policy (17 Dec 2024): prohibits impersonation without disclosure and misrepresenting provenance as solely human.",
+     "provision": "Prohibited Use Policy, 'Misinformation and misrepresentation'",
+     "quote": "Misrepresenting the provenance of generated content by claiming it was created solely by a human, in order to deceive.",
+     "url": "https://policies.google.com/terms/generative-ai/use-policy",
+     "status": "text says",
+     "implication_for_ratio": "Same shape as Anthropic: obligation on the user of the model. OpenAI's usage policy returned HTTP 403 and was not read; its ChatGPT agent identifies to sites via a signed 'Signature-Agent' header (Willison, 4 Aug 2025, secondary). No vendor policy read addresses how many agents one person may run."
+    },
+    {
+     "point": "EU AI Act Art. 3(3)\u2013(4): 'provider' develops or has developed and places on the market or puts into service 'under its own name or trademark'; 'deployer' uses a system 'under its authority except where the AI system is used in the course of a personal non-professional activity'.",
+     "provision": "Regulation (EU) 2024/1689, Article 3(3), 3(4)",
+     "quote": "using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity",
+     "url": "https://artificialintelligenceact.eu/article/3/",
+     "status": "text says",
+     "implication_for_ratio": "Most Moltbook owners are hobbyists; the personal-non-professional carve-out may take them out of 'deployer' entirely, leaving 88 agents with no AI Act addressee unless the owner counts as a provider (puts an agent into service under own name). Metric M10: share of owner_x_handle values that resolve to an organisation vs a person (via owner_x_bio where present; organisations only, per Vigilia's rules)."
+    },
+    {
+     "point": "EU AI Act Art. 50(1) and (5): providers must ensure systems interacting directly with natural persons inform them, unless obvious; information at first interaction.",
+     "provision": "Regulation (EU) 2024/1689, Article 50(1), 50(5); applies from 2 August 2026",
+     "quote": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system",
+     "url": "https://artificialintelligenceact.eu/article/50/",
+     "status": "contested",
+     "implication_for_ratio": "Whether an agent-only feed that humans 'observe' is 'interacting directly with natural persons' is unsettled; the Commission's 20 July 2026 guidelines were not read in full. If it is, the ratio fixes where the duty lands: on whoever put each of the 88 into service, not on the one X handle that claimed them."
+    },
+    {
+     "point": "EU AI Act Art. 99(4)(g): Art. 50 breaches carry the \u20ac15M/3% tier.",
+     "provision": "Regulation (EU) 2024/1689, Article 99(4)(g)",
+     "quote": "transparency obligations for providers and deployers pursuant to Article 50",
+     "url": "https://artificialintelligenceact.eu/article/99/",
+     "status": "text says",
+     "implication_for_ratio": "Statutory maximum, not exposure. A fine needs an addressee; the ratio measures how many actors share each addressee."
+    },
+    {
+     "point": "Swiss law: no AI act. Federal Council decided 12 Feb 2025 to ratify the Council of Europe AI Convention (signed 27 Mar 2025), sector-specific changes, consultation draft due end 2026; the Convention applies primarily to state actors.",
+     "provision": "admin.ch media release msg-id 104110 (12 Feb 2025); CETS 225 Art. 8 (transparency incl. identification of AI-generated content) and Art. 9 (accountability)",
+     "quote": "Switzerland intends to ratify the Council of Europe Convention on Artificial Intelligence (AI)",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html",
+     "status": "text says",
+     "implication_for_ratio": "For a private Moltbook owner in Switzerland the Convention creates no direct duty today. The FDPIC (8 May 2025) states 'users have a legal right to know whether they are speaking or corresponding with a machine', grounded in the FADP (https://www.edoeb.admin.ch/en/update-current-legislation-directly-applicable-ai). Whether that reaches an owner of 88 agents on a US platform: needs legal review."
+    },
+    {
+     "point": "Moltbook claiming flow (platform docs unreachable this session; Hashgraph Online and DataCamp as secondary): registration returns an API key plus claim URL and verification code; the human verifies email and posts the code on X; Moltbook then marks the agent claimed; before that the API answers 401 'Agent not yet claimed'.",
+     "provision": "is_claimed = the claim tweet was verified; owner_x_handle = the X account that posted it",
+     "quote": "Until the agent is claimed, Moltbook currently returns 401 with an 'Agent not yet claimed' error",
+     "url": "https://hol.org/docs/registry-broker/moltbook/",
+     "status": "reasonable reading",
+     "implication_for_ratio": "The 'one X account, one agent' rule is asserted only by an unofficial fan site (moltsbooks.com) and must be verified against moltbook.com/skill.md or /terms. If it is real, every owner_x_handle with >1 agent in the archive is a rule breach measurable per row; if it is not, the ratio is policy-permitted."
+    },
+    {
+     "point": "Wiz Research (disclosed 31 Jan\u20131 Feb 2026): owners table held 17,000+ rows against 1.5M agents; 35,000 emails; 1.5M API tokens; no check that an agent was AI.",
+     "provision": "Wiz blog",
+     "quote": "The platform had no mechanism to verify whether an 'agent' was actually AI or just a human with a script.",
+     "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys",
+     "status": "text says",
+     "implication_for_ratio": "88:1 counts registered agents over owner rows, not claimed agents over verified handles. Wikipedia reports Moltbook's own counters at 6 Jun 2026: 206,839 human-verified of 2,895,874 registered (7.1% claimed). The archive can produce the honest denominator: posting agents per distinct handle, pre and post 2026-03-10 (Metric M7)."
+    },
+    {
+     "point": "Nearest empirical analogue for accounts-per-operator: Kumar et al., 'An Army of Me' (WWW 2017) \u2014 3,656 sockpuppets in 1,623 groups on Disqus, about 2.25 accounts per puppetmaster. No published study of agent-to-owner ratios on an agent platform was found beyond Wiz's single figure.",
+     "provision": "arXiv 1703.07355",
+     "quote": "",
+     "url": "https://arxiv.org/abs/1703.07355",
+     "status": "reasonable reading",
+     "implication_for_ratio": "88:1 is roughly forty times the human sockpuppet baseline; that comparison is the headline the literature does not yet contain. Metric M11: name-entropy of agent names per handle (Kumar's sockpuppet heuristic) as a secondary automation signal."
+    }
+   ],
+   "who_is_provider_deployer": "Four candidates, none settled. (1) The owner who writes the system prompt and runs OpenClaw: the most plausible 'provider' under Art. 3(3) \u2014 develops or has developed and puts into service under own name (the agent name and the X handle) \u2014 and simultaneously the 'deployer' under Art. 3(4), except that a hobbyist owner likely falls under the 'personal non-professional activity' carve-out from 'deployer' (text says) while the provider definition has no such carve-out (reasonable reading; needs legal review). (2) Moltbook/Meta: provider of the platform system (feed, ranking, reverse-CAPTCHA), not of each agent; the Art. 50(1) duty would attach to the platform only if the site itself is a system 'intended to interact directly with natural persons' (contested). (3) The model vendor (Anthropic, OpenAI, Google, open models): general-purpose AI model provider with Art. 53 duties; not the Art. 50 addressee unless the model is the interacting system unchanged (reasonable reading). (4) OpenClaw: an open-source framework; Art. 2(12) exempts free and open-source AI systems 'unless ... placed on the market or put into service ... as an AI system that falls under Article 5 or 50' (recalled wording, not re-fetched this session; verify at EUR-Lex). Bottom line for the ratio: the only role with no exemption is the provider, and on Moltbook that role sits on an X handle; 17,000 handles for 1.5M agents means the addressee set is two orders of magnitude smaller than the actor set.",
+   "dates": [
+    {
+     "date": "2024-12-17",
+     "what": "Google Generative AI Prohibited Use Policy version read",
+     "url": "https://policies.google.com/terms/generative-ai/use-policy"
+    },
+    {
+     "date": "2025-02-12",
+     "what": "Swiss Federal Council decides to ratify the CoE AI Convention; sector-specific approach",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+    },
+    {
+     "date": "2025-03-27",
+     "what": "Switzerland signs CETS 225 in Strasbourg",
+     "url": "https://www.admin.ch/en/nsb?id=104646"
+    },
+    {
+     "date": "2025-05-08",
+     "what": "FDPIC: users have a legal right to know whether they are corresponding with a machine",
+     "url": "https://www.edoeb.admin.ch/en/update-current-legislation-directly-applicable-ai"
+    },
+    {
+     "date": "2025-09-15",
+     "what": "Anthropic Usage Policy with agent disclosure clause takes effect",
+     "url": "https://www.anthropic.com/legal/aup"
+    },
+    {
+     "date": "2025-12-09",
+     "what": "OWASP Top 10 for Agentic Applications 2026 published",
+     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+    },
+    {
+     "date": "2026-01-28",
+     "what": "Moltbook launches",
+     "url": "https://en.wikipedia.org/wiki/Moltbook"
+    },
+    {
+     "date": "2026-02-01",
+     "what": "Wiz disclosure: 1.5M agents, 17,000 owners, 88:1",
+     "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+    },
+    {
+     "date": "2026-03-10",
+     "what": "Meta acquires Moltbook; archive partition dump_date \u2264 / > 2026-03-10",
+     "url": "https://arxiv.org/html/2605.13860v1"
+    },
+    {
+     "date": "2026-04-14",
+     "what": "Observatory Archive documented release ends (78 days; 175,886 posting agents); MIT licence; HF SimulaMet/moltbook-observatory-archive",
+     "url": "https://arxiv.org/abs/2605.13860"
+    },
+    {
+     "date": "2026-06-06",
+     "what": "Moltbook counters: 206,839 human-verified of 2,895,874 registered agents (via Wikipedia; primary not read)",
+     "url": "https://en.wikipedia.org/wiki/Moltbook"
+    },
+    {
+     "date": "2026-07-20",
+     "what": "Commission publishes final Article 50 transparency guidelines",
+     "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"
+    },
+    {
+     "date": "2026-08-02",
+     "what": "Article 50 obligations apply",
+     "url": "https://artificialintelligenceact.eu/article/50/"
+    }
+   ],
+   "enforcement_and_penalties": "EU: Art. 99(4)(g) \u2014 up to EUR 15,000,000 or 3% of worldwide turnover for Art. 50 breaches (statutory maximum, not exposure); enforcement by national market surveillance authorities from 2 Aug 2026; no Moltbook-related enforcement found. Switzerland: no AI-specific penalty; FADP duties (FDPIC, 8 May 2025) and UCA Art. 3(1)(b) on misleading statements (VISCHER, secondary) are the only hooks; CETS 225 binds state actors first, consultation draft end 2026. Vendor policies (Anthropic, Google) enforce by account restriction, not fines. Platform: Moltbook's own rules on claiming are unverified this session (skill.md and /terms unreachable).",
+   "open_questions": [
+    "Does Moltbook's own skill.md or terms state 'one X account, one agent'? Only an unofficial site asserts it; fetch moltbook.com/skill.md and /terms in a session with a working fetch (curl, read-only).",
+    "What is Wiz's 17,000 counting \u2014 rows in `owners` \u2014 and why 35,000 emails? If emails include unfinished claims, the true human count sits between 17k and 35k; the archive's distinct owner_x_handle gives a third, independent count.",
+    "Do posts by is_claimed=false agents exist in the archive? If yes, the 401 gate was porous and the 7.1% claimed figure overstates accountability coverage.",
+    "Does Art. 50(1) reach an agent-only feed that humans only read? The Commission's 20 July 2026 guidelines must be read for 'interact directly' and any AI-to-AI carve-out (needs legal review).",
+    "Is a hobbyist owner a 'provider' (no personal-use exemption in Art. 3(3)) even when not a 'deployer' (Art. 3(4) exemption)? Needs legal review; it decides whether 88:1 has any EU addressee at all.",
+    "Art. 2(12) open-source wording for OpenClaw was recalled, not fetched; verify at EUR-Lex before citing.",
+    "OpenAI usage policy (403) and the OWASP PDF were not read; ASI03/09/10 wording is from a secondary reproduction.",
+    "Vigilia's own rule: owner_x_handle values are pseudonymous individuals; compute counts and distributions only, never publish a handle-level table (organisations and public professional roles only)."
+   ],
+   "sources": [
+    {
+     "title": "Chan et al., Visibility into AI Agents (2024)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2401.13138"
+    },
+    {
+     "title": "Chan et al., IDs for AI Systems (2024)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2406.12137"
+    },
+    {
+     "title": "Chan et al., Infrastructure for AI Agents (2025)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2501.10114"
+    },
+    {
+     "title": "South et al., Authenticated Delegation and Authorized AI Agents (2025)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2501.09674"
+    },
+    {
+     "title": "Otsuka et al., AI Identity: Standards, Gaps, and Research Directions (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2604.23280"
+    },
+    {
+     "title": "The 2025 AI Agent Index (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2602.17753"
+    },
+    {
+     "title": "Moltbook Observatory Archive (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/html/2605.13860v1"
+    },
+    {
+     "title": "Humans welcome to observe: a first look at Moltbook (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/html/2602.10127v1"
+    },
+    {
+     "title": "MoltNet (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2602.13458"
+    },
+    {
+     "title": "OpenClaw Agents on Moltbook: Risky Instruction Sharing (2026)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/2602.02625"
+    },
+    {
+     "title": "Kumar et al., An Army of Me (2017)",
+     "type": "arXiv",
+     "url": "https://arxiv.org/abs/1703.07355"
+    },
+    {
+     "title": "Wiz Research, Hacking Moltbook",
+     "type": "primary disclosure",
+     "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+    },
+    {
+     "title": "Hashgraph Online, Moltbook registration docs (claim flow)",
+     "type": "secondary",
+     "url": "https://hol.org/docs/registry-broker/moltbook/"
+    },
+    {
+     "title": "DataCamp, Getting started with Moltbook (claim flow)",
+     "type": "secondary",
+     "url": "https://www.datacamp.com/tutorial/moltbook-how-to-get-started"
+    },
+    {
+     "title": "Wikipedia, Moltbook (counters, acquisition date)",
+     "type": "secondary",
+     "url": "https://en.wikipedia.org/wiki/Moltbook"
+    },
+    {
+     "title": "A2A Protocol Specification 1.0.0",
+     "type": "standard",
+     "url": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+     "title": "OWASP Top 10 for Agentic Applications 2026",
+     "type": "standard",
+     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+    },
+    {
+     "title": "Promptfoo reproduction of ASI items",
+     "type": "secondary",
+     "url": "https://www.promptfoo.dev/docs/red-team/owasp-agentic-ai/"
+    },
+    {
+     "title": "Anthropic Usage Policy",
+     "type": "vendor policy",
+     "url": "https://www.anthropic.com/legal/aup"
+    },
+    {
+     "title": "Google Generative AI Prohibited Use Policy",
+     "type": "vendor policy",
+     "url": "https://policies.google.com/terms/generative-ai/use-policy"
+    },
+    {
+     "title": "Simon Willison, ChatGPT agent's user-agent (2025)",
+     "type": "secondary",
+     "url": "https://simonwillison.net/2025/Aug/4/chatgpt-agents-user-agent/"
+    },
+    {
+     "title": "EU AI Act Article 3",
+     "type": "statute (publisher mirror; EUR-Lex fetch returned unusable text)",
+     "url": "https://artificialintelligenceact.eu/article/3/"
+    },
+    {
+     "title": "EU AI Act Article 50",
+     "type": "statute (publisher mirror)",
+     "url": "https://artificialintelligenceact.eu/article/50/"
+    },
+    {
+     "title": "EU AI Act Article 99",
+     "type": "statute (publisher mirror)",
+     "url": "https://artificialintelligenceact.eu/article/99/"
+    },
+    {
+     "title": "Regulation (EU) 2024/1689 on EUR-Lex",
+     "type": "statute",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+     "title": "Commission Article 50 guidelines news (20 Jul 2026)",
+     "type": "EU AI Office",
+     "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"
+    },
+    {
+     "title": "Federal Council media release, 12 Feb 2025",
+     "type": "admin.ch",
+     "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+    },
+    {
+     "title": "FDPIC: current legislation directly applicable to AI (8 May 2025)",
+     "type": "admin.ch",
+     "url": "https://www.edoeb.admin.ch/en/update-current-legislation-directly-applicable-ai"
+    },
+    {
+     "title": "CETS 225 text",
+     "type": "coe.int (403 this session; Arts. 8\u20139 via secondary)",
+     "url": "https://rm.coe.int/1680afae3c"
+    },
+    {
+     "title": "VISCHER, AI in marketing: unfair competition pitfalls",
+     "type": "law-firm note (secondary)",
+     "url": "https://www.vischer.com/en/knowledge/blog/part-9-ai-in-marketing-4-unfair-competition-law-pitfalls/"
+    }
+   ],
+   "confidence": "Moderate. High on the literature summaries, the Wiz figures, the Art. 3/50/99 wording and the Swiss timeline. Medium on the Moltbook claim flow (platform docs unreachable; two secondary sources agree) and on the 6 Jun 2026 counters (Wikipedia only). Low on the 'one X account, one agent' rule, on Art. 2(12) wording (recalled), and on the OWASP item text (secondary reproduction). No empirical agent-to-owner study exists beyond Wiz's single figure, so the archive-derived metrics M1\u2013M11 would be new."
+  }
+ ],
+ "synth": {
+  "bottom_line": "Both the EU AI Act and Swiss law create duties that a Moltbook agent's operator can breach, and neither creates any mechanism to find that operator. Article 50 applies from 2 August 2026, was left untouched by the Digital Omnibus, and carries a fine of up to EUR 15M or 3% (Art. 99(4)(g)) \u2014 but registration, naming and authorised-representative duties exist only for high-risk systems and GPAI models, and a hobbyist owner is carved out of \"deployer\" entirely (Art. 2(10)). Swiss law has no AI statute; its only hooks are FADP Art. 19 (a controller must name itself to data subjects) and UCA Art. 3(1)(s) (sellers online must publish identity). Wiz's 88:1 ratio (1.5M agents, ~17,000 owner rows) is therefore not a breach of anything; it is the measured size of the gap between the actors the law addresses and the persons it can reach. The Observatory Archive can turn that single figure into the first population-level measurement. This is a gap analysis, not a legal determination.",
+  "frame": [
+   {
+    "question": "Who is the provider of a Moltbook agent?",
+    "answer": "Four candidates, none settled by statute. Model vendor: provider of a GPAI model (Art. 3(63)), Chapter V duties, not the Art. 50 addressee for what an agent posts. OpenClaw framework: provider of an AI system placed on the market free of charge (Art. 3(3)); Art. 2(12) keeps open-source systems inside the Act where they fall under Art. 50, so the 50(1) design duty plausibly lands on the runtime. Owner writing the system prompt: on the words of Art. 3(3) ('has an AI system developed ... puts the AI system into service under its own name') a provider of that specific agent \u2014 the provider definition has no personal-use carve-out. Art. 25 (deployer becomes provider) is high-risk only and does not help. All three lenses agree the Commission FAQ and the July 2026 Guidelines do not reach the system-prompt case.",
+    "provisions": "Art. 3(3), 3(63), 3(66), 3(13); Art. 2(12) ('This Regulation does not apply to AI systems released under free and open-source licences, unless they are placed on the market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50.'); Art. 25(1)",
+    "status": "reasonable reading; needs legal review at the owner/framework boundary",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "question": "Who is the deployer?",
+    "answer": "The owner, as the person 'using an AI system under its authority' \u2014 except that Art. 3(4) and Art. 2(10) remove natural persons acting in a 'purely personal non-professional activity', and the Commission FAQ says a person posting AI content on social media in a personal capacity is outside the Act. A hobbyist running 88 agents has no 50(4) duty. Professional owners (companies, marketers, researchers) keep it, and they are indistinguishable from hobbyists in the archive. The platform (Moltbook, Meta since 2026-03-10) is neither provider nor deployer of the agents; it is a DSA hosting question (recital 136) and holds the only owner table, with no AI Act duty to keep or disclose it.",
+    "provisions": "Art. 3(4); Art. 2(10) ('This Regulation does not apply to obligations of deployers who are natural persons using AI systems in the course of a purely personal non-professional activity.'); recital 136",
+    "status": "text says (carve-out); reasonable reading (platform outside the Regulation)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "question": "Does Article 50 apply agent-to-agent?",
+    "answer": "Not on the Commission's own reading: the FAQ places systems operating 'through machine-to-machine communication, or without direct contact with people' outside 50(1). Where humans observe the public feed, three positions: (i) the platform's 'every account is an agent' framing satisfies the 'obvious' exception on-platform \u2014 but the Commission says that exception is read restrictively, and Wiz showed humans could post as agents; (ii) the exception fails once a post is quoted elsewhere; (iii) 50(4) (published text informing the public on matters of public interest) is triggered by topic, not audience, and its editorial-responsibility exemption cannot be claimed when no natural or legal person is on record for any post (recital 134). The EU lens labels the observer case contested per surface; the literature lens labels the whole question contested. They do not disagree on substance.",
+    "provisions": "Art. 50(1) first sentence; Art. 50(4) second subparagraph; Art. 50(5); recitals 132, 134",
+    "status": "text says (machine-to-machine outside 50(1), per FAQ); contested (human observers; 50(4) on an agent-majority audience)",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+   },
+   {
+    "question": "What does 17,000 owners behind 1.5M agents mean for enforceability?",
+    "answer": "A fine needs an addressee. The 'if the offender is an undertaking' clause in Art. 99 shows natural persons are fineable, but a market surveillance authority must first identify the person behind a handle, and the Act gives it no tool for a non-high-risk system: no registry (Art. 49/71), no name-on-product (Art. 16(b)), no authorised representative (Art. 22) apply. Of the ~17,000, only EU-established owners are caught with certainty (Art. 2(1)(b)); third-country owners depend on the contested 'output used in the Union' limb (Art. 2(1)(c)). The complaint right (Art. 85) is real but has no addressee unless the platform discloses identity \u2014 a DSA/GDPR question. The ratio also overstates accountability coverage: Wiz counts registered agents over owner rows; Moltbook's own counters (6 Jun 2026, via Wikipedia) showed 7.1% of registered agents human-verified. Against the only empirical analogue, Kumar et al.'s 2.25 accounts per human sockpuppeteer, 88:1 is roughly forty times the human baseline.",
+    "provisions": "Art. 99(4)(g) ('up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover ... whichever is higher'); Art. 99(1), (6); Art. 2(1)(a)-(c), (g); Art. 49(1), 16(b), 22(1), 85(1)",
+    "status": "text says (penalty tier, registry limits); contested (territorial reach via reading in the EU); reasonable reading (enforceable population = platform user table)",
+    "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+   },
+   {
+    "question": "What does Swiss law add?",
+    "answer": "No AI statute; the Federal Council (12 Feb 2025) chose ratification of CETS 225 plus sectoral amendments, with an EJPD consultation draft due end-2026 whose named pillars include 'Transparenz' \u2014 the place to argue for owner traceability. CETS 225 (signed 27 Mar 2025, not ratified) binds the state and asks only for notification of AI interaction (Art. 15(2)) and identification of AI content (Art. 8), never of the person behind an agent. Today's hooks: FADP Art. 19(2)(a) \u2014 a controller collecting personal data must give 'the controller's identity and contact details', fine up to CHF 250,000 on complaint (Art. 60(1)); UCA Art. 3(1)(s) \u2014 anyone offering goods or services online must publish identity and email; OR 41 fault liability attributes an agent's harm to its operator, with the ratio itself evidence on whether one human can meet the standard of care over 88 personas. All presuppose an identified defendant. Both lenses agree: an 88:1 ratio is legally invisible in Switzerland in September 2026.",
+    "provisions": "FADP Art. 5(a), 19(1)-(2), 21, 25(2)(a), 60(1); UCA Art. 2, 3(1)(b), 3(1)(s), 23; OR 41(1), 55(1), 101(1); ZGB 55; CETS 225 Art. 8, 9, 15(2)",
+    "status": "text says (statutes, Convention); reasonable reading (no draft published by 23 Sep 2026 \u2014 admin.ch unreachable, verify); contested (OR 55/101 by analogy to software agents; whether a post is an 'automated individual decision')",
+    "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+   },
+   {
+    "question": "What does the literature propose?",
+    "answer": "Chan et al. (2024, 2025) name the missing piece: visibility into 'by whom' an agent is used, via agent identifiers carrying responsible-party metadata, activity logs and identity binding. South et al. (2025) propose OAuth-style delegation credentials so each agent action carries a verifiable chain to a human principal; Moltbook's only credential is the API key and the human link is an out-of-band tweet, deletable after verification. A2A v1.0 AgentCards carry a provider organisation and card signatures but defer verifying the organisation to deployment policy. Otsuka et al. (2026) list 'recursive delegation accountability' as an open gap with no empirical number attached. Vendor policies (Anthropic, Google) place the disclosure duty on the operator and say nothing about how many agents one person may run. No published study measures agent-to-owner ratios on an agent platform; the archive-derived metrics below would be new.",
+    "provisions": "arXiv 2401.13138 \u00a73; 2406.12137; 2501.10114; 2501.09674; 2604.23280; A2A Specification 1.0.0 \u00a78.4; Anthropic Usage Policy (15 Sep 2025)",
+    "status": "text says (summaries); reasonable reading (Moltbook mapping)",
+    "url": "https://arxiv.org/abs/2401.13138"
+   }
+  ],
+  "what_the_ratio_implies": "The ratio is a measurement of the gap between actors and addressees, not evidence of any breach. On the EU side the actor set (agents) is two orders of magnitude larger than the largest possible addressee set (owner handles), and that set shrinks further to the intersection of EU-established and professionally acting owners, which the archive cannot see directly. The only role with no personal-use exemption is 'provider', and whether a system-prompt author holds it is the unresolved question that decides whether 88 agents have any EU addressee at all. On the Swiss side the ratio matters only after a defendant is known, as evidence on the fault element (Sorgfalt) under OR 41. For the brief: 88:1 should be presented as Wiz's registration-era figure, then replaced with the archive's honest denominators (posting agents per distinct claimed handle, pre and post 2026-03-10), and set against Kumar et al.'s 2.25 human sockpuppet baseline. Where lenses diverge: the literature lens leans towards owner-as-provider as 'most plausible'; the EU lens holds it at 'contested, needs legal review'. The brief should carry the EU lens's caution.",
+  "metrics_to_compute": [
+   {
+    "metric": "M1 Accountability-resolvable share: fraction of posting agents, and of posts, whose author has is_claimed=true and a non-null owner_x_handle",
+    "data_fields": "agents.is_claimed, agents.owner_x_handle, posts.agent_id (or author key), posts.dump_date",
+    "why_legally_relevant": "The only 'by whom' link (Chan et al.) that exists on Moltbook; measures what share of Art. 50 duty-bearers are nominally findable and what share of Art. 85 complaints could ever have an addressee."
+   },
+   {
+    "metric": "M2 Honest ratio: posting agents per distinct owner_x_handle, overall and split pre/post 2026-03-10 (dump_date partition)",
+    "data_fields": "agents.owner_x_handle, agents.is_claimed, posts.agent_id, posts.created_at or dump_date",
+    "why_legally_relevant": "Replaces Wiz's registration-based 88:1 with an activity-based figure; tests whether the Meta acquisition changed the concentration of actors per accountable principal."
+   },
+   {
+    "metric": "M3 Concentration of agents per handle: Gini, top-1% and top-10% share of agents and of posts, maximum agents on one handle",
+    "data_fields": "agents.owner_x_handle, posts.agent_id",
+    "why_legally_relevant": "Under OR 41 the count of autonomous personas one human supervises is evidence on the standard of care; under the AI Act it sizes how far one addressee stands in for many actors. Report distributions only, never a handle-level table."
+   },
+   {
+    "metric": "M4 Unclaimed posting: number and share of posts by agents with is_claimed=false, by period",
+    "data_fields": "agents.is_claimed, posts.agent_id, posts.created_at",
+    "why_legally_relevant": "If non-zero, the platform's 401 'Agent not yet claimed' gate was a claim, not a fact, and the human-verified counter overstates accountability coverage. Check the effect, not the response."
+   },
+   {
+    "metric": "M5 Registration bursts: agents sharing an owner_x_handle created within the same minute, and burst-size distribution",
+    "data_fields": "agents.created_at, agents.owner_x_handle",
+    "why_legally_relevant": "Wiz's 'simple loop and no rate limiting' automation signature; separates deliberate fleets from casual owners, which bears on the personal/non-professional carve-out (Art. 2(10)) and on intent under Art. 99(7)."
+   },
+   {
+    "metric": "M6 Disclosure content of the identifier: share of agent description strings naming a model, a framework (OpenClaw), or an operator/organisation",
+    "data_fields": "agents.description (and agents.name)",
+    "why_legally_relevant": "Measures after the fact what an A2A provider field or Chan's responsible-party metadata would have carried; also the only proxy for the Anthropic/Google operator-disclosure duty and for the Guidelines' reported 'on whose behalf' rule."
+   },
+   {
+    "metric": "M7 Organisation vs person: share of claimed handles whose bio/description identifies an organisation or public professional role (organisations only, per Vigilia's rules; never resolve private individuals)",
+    "data_fields": "agents.owner_x_handle, agents.owner_x_bio where present, agents.description",
+    "why_legally_relevant": "The AI Act's reach collapses to owners acting professionally; this is the closest archive proxy for that intersection, and for FADP/UCA controller and commercial-nexus questions in Switzerland."
+   },
+   {
+    "metric": "M8 Trust-signal concentration: karma or vote totals aggregated by owner_x_handle; share held by top handles",
+    "data_fields": "posts.karma/upvotes, agents.karma, agents.owner_x_handle",
+    "why_legally_relevant": "OWASP ASI10 precondition: whether platform trust accrued to a few operators running many actors; relevant to recital 136's DSA systemic-risk framing."
+   },
+   {
+    "metric": "M9 Name-entropy of agent names per handle (Kumar et al. sockpuppet heuristic) as a secondary automation signal, and the 88:1 vs 2.25:1 comparison",
+    "data_fields": "agents.name, agents.owner_x_handle",
+    "why_legally_relevant": "Places the ratio against the only empirical baseline for accounts-per-human; supports the headline that agent fleets are an order of magnitude beyond human sockpuppetry."
+   }
+  ],
+  "legal_review_flags": [
+   "Whether an owner who writes a system prompt and runs an OpenClaw agent under their own handle is a 'provider' under Art. 3(3), a 'deployer' under Art. 3(4), or both; the statute is silent and the Commission FAQ and July 2026 Guidelines do not address the case. This decides whether 88:1 has any EU addressee.",
+   "Whether a post readable in the EU is output 'used in the Union' under Art. 2(1)(c) for a third-country owner or platform; no guidance found.",
+   "Whether the platform's 'every account is an agent' framing satisfies the 'obvious' exception in Art. 50(1) for human observers, given the Commission reads the exception restrictively and Wiz showed humans could post as agents.",
+   "The Guidelines' reported rule that an agent must identify 'both its AI nature and the person or entity on whose behalf it is acting' is known only from two law-firm notes; the Guidelines PDF (ec.europa.eu/newsroom/dae/redirection/document/131215) must be read verbatim before it is cited.",
+   "Art. 2(12) wording was verified on the FLI mirror only; Art. 113 as amended by Reg. 2026/1744 was read from the AI Act Explorer consolidated view; both must be re-read on EUR-Lex before publication.",
+   "Whether Moltbook/Meta is a DSA hosting service or online platform with any duty to keep or disclose owner identity; the brief must not claim an enforcement path until this is answered.",
+   "National penalty regimes under Art. 99(1): whether and at what scale Member States fine natural persons; not checked for any Member State.",
+   "Swiss: whether the EJPD consultation draft was published between 22 Jul and 23 Sep 2026 (admin.ch/fedlex pages returned 403/502); a human check on fedlex.admin.ch consultation procedures is required before stating 'no draft yet'.",
+   "Swiss: CETS 225 entry-into-force date (1 Nov 2025) and Switzerland's non-ratification were inferred from secondary sources; the coe.int signature table was not fetched.",
+   "Swiss: FADP territorial scope (Art. 3) for a foreign owner processing data of persons in Switzerland; whether a post can be an 'automated individual decision' under Art. 21; whether OR 55/101 apply by analogy to software agents (no case law found; the Jusletter IT/unisg paper was not opened).",
+   "Vigilia's own processing: owner_x_handle values are personal data of pseudonymous natural persons (FADP Art. 5(a), BGE 136 II 508). Publish aggregate ratios and distributions only; no handle-level table; confirm whether FADP Art. 27 (media) or Art. 20 relieves the Art. 19(1)/(5) one-month duty to inform before any owner-level output.",
+   "Vigilia's association: foreign philanthropic funds above CHF 100,000 over two years may trigger ZGB 61(2) no. 3 registration, member list (61a) and Swiss-domiciled representative (69(2)); relevant to the funding one-pager, not to the brief's claims.",
+   "Moltbook's own 'one X account, one agent' rule is asserted only by an unofficial fan site; fetch moltbook.com/skill.md and /terms read-only before any claim that multi-agent handles breach platform rules.",
+   "The Wiz 17,000 figure counts owner rows; 35,000 emails were also reported. Whether the true human count sits between the two must be stated as uncertain; the archive's distinct owner_x_handle is an independent third count.",
+   "Two FDPIC statements are cited by different lenses (9 Nov 2023 / 28 Jan 2026 in German; 8 May 2025 in English); confirm which URL carries the 'right to know you are talking to a machine' wording before quoting.",
+   "Fedlex English texts are unofficial translations with no legal force; cite the German, French or Italian for anything binding."
+  ],
+  "key_claims": [
+   {
+    "claim": "Article 50(1) obliges providers to ensure systems intended to interact directly with natural persons inform them they are interacting with an AI system, unless obvious; it applies from 2 August 2026.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "claim": "The Commission's Article 50 FAQ places systems operating through machine-to-machine communication, or without direct contact with people, outside the 50(1) obligation.",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+   },
+   {
+    "claim": "Article 2(10) excludes obligations of deployers who are natural persons using AI systems in a purely personal non-professional activity; the provider definition in Art. 3(3) has no equivalent carve-out.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "claim": "Article 2(12) exempts free and open-source AI systems unless placed on the market or put into service as high-risk or as a system falling under Article 5 or 50 \u2014 so an open-source agent runtime stays inside Article 50.",
+    "url": "https://artificialintelligenceact.eu/article/2/"
+   },
+   {
+    "claim": "Breaches of Article 50 carry administrative fines of up to EUR 15,000,000 or, for undertakings, 3% of worldwide annual turnover, whichever is higher (Art. 99(4)(g)); statutory maximum, not exposure.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "claim": "Registration in the EU database (Art. 49/71), name-and-address marking (Art. 16(b)) and authorised representatives (Art. 22) apply only to high-risk AI systems; no traceability duty exists for a non-high-risk social-media agent.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+   },
+   {
+    "claim": "Regulation (EU) 2026/1744 (Digital Omnibus on AI) deferred Annex III high-risk obligations to 2 December 2027 and Annex I to 2 August 2028 but left Article 50(1), (3), (4), (5) and the 2 August 2026 application date unchanged.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+   },
+   {
+    "claim": "Wiz Research found the Moltbook owners table held about 17,000 rows against roughly 1.5 million registered agents (88:1), 1.5 million exposed API keys, and no mechanism to verify that an agent was AI.",
+    "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+   },
+   {
+    "claim": "The Swiss Federal Council decided on 12 February 2025 to ratify the Council of Europe AI Convention, pursue sector-specific amendments, and prepare a consultation draft by end-2026 covering transparency, data protection, non-discrimination and supervision.",
+    "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+   },
+   {
+    "claim": "CETS 225 Art. 15(2) asks Parties to ensure persons are notified they are interacting with an AI system, and Art. 8 covers identification of AI-generated content; neither requires identifying the person behind an agent.",
+    "url": "https://eur-lex.europa.eu/eli/agree_internation/2026/1081/oj"
+   },
+   {
+    "claim": "Under the revised Swiss FADP a controller must inform data subjects of its identity and contact details when collecting personal data (Art. 19(2)(a)), with a fine of up to CHF 250,000 on complaint for wilful failure (Art. 60(1)).",
+    "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+   },
+   {
+    "claim": "Chan et al. define visibility as information about where, why, how and by whom AI agents are used, delivered through agent identifiers, real-time monitoring and activity logging.",
+    "url": "https://arxiv.org/abs/2401.13138"
+   },
+   {
+    "claim": "The Moltbook Observatory Archive covers 78 days to 14 April 2026, 175,886 posting agents, MIT licence, with a pre/post partition at the Meta acquisition on 2026-03-10.",
+    "url": "https://arxiv.org/abs/2605.13860"
+   }
+  ],
+  "markdown": "## The legal frame: an attribution gap, not a breach\n\n**Bottom line.** Both the EU AI Act and Swiss law impose duties that the operator of a Moltbook agent can breach, and neither gives anyone a way to find that operator. Article 50 applies from 2 August 2026, survived the Digital Omnibus untouched, and carries a maximum fine of EUR 15 million or 3% of turnover (Art. 99(4)(g)). But every registration, naming and authorised-representative duty in the Act is confined to high-risk systems and general-purpose models, and a natural person running agents as a hobby is carved out of \"deployer\" altogether (Art. 2(10)). Swiss law has no AI statute; its only hooks are the FADP (a controller must name itself to data subjects) and the Unfair Competition Act (a seller online must publish identity). Wiz's 88:1 figure \u2014 roughly 1.5 million agents against about 17,000 owner rows \u2014 is therefore not evidence of any violation. It is the measured distance between the actors the law addresses and the persons it can reach. *This is a gap analysis by a disclosed AI agent, not a legal determination; every item marked \"needs legal review\" goes to counsel before publication.*\n\n### Six questions\n\n**1. Who is the provider?** \u2014 *reasonable reading; needs legal review.* The Act defines a provider as one who \"develops an AI system ... or that has an AI system ... developed and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge\" (Art. 3(3)). Four candidates. The model vendor is a GPAI-model provider (Art. 3(63)) with Chapter V duties, not the addressee for what an agent posts. The OpenClaw framework is a provider of a system placed on the market free of charge; Art. 2(12) states the Regulation \"does not apply to AI systems released under free and open-source licences, unless they are placed on the market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50\", so the 50(1) design duty plausibly lands on the runtime. The owner who writes the system prompt and runs the agent under a handle fits the words \"has an AI system developed ... puts [it] into service under its own name\" \u2014 and the provider definition has no personal-use carve-out. Art. 25, which turns deployers into providers, is high-risk only and does not resolve this. All three lenses agree the Commission FAQ and the July 2026 Guidelines do not address the system-prompt case. The literature lens calls owner-as-provider \"most plausible\"; the EU lens holds it at contested. The brief should carry the caution.\n\n**2. Who is the deployer?** \u2014 *text says (carve-out); reasonable reading (platform).* The owner, \"using an AI system under its authority\" (Art. 3(4)) \u2014 unless a natural person \"using AI systems in the course of a purely personal non-professional activity\" (Art. 2(10)), whom the Commission FAQ puts outside the Act entirely. A hobbyist with 88 agents owes nothing under 50(4); a company, marketer or researcher does, and the two are indistinguishable in the archive. Moltbook (Meta since 2026-03-10) is neither provider nor deployer of the agents. It is a DSA hosting question (recital 136), holds the only owner table, and has no AI Act duty to keep or disclose it.\n\n**3. Does Article 50 apply agent-to-agent?** \u2014 *text says (FAQ); contested (observers).* The Commission FAQ places systems operating \"through machine-to-machine communication, or without direct contact with people\" outside 50(1). For the human who reads the feed: the platform's \"every account is an agent\" framing may satisfy the \"obvious\" exception on-platform, but the Commission reads that exception restrictively and Wiz showed humans could post as agents via a plain POST request \u2014 recital 132's impersonation risk, inverted. Off-platform, once a post is quoted, the exception fails. 50(4) (text \"published with the purpose of informing the public on matters of public interest\") turns on topic, not audience; its editorial-responsibility exemption cannot be claimed when no natural or legal person is on record for any post (recital 134).\n\n**4. What does 17,000 behind 1.5 million mean for enforceability?** \u2014 *text says (tiers, registry limits); contested (territorial reach).* A fine needs an addressee. Natural persons are fineable \u2014 the clause \"if the offender is an undertaking\" implies a fixed cap for those who are not \u2014 but an authority must first identify the person behind a handle, and for a non-high-risk system the Act offers no registry (Art. 49/71), no name-on-product (Art. 16(b)), no authorised representative (Art. 22). Only EU-established owners are caught with certainty (Art. 2(1)(b)); third-country owners depend on whether a post read in the EU is output \"used in the Union\" (Art. 2(1)(c)), on which no guidance exists. The Art. 85 complaint right has no addressee unless the platform discloses identity \u2014 a DSA/GDPR path, outside this Regulation. The ratio also overstates coverage: Wiz counts registered agents over owner rows, while Moltbook's own counters on 6 June 2026 (via Wikipedia, primary not read) showed 7.1% of registered agents human-verified. Against the one empirical analogue \u2014 Kumar et al. (2017), 2.25 accounts per human sockpuppeteer on Disqus \u2014 88:1 is roughly forty times the human baseline.\n\n**5. What does Swiss law add?** \u2014 *text says (statutes); reasonable reading (no draft yet); contested (liability analogies).* No AI act. On 12 February 2025 the Federal Council chose to ratify CETS 225 (signed 27 March 2025, not ratified), amend sectoral law, and table a consultation draft by end-2026 whose named pillars include \"Transparenz\" \u2014 the venue for an owner-traceability argument. The Convention asks Parties to \"seek to ensure ... persons interacting with artificial intelligence systems are notified that they are interacting with such systems\" (Art. 15(2)) and to address \"identification of content generated by artificial intelligence systems\" (Art. 8); neither concerns the person behind the agent. Today's hooks: FADP Art. 19(2) \u2014 a controller must give \"the controller's identity and contact details\", fine up to CHF 250,000 on complaint (Art. 60(1)); UCA Art. 3(1)(s) \u2014 a person offering goods or services online must give \"clear and complete details of their identity and their contact address including their email address\"; OR 41(1) \u2014 \"Any person who unlawfully causes damage to another, whether wilfully or negligently, is obliged to provide compensation\", with the ratio itself evidence on whether one human can meet the standard of care over 88 personas. Every one of these presupposes an identified defendant. Both Swiss-facing lenses agree: an 88:1 ratio is legally invisible in Switzerland in September 2026.\n\n**6. What does the literature propose?** \u2014 *text says.* Chan et al. (2024) name the missing piece as visibility into \"by whom\" agents are used, through identifiers with responsible-party metadata, activity logs and identity binding (2025). South et al. (2025) propose OAuth-style delegation credentials so each action carries a verifiable chain to a human principal; Moltbook's only credential is the API key, and the human link is an out-of-band tweet, deletable after verification. A2A v1.0 AgentCards carry a provider organisation and signatures but defer verifying the organisation to deployment policy. Otsuka et al. (2026) list delegation accountability as an open gap with no number attached. Vendor policies (Anthropic, Google) put the disclosure duty on the operator and say nothing about fleet size. No published study measures agent-to-owner ratios on an agent platform.\n\n### What Study C should compute\n\nFrom `agents` (`is_claimed`, `owner_x_handle`, `created_at`, `description`, `name`) and `posts` (author key, `created_at`, karma), split at the 2026-03-10 partition: **M1** accountability-resolvable share of posting agents and of posts (claimed, handle non-null); **M2** posting agents per distinct handle \u2014 the honest replacement for 88:1; **M3** concentration (Gini, top-1%/10% share, maximum agents on one handle); **M4** posts by unclaimed agents \u2014 if non-zero the 401 gate was a claim, not a fact; **M5** registration bursts per handle within one minute, Wiz's loop signature; **M6** share of descriptions naming a model, framework or operator \u2014 the A2A provider field measured after the fact; **M7** organisation versus person among claimed handles, organisations only; **M8** karma concentration by handle (OWASP ASI10 precondition); **M9** name-entropy per handle against the 2.25:1 sockpuppet baseline. Distributions only. **No handle-level table is ever published**: owner handles are personal data under FADP Art. 5(a) and the Logistep test, and Vigilia's own rule is organisations and public roles only.\n\n### Legal review before publication\n\nOwner as provider under Art. 3(3) (decides whether 88:1 has any EU addressee). \"Output used in the Union\" for posts read in the EU. The \"obvious\" exception for human observers. The Guidelines' reported \"on whose behalf\" rule \u2014 known only from law-firm notes; read the PDF. Art. 2(12) and amended Art. 113 re-read on EUR-Lex (both read on mirrors). Moltbook/Meta's DSA status and any duty to disclose owner identity. National penalty regimes for natural persons. Swiss: whether the EJPD draft appeared between 22 July and 23 September 2026 (admin.ch was unreachable); CETS 225 entry-into-force and Swiss non-ratification (coe.int not fetched); FADP territorial scope; OR 55/101 analogy (no case law; the unisg paper unread). Vigilia's own processing of handles (FADP Art. 19/20/27) and ZGB 61(2) no. 3 registration once foreign funds exceed CHF 100,000 over two years. Moltbook's \"one account, one agent\" rule \u2014 asserted only by a fan site; read skill.md and /terms. The 17,000 versus 35,000-email discrepancy in Wiz. Which FDPIC statement carries the \"right to know you are talking to a machine\" line (three dates cited across lenses). Fedlex English texts are unofficial; cite German, French or Italian for anything binding.\n\n### Confidence\n\nHigh on the statutory quotations (Art. 2, 3, 50, 99; FADP, UCA, OR; CETS 225 from the EU Official Journal) and on the Omnibus leaving Article 50 and 2 August 2026 untouched. Medium on role allocation and on the Swiss \"no draft yet\". Low on the Guidelines' agent paragraph, the platform's claim rules, and the 6 June 2026 counters. The 88:1 figure is Wiz's, from an early-2026 snapshot, about registration rather than activity; the archive metrics would be the first population-level measurement."
+ },
+ "verdicts": [
+  {
+   "claim": "Article 50(1) obliges providers to ensure systems intended to interact directly with natural persons inform them they are interacting with an AI system, unless obvious; it applies from 2 August 2026.",
+   "verified": true,
+   "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+   "evidence_quote": "Article 50(1): \"Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use. This obligation shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence.\" \u2014 Article 113: \"It shall apply from 2 August 2026. However: (a) Chapters I and II shall apply from 2 February 2025; (b) Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the exception of Article 101; (c) Article 6(1) and the corresponding obligations in this Regulation shall apply from 2 August 2027.\"",
+   "note": "Text says. Re-fetched from the primary source: the EUR-Lex ELI page for Regulation (EU) 2024/1689 (OJ L, 2024/1689, 12.7.2024), read in a browser session because the fetch tool truncated the page before Article 49; the quotes above are copied from the live page text. Both halves of the claim hold. (1) The duty: Article 50(1), first sentence, matches the claim in substance. Two precisions the claim compresses: the \"unless obvious\" test is the objective standard of \"a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use\", and the second sentence carves out AI systems authorised by law for criminal-offence detection/investigation/prosecution (unless open to the public for reporting offences). (2) The date: Article 50 sits in Chapter IV (\"CHAPTER IV TRANSPARENCY OBLIGATIONS FOR PROVIDERS AND DEPLOYERS OF CERTAIN AI SYSTEMS\" immediately precedes \"Article 50\"). Article 113's general rule is \"It shall apply from 2 August 2026\", and Chapter IV is in none of the three exceptions (a) Chapters I and II, (b) Chapter III Section 4, Chapters V, VII, XII and Article 78, (c) Article 6(1). So 2 August 2026 for Article 50 is the text as published in the OJ, by direct reading of Articles 50 and 113 together. Caveat for the synthesis step: this verifies the OJ text as adopted on 13 June 2024. Whether any later amending act (the \"Digital Omnibus\" referred to in Vigilia's deadlines.ts) has since altered the Article 50 application date is not established by this fetch; the workspace's standing position is that it did not touch Article 50, and that should be confirmed against the consolidated EUR-Lex version or the amending act's own text before it is printed as current law. Confidence in the claim as stated against the OJ text: high. Vigilia is not a law firm; this is a gap-analysis reading, not a legal determination."
+  },
+  {
+   "claim": "The Commission's Article 50 FAQ places systems operating through machine-to-machine communication, or without direct contact with people, outside the 50(1) obligation.",
+   "verified": true,
+   "evidence_quote": "AI systems operating solely in the background, through machine-to-machine communication, or without direct contact with people, fall outside the scope of this obligation.",
+   "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+   "note": "Text says. Re-fetched 2026-09-23 from the primary page (title \"Transparency obligations under Article 50 of the AI Act\", page shows last update 24 July 2026). The sentence appears in the answer to the FAQ question \"When do providers of AI systems have to inform people they are interacting with an AI system?\", which is the 50(1) duty; the same answer notes the duty runs from the start of the interaction unless it is \"obvious\". Two independent fetches returned the identical sentence. Caveats for the synthesis step: (1) this is Commission guidance, not the statutory text of Article 50(1) (Regulation (EU) 2024/1689, EUR-Lex CELEX 32024R1689) and is not legally binding; whether an agent-to-agent platform such as Moltbook, where agents' output is later read by humans on a public website, counts as \"without direct contact with people\" is a reasonable-reading question the FAQ sentence does not settle \u2014 needs legal review before Vigilia states it as a finding. (2) The FAQ wording is \"solely in the background ... or without direct contact with people\"; the claim's paraphrase drops \"solely\" and \"in the background\", which narrows the exclusion slightly in the original. (3) Article 50(2) (marking of synthetic content) and 50(4) (deepfakes / public-interest text) are separate duties not addressed by this sentence."
+  },
+  {
+   "claim": "Article 2(10) excludes obligations of deployers who are natural persons using AI systems in a purely personal non-professional activity; the provider definition in Art. 3(3) has no equivalent carve-out.",
+   "verified": true,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+   "evidence_quote": "Art. 2(10): \"This Regulation does not apply to obligations of deployers who are natural persons using AI systems in the course of a purely personal non-professional activity.\" | Art. 3(3): \"'provider' means a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model or that has an AI system or a general-purpose AI model developed and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge;\" | Art. 3(4): \"'deployer' means a natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity;\" | Art. 3(11): \"'putting into service' means the supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose;\"",
+   "note": "TEXT SAYS: both halves of the claim hold on the primary text, re-fetched 2026-09-23 from EUR-Lex (Regulation (EU) 2024/1689, CELEX:32024R1689). The ELI URL given (https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) resolves to the same Official Journal document but the fetch tool truncated it at recital (67), so the quotations were taken from EUR-Lex's own HTML rendering of the identical CELEX document via curl and grep; no secondary source was used. (1) Art. 2(10) is verbatim as claimed, except the statute says \"in the course of a purely personal non-professional activity\" (the claim drops \"in the course of a\"). (2) Art. 3(3) 'provider' contains no personal/non-professional exception; it is drafted as \"natural or legal person\" and expressly covers supply \"whether for payment or free of charge\". By contrast the deployer definition in Art. 3(4) carries the carve-out a second time (\"except where the AI system is used in the course of a personal non-professional activity\"), so the asymmetry appears in both the scope article and the definitions article. REASONABLE READING (for the Moltbook attribution-gap study): a natural person who runs an off-the-shelf agent for personal amusement is outside the Act as a deployer, but a natural person who builds or has built an agent and \"puts it into service\" under their own name \u2014 Art. 3(11) includes supply \"for own use in the Union for its intended purpose\" \u2014 is not excluded by the Act's text from provider status on personal-use grounds. Whether a hobbyist's self-built Moltbook agent is \"developed\" and \"put into service under its own name or trademark\" is a fact question and CONTESTED; the Act's other provider-side exclusions in Art. 2 (research/testing before placing on the market, Art. 2(8); free and open-source systems, Art. 2(12), which by its own terms does not lift Art. 50 obligations) are not keyed to natural-person personal use, but I could not extract those two paragraphs verbatim in this run, so treat that last sentence as from memory, NEEDS LEGAL REVIEW before it is published. Art. 50 itself was not re-fetched here; the Article 50(2)/(4) provider-versus-deployer split for synthetic content and its interaction with Art. 2(10) is the load-bearing question for the policy brief and should be quoted verbatim in the synthesis step, not paraphrased from this note. Confidence that the claim as stated is textually accurate: high."
+  },
+  {
+   "claim": "Article 2(12) exempts free and open-source AI systems unless placed on the market or put into service as high-risk or as a system falling under Article 5 or 50 \u2014 so an open-source agent runtime stays inside Article 50.",
+   "verified": true,
+   "url": "https://artificialintelligenceact.eu/article/2/",
+   "evidence_quote": "Article 2(12): \"This Regulation does not apply to AI systems released under free and open-source licences, unless they are placed on the market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50.\"",
+   "note": "Text says (first half of the claim): re-fetched 2026-09-23 from the stated source; the page reproduces Regulation (EU) 2024/1689 Article 2 with thirteen paragraphs and paragraph 12 reads exactly as quoted. The open-source carve-out is conditional: it falls away where the system is placed on the market or put into service as high-risk, or as a system under Article 5 (prohibited practices) or Article 50 (transparency). Reasonable reading (second half of the claim): an open-source agent runtime is not exempted from Article 50 by the licence alone; whether Article 50 duties actually attach depends on the runtime meeting Article 50's own triggers (e.g. Art. 50(1) systems intended to interact directly with natural persons, Art. 50(2) synthetic-content generation, Art. 50(4) deployer duties) and on the \"placed on the market / put into service\" conditions of Art. 3(9)-(11) \u2014 the claim's phrase \"stays inside Article 50\" is an inference, not statutory text. Caveat on source hierarchy: artificialintelligenceact.eu is a Future of Life Institute reproduction, not the Official Journal. A same-session fetch of EUR-Lex (https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) returned only the recitals before truncation, so the verbatim wording was not re-confirmed against EUR-Lex here; the reproduction matches the OJ wording as known, and the ELI link is the citation to carry into the paper. Needs legal review: whether a specific Moltbook-hosted open-source runtime is a \"provider\" placing a system on the market (Art. 3(3), 3(9)) versus a mere code publication \u2014 that determination is outside Vigilia's gap-analysis frame. Confidence: high on the text, medium on the inference."
+  },
+  {
+   "claim": "Breaches of Article 50 carry administrative fines of up to EUR 15,000,000 or, for undertakings, 3% of worldwide annual turnover, whichever is higher (Art. 99(4)(g)); statutory maximum, not exposure.",
+   "verified": true,
+   "evidence_quote": "Art. 99(4): \"Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher: [...] (g) transparency obligations for providers and deployers pursuant to Article 50.\" Art. 99(6): \"In the case of SMEs, including start-ups, each fine referred to in this Article shall be up to the percentages or amount referred to in paragraphs 3, 4 and 5, whichever thereof is lower.\"",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689",
+   "note": "Text says. Source: Regulation (EU) 2024/1689, Official Journal PDF from EUR-Lex (OJ L, 12.7.2024, page 115/144, ELI http://data.europa.eu/eli/reg/2024/1689/oj), Chapter XII, Article 99 \"Penalties\", paragraph 4, point (g). The claim's figures (EUR 15 000 000 / 3 % / \"whichever is higher\") and the mapping to Art. 99(4)(g) match the primary text verbatim. Two qualifications in the same article support the \"statutory maximum, not exposure\" framing: Art. 99(1) leaves the rules on penalties to Member States (\"effective, proportionate and dissuasive\", with regard to SMEs), Art. 99(6) inverts the rule for SMEs and start-ups to whichever is LOWER, and Art. 99(7) lists the circumstances (nature, gravity, duration, size, cooperation, intent or negligence) that set the amount in each case. Neighbouring tiers also confirmed on pp. 115-116: Art. 99(3) EUR 35 000 000 / 7 % (Article 5 prohibited practices); Art. 99(5) EUR 7 500 000 / 1 % (incorrect, incomplete or misleading information to authorities). Art. 101(1) separately gives the Commission a 3 % / EUR 15 000 000 ceiling for providers of general-purpose AI models. Method note: the EUR-Lex HTML endpoints (eli/reg/2024/1689/oj/eng and legal-content/EN/TXT/HTML) were fetched but truncated before Article 99; verification was done by reading pages 115-117 of the OJ PDF downloaded from eur-lex.europa.eu in this session, not from memory or a secondary source. No legal review needed for the figures themselves; how a fine would be set in a given case is for a lawyer and outside a gap analysis."
+  },
+  {
+   "claim": "Registration in the EU database (Art. 49/71), name-and-address marking (Art. 16(b)) and authorised representatives (Art. 22) apply only to high-risk AI systems; no traceability duty exists for a non-high-risk social-media agent.",
+   "verified": false,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+   "evidence_quote": "Art. 16: \"Providers of high-risk AI systems shall: [...] (b) indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, as applicable, their name, registered trade name or registered trade mark, the address at which they can be contacted;\" \u2014 Art. 22(1): \"Prior to making their high-risk AI systems available on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative which is established in the Union.\" \u2014 Art. 49(1): \"Before placing on the market or putting into service a high-risk AI system listed in Annex III, with the exception of high-risk AI systems referred to in point 2 of Annex III, the provider or, where applicable, the authorised representative shall register themselves and their system in the EU database referred to in Article 71.\" \u2014 Art. 49(2): \"Before placing on the market or putting into service an AI system for which the provider has concluded that it is not high-risk according to Article 6(3), that provider or, where applicable, the authorised representative shall register themselves and that system in the EU database referred to in Article 71.\" \u2014 Art. 50(2): \"Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, shall ensure that the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated.\"",
+   "note": "SOURCE AND METHOD. The ELI landing page (https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) loaded but the fetch tool truncated it inside the recitals, before any article. I therefore downloaded the full consolidated HTML of the same act from EUR-Lex (CELEX:32024R1689, the URL above, 1.26 MB) and extracted the articles from the local copy. All quotations are verbatim from that primary text. No secondary source was used.\n\nVERDICT: the claim is half right and half wrong, so it fails as written.\n\nPART 1 \u2014 \"Art. 49/71, 16(b) and 22 apply only to high-risk AI systems\".\n- Art. 16(b) \u2014 TEXT SAYS: the article opens \"Providers of high-risk AI systems shall\" and (b) is the name/trade-name/address marking. Only high-risk. Confirmed.\n- Art. 22(1) \u2014 TEXT SAYS: the authorised-representative duty is on \"providers [of high-risk AI systems] established in third countries\". Only high-risk. Confirmed. Caveat: Art. 54(1) creates a parallel duty for third-country providers of general-purpose AI MODELS (\"Prior to placing a general-purpose AI model on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative which is established in the Union\"). That binds the model provider (e.g. a frontier lab), not the operator of a social-media agent built on the model, but a claim that authorised representatives are a high-risk-only device is incomplete.\n- Art. 49/71 \u2014 TEXT SAYS the claim is INACCURATE: registration is not limited to high-risk systems. Art. 49(2) requires registration of an Annex III system \"for which the provider has concluded that it is not high-risk according to Article 6(3)\", and Art. 71(1) says the database also contains \"AI systems that are not considered as high-risk pursuant to Article 6(3) and which are registered in accordance with Article 6(4) and Article 49\". Art. 49(1) is also narrower than \"all high-risk\": it covers Annex III systems only (\"a high-risk AI system listed in Annex III, with the exception of high-risk AI systems referred to in point 2 of Annex III\"); Annex I product-safety systems are outside Art. 49(1). REASONABLE READING: a social-media posting agent is not an Annex III use case, so neither 49(1) nor 49(2) reaches it in practice \u2014 but the statement \"only high-risk\" is wrong as a description of the text and should be rewritten as \"only Annex III systems, whether classified high-risk or de-classified under Art. 6(3)\".\n\nPART 2 \u2014 \"no traceability duty exists for a non-high-risk social-media agent\".\n- TEXT SAYS this is wrong as stated, for the meaning of \"traceability\" that matters to a register of disclosure: Art. 50 is risk-class-independent. Art. 50(1): \"Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect\". Art. 50(2) (quoted above) requires machine-readable marking of synthetic text \"detectable as artificially generated or manipulated\", subject to the carve-out for assistive editing that does \"not substantially alter the input data provided by the deployer or the semantics thereof\". Art. 50(4), second subparagraph: \"Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated\", unless the content \"has undergone a process of human review or editorial control and where a natural or legal person holds editorial responsibility\". These are provenance/detectability duties on the OUTPUT.\n- REASONABLE READING: what the text does NOT impose on a non-high-risk agent is any duty to identify the provider, deployer or owner by name and contactable address (that is Art. 16(b), high-risk only), nor to appear in a public database (Art. 49/71, Annex III only). So the accurate formulation is: \"for a non-high-risk, non-Annex III social-media agent the AI Act imposes content-provenance duties (Art. 50(1), (2), (4)) but no operator-identification or registration duty; the attribution gap is a gap in who-is-behind-it, not in whether-it-is-AI.\" That formulation is what the Moltbook attribution-gap study should carry.\n- CONTESTED / NEEDS LEGAL REVIEW: (a) whether an autonomous agent posting on a platform like Moltbook is an \"AI system intended to interact directly with natural persons\" under 50(1) when its readers are mostly other agents \u2014 the text turns on intent and on the \"obvious\" exception; (b) whether Art. 50(2) applies to a US-established agent operator at all (territorial scope is Art. 2(1), not re-fetched here); (c) whether Art. 50(4) \"matters of public interest\" reaches social posts; (d) whether the Digital Omnibus changed any of this \u2014 CLAUDE.md's standing position is that Art. 50 still applies from 2 August 2026 and the deferral touched high-risk only; that was not re-verified in this pass and should be checked against the Omnibus text before publication. Swiss law was not examined here.\n\nCONFIDENCE: high on Part 1 (verbatim text, three articles quoted); high that Part 2 is wrong as worded (Art. 50 quoted verbatim); medium on the reasonable reading of \"traceability\", which depends on a definition the claim did not supply. This is a gap analysis, not a legal determination.\n\nLocal extract used: /private/tmp/claude-503/-Users-gregoriovonhildebrand-Documents-Agents-vigilia/3d314635-5776-4f1f-a8ab-85568dd93818/scratchpad/aiact2.txt (tag-stripped EUR-Lex HTML)."
+  },
+  {
+   "claim": "Regulation (EU) 2026/1744 (Digital Omnibus on AI) deferred Annex III high-risk obligations to 2 December 2027 and Annex I to 2 August 2028 but left Article 50(1), (3), (4), (5) and the 2 August 2026 application date unchanged.",
+   "verified": true,
+   "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+   "evidence_quote": "Article 1, point (40): \"in Article 113, the third paragraph is amended as follows: (a) point (a) is replaced by the following: '(a) Chapters I and II shall apply from 2 February 2025, with the exception of Article 5(1), first subparagraph, points (ba) and (bb), and Article 5(1a) and (1b) which shall apply from 2 December 2026;'; (b) point (c) is replaced by the following: '(c) Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and (ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;'; (c) the following point is added: '(d) Articles 102 to 110 shall apply from 27 July 2026.'\" \u2014 Article 1, point (20): \"in Article 50, paragraph 7 is replaced by the following: [...]\" (the only point of Article 1 that touches Article 50). Recital (40): \"Article 113 of Regulation (EU) 2024/1689 establishes the dates of entry into force and application of that Regulation, in particular that the general date of application is 2 August 2026.\"",
+   "note": "TEXT SAYS. Verified against the OJ PDF of Regulation (EU) 2026/1744 (OJ L, 24.7.2026, 41 pp., ELI http://data.europa.eu/eli/reg/2026/1744/oj), fetched from the EUR-Lex ELI URL and read page by page (pp. 1-3, 12-41; the operative Article 1 spans pp. 15-36 and was read in full). Method note: WebFetch's summarizer truncated the HTML and returned inconsistent point numbers (1(13)/1(53) for Article 113; 1(41) for Article 50) \u2014 those were hallucinated; the PDF is authoritative and the correct points are 1(20) and 1(40). Findings: (1) Deferral: Article 1(40)(b) replaces Article 113, third paragraph, point (c) \u2014 \"Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5)\" applies from 2 December 2027 (Article 6(2)/Annex III) and 2 August 2028 (Article 6(1)/Annex I). Reasonable reading: Chapter III Sections 1-3 are the classification rules, requirements and provider/deployer obligations for high-risk systems, i.e. \"high-risk obligations\" as the claim puts it; the text does not use the word \"obligations\". (2) Article 50(1), (3), (4), (5) unchanged: the only amendment to Article 50 in the whole act is Article 1(20), which replaces paragraph 7 (codes of practice; the Commission \"may adopt an implementing act specifying common rules\" only if it deems a code inadequate). No point of Article 1 touches paragraphs 1-6. (3) 2 August 2026 unchanged: the amending act touches only the THIRD paragraph of Article 113 (points (a), (c), new (d)); the second paragraph of Article 113 (\"It shall apply from 2 August 2026\") is not amended, and recital (40) restates \"the general date of application is 2 August 2026\". Article 50 sits in Chapter IV, which is governed by that general date. (4) One adjacent fact the claim correctly omits but a synthesis should carry: Article 1(39)(b) inserts Article 111(4): \"Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, that have been placed on the market before 2 August 2026 shall take the necessary steps in order to comply with Article 50(2) by 2 December 2026.\" That is a four-month transitional for Article 50(2) marking only, for systems already on the market; it does not reach 50(1), (3), (4) or (5). (5) Entry into force: Article 4 \u2014 third day after publication in the OJ (published 24.7.2026, so 27 July 2026, consistent with new Article 113(3)(d) \"Articles 102 to 110 shall apply from 27 July 2026\"). Confidence: high on all three limbs of the claim; the text is direct. For deadlines.ts: the \"Article 50 applies from 2 August 2026\" line stands; add the 2 December 2026 Article 50(2) transitional for pre-existing generative systems if not already there, and note Annex I deferral is 2 August 2028 (not 2027). Nothing here needs legal review beyond the standing caveat that \"high-risk obligations\" is a gloss on \"Chapter III, Sections 1, 2 and 3\"."
+  },
+  {
+   "claim": "Wiz Research found the Moltbook owners table held about 17,000 rows against roughly 1.5 million registered agents (88:1), 1.5 million exposed API keys, and no mechanism to verify that an agent was AI.",
+   "verified": true,
+   "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys",
+   "evidence_quote": "\"The owners table contained personal information for 17,000+ users\" ... \"Moltbook reported 1.5 million registered agents\" ... \"the database revealed only 17,000 human owners behind them - an 88:1 ratio\" ... \"1.5 million API authentication tokens\" ... \"The platform had no mechanism to verify whether an 'agent' was actually AI or just a human with a script.\"",
+   "note": "Text says. Primary source re-fetched 2026-09-23: Wiz blog post \"Hacking Moltbook: The AI Social Network Any Human Can Control\", by Gal Nagli, dated 2 February 2026. All five elements of the claim appear verbatim or near-verbatim. Two precision points for the synthesis: (1) the 1.5 million agent count is Moltbook's own reported figure as relayed by Wiz, not an independent Wiz count; the 88:1 ratio is Wiz's computation from that figure against the 17,000+ owner rows. (2) Wiz writes \"1.5 million API authentication tokens\"; the claim's \"API keys\" is a fair paraphrase but cite the article's wording. The article also states \"humans could post content disguised as 'AI agents' via a basic POST request\" and \"Anyone could register millions of agents with a simple loop and no rate limiting\" \u2014 useful for the attribution-gap study (Study C). Confidence: high."
+  },
+  {
+   "claim": "The Swiss Federal Council decided on 12 February 2025 to ratify the Council of Europe AI Convention, pursue sector-specific amendments, and prepare a consultation draft by end-2026 covering transparency, data protection, non-discrimination and supervision.",
+   "verified": true,
+   "url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html",
+   "evidence_quote": "\"Published on 12 February 2025 \u2014 AI regulation: Federal Council to ratify Council of Europe Convention. Bern, 12.2.2025 - Switzerland intends to ratify the Council of Europe Convention on Artificial Intelligence (AI) and to make the necessary amendments to Swiss law. [...] The Federal Council spoke out in favour of this approach at its meeting on 12 February. [...] Where legislative changes are needed, they should be as sector-specific as possible. Only key areas relevant to fundamental rights, such as data protection, will be subject to general, cross-sectoral regulation. [...] The Federal Council has decided on the following next steps. The FDJP will draft a bill for consultation with DETEC and the FDFA by the end of 2026. The bill will implement the Council of Europe's AI Convention by defining the necessary legal measures, in particular in the areas of transparency, data protection, non-discrimination and supervision. DETEC, together with the FDJP, the FDFA and the EAER, will also draw up a plan by the end of 2026 for further measures non-legally-binding measures.\"",
+   "note": "Text says. Primary source re-fetched 2026-09-23 and rendered in a browser; every element of the claim appears verbatim: the 12 February 2025 date and meeting, the intent to ratify the CoE AI Convention, \"as sector-specific as possible\" for legislative changes, a bill \"for consultation ... by the end of 2026\", and the four named areas (transparency, data protection, non-discrimination, supervision). Two precision points for the synthesis: (1) the release says \"intends to ratify\" / \"spoke out in favour of this approach\" \u2014 a Federal Council policy decision on parameters and next steps, not the act of ratification itself, which needs a bill and Parliament; (2) the drafting mandate is to the FDJP with DETEC and the FDFA, and a separate DETEC-led plan for non-binding measures is also due end-2026. Access notes: the given /gov/en/...msg-id-104110 URL now redirects to https://www.admin.ch/en/nsb?id=104110 (same release, same publisher); curl returns an Akamai 403 and WebFetch returns only the lead paragraph, so a full browser render was required to read the body. Whether the end-2026 consultation is still on schedule as of September 2026 is not stated by this page and was not checked \u2014 reasonable reading only, and a follow-up on admin.ch/fedlex would settle it."
+  },
+  {
+   "claim": "CETS 225 Art. 15(2) asks Parties to ensure persons are notified they are interacting with an AI system, and Art. 8 covers identification of AI-generated content; neither requires identifying the person behind an agent.",
+   "verified": true,
+   "url": "https://eur-lex.europa.eu/eli/agree_internation/2026/1081/oj",
+   "evidence_quote": "Article 15(2): \"Each Party shall seek to ensure that, as appropriate for the context, persons interacting with artificial intelligence systems are notified that they are interacting with such systems rather than with a human.\" Article 8: \"Each Party shall adopt or maintain measures to ensure that adequate transparency and oversight requirements tailored to the specific contexts and risks are in place in respect of activities within the lifecycle of artificial intelligence systems, including with regard to the identification of content generated by artificial intelligence systems.\"",
+   "note": "Re-fetched the primary source twice (the ELI URL and the OJ HTML at https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601081); both return identical text. Document: Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law, OJ L 2026/1081, 13.5.2026, document 22026A01081 (the EU's publication of the CETS 225 text; the Council of Europe copy on coe.int is the treaty's own authoritative version and was not fetched). TEXT SAYS: Art. 15(2) is the interaction-notification duty and Art. 8 names \"identification of content generated by artificial intelligence systems\". TEXT SAYS, with one correction to the claim's wording: Art. 15(2) reads \"shall seek to ensure ... as appropriate for the context\" \u2014 a best-efforts obligation qualified by context, not \"shall ensure\"; Art. 15(1), by contrast, uses \"shall ensure\". The claim's phrase \"asks Parties to ensure\" overstates the strength slightly and should read \"asks Parties to seek to ensure, as appropriate for the context\". REASONABLE READING: neither Art. 8 nor Art. 15 contains any wording about identifying the operator, deployer, owner or natural person behind an AI system or agent; both speak only of the system and its content. This is an absence claim checked against the verbatim text of those two articles only; I did not scan every other article of the Convention for an identification-of-operator duty, so the negative limb is scoped to Art. 8 and Art. 15 as the claim states it. Not a legal determination."
+  },
+  {
+   "claim": "Under the revised Swiss FADP a controller must inform data subjects of its identity and contact details when collecting personal data (Art. 19(2)(a)), with a fine of up to CHF 250,000 on complaint for wilful failure (Art. 60(1)).",
+   "verified": true,
+   "url": "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20230901/en/html/fedlex-data-admin-ch-eli-cc-2022-491-20230901-en-html-4.html",
+   "evidence_quote": "Art. 19 Duty to provide information when collecting personal data \u2014 1 The controller shall inform the data subject in an appropriate manner when collecting personal data; this duty to provide information also applies if the data is not collected from the data subject. 2 It shall provide the data subject on collecting the data with the information required for the data subject to exercise their rights under this Act and to guarantee transparent data processing; it shall provide the following information as a minimum: a. the controller's identity and contact details; b. the purpose of processing; c. if applicable, the recipients or the categories of recipients to which personal data is disclosed. [...] Art. 60 Violation of obligations to provide access and information or to cooperate \u2014 1 On complaint, a fine not exceeding 250,000 francs shall be imposed on private persons who: a. violate their duties under Articles 19, 21 and 25\u201327, in that they wilfully provide false or incomplete information; b. fail wilfully: 1. to provide information to the data subject in accordance with Articles 19 paragraph 1 and 21 paragraph 1, or 2. to provide the data subject with the information specified in Article 19 paragraph 2.",
+   "note": "Text says: both halves of the claim are confirmed verbatim in the primary source. Source handling: the ELI landing URL https://www.fedlex.admin.ch/eli/cc/2022/491/en is a JavaScript shell (WebFetch returned only browser-requirement notices), so the consolidated English text was fetched by curl from Fedlex's own filestore for that ELI (SR 235.1, Federal Act on Data Protection of 25 September 2020, \"Status as of 1 September 2023\", HTTP 200, 108,944 bytes) \u2014 same official publisher, same ELI, not a secondary source. Three precision points for the synthesis step. (1) Art. 60(1) fines \"private persons\" \u2014 i.e. natural persons, and the English version is a non-authentic translation (German/French/Italian are authentic); liability of undertakings is dealt with separately in Art. 64 (not quoted here; needs legal review before any figure is cited for a company). (2) The wilful-failure limb that matches the claim is specifically Art. 60(1)(b)(2): wilfully failing to provide the Art. 19(2) information; Art. 60(1)(a) covers wilfully false or incomplete information. Negligent failure is not covered \u2014 \"wilfully\" is in the text. (3) \"On complaint\" (Antragsdelikt) is confirmed in the text; who may file the complaint and how it interacts with the FDPIC's administrative powers is a reasonable-reading/needs-legal-review matter, not in the quoted paragraphs. Confidence: high on the statutory text; medium on any application to an AI-agent operator, since whether such an operator is a \"controller\" collecting personal data is a fact question. Vigilia does not make legal determinations; this is a gap-analysis citation only."
+  },
+  {
+   "claim": "Chan et al. define visibility as information about where, why, how and by whom AI agents are used, delivered through agent identifiers, real-time monitoring and activity logging.",
+   "verified": true,
+   "url": "https://arxiv.org/abs/2401.13138",
+   "evidence_quote": "Information about where, why, how, and by whom certain AI agents are used, which we refer to as visibility, is critical to these objectives. In this paper, we assess three categories of measures to increase visibility into AI agents: agent identifiers, real-time monitoring, and activity logging.",
+   "note": "Re-fetched 2026-09-23 from the arXiv abstract page (primary source; the PDF fetch returned binary and was not used). Title \"Visibility into AI Agents\", Chan, Ezell, Kaufmann, Wei, Hammond, Bradley, Bluemke, Rajkumar, Krueger, Kolt, Heim, Anderljung. Text says: the definition of visibility matches the claim word for word (\"where, why, how, and by whom\"). Reasonable reading: the claim's phrase \"delivered through\" is a paraphrase; the abstract calls agent identifiers, real-time monitoring and activity logging \"three categories of measures to increase visibility\", which the authors assess with implementations varying in intrusiveness and informativeness. Prefer \"measures to increase visibility\" when quoting. Confidence high. Not a legal source; no legal review needed for this citation."
+  }
+ ]
+}

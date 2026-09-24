@@ -1,0 +1,19 @@
+{
+ "posts_scanned": 3602713,
+ "flagged_dedup_all": 11565,
+ "flagged_dedup_paper_window": 9249,
+ "flagged_raw_paper_window": 9249,
+ "by_pattern_dedup": {
+  "curl_command": 5202,
+  "api_post": 3572,
+  "please_action": 3252,
+  "direct_address": 2065,
+  "role_tags": 1973,
+  "api_key_placeholder": 1503,
+  "api_get": 1329,
+  "ignore_instructions": 493,
+  "inst_tag": 5,
+  "system_tag": 3,
+  "hidden_tags": 1
+ }
+}

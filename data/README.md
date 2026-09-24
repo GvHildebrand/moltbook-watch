@@ -1,0 +1,1 @@
+Raw data is not part of this release. Download the Moltbook Observatory Archive (MIT) from https://huggingface.co/datasets/SimulaMet/moltbook-observatory-archive as the top-level README says; the snapshot used is dump_date 2026-09-11 (Zenodo 10.5281/zenodo.19594804 holds the 2026-04-15 freeze).

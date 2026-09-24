@@ -1,0 +1,167 @@
+{
+ "fetched_at_utc": "2026-09-24T06:40Z",
+ "method": "GET https://www.moltbook.com/api/v1/posts?sort={new,hot,top}&limit=100 plus cursor pages for new; GET /api/v1/stats; no credential; identifying User-Agent; 10 requests",
+ "stats": {
+  "totalAgents": 2915360,
+  "verifiedAgents": 213661,
+  "totalPosts": 4281970,
+  "totalComments": 22416539,
+  "totalSubmolts": 33259
+ },
+ "sets": {
+  "new": {
+   "posts": 600,
+   "first_created": "2026-09-24T03:33:41.284Z",
+   "last_created": "2026-09-24T05:56:01.460Z",
+   "span_hours": 2.37,
+   "distinct_authors": 140,
+   "top5_authors_share_pct": 36.3,
+   "distinct_submolts": 36,
+   "top3_submolts": [
+    [
+     "general",
+     482
+    ],
+    [
+     "agents",
+     24
+    ],
+    [
+     "infrastructure",
+     14
+    ]
+   ],
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0,
+   "injection_patterns": {},
+   "verification_status": {
+    "verified": 600
+   },
+   "is_spam_true": 0,
+   "is_deleted_true": 0,
+   "author_keys": [
+    "avatarUrl",
+    "createdAt",
+    "deletedAt",
+    "description",
+    "followerCount",
+    "followingCount",
+    "id",
+    "isActive",
+    "isClaimed",
+    "karma",
+    "lastActive",
+    "name"
+   ],
+   "median_content_len": 500,
+   "authors_claimed": 140,
+   "authors_unclaimed": 0,
+   "posts_by_claimed_pct": 100.0,
+   "author_has_owner_field": false
+  },
+  "hot": {
+   "posts": 100,
+   "first_created": "2026-09-22T06:08:32.785Z",
+   "last_created": "2026-09-24T04:00:51.630Z",
+   "span_hours": 45.87,
+   "distinct_authors": 18,
+   "top5_authors_share_pct": 80.0,
+   "distinct_submolts": 2,
+   "top3_submolts": [
+    [
+     "general",
+     99
+    ],
+    [
+     "agents",
+     1
+    ]
+   ],
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0,
+   "injection_patterns": {},
+   "verification_status": {
+    "verified": 100
+   },
+   "is_spam_true": 0,
+   "is_deleted_true": 0,
+   "author_keys": [
+    "avatarUrl",
+    "createdAt",
+    "deletedAt",
+    "description",
+    "followerCount",
+    "followingCount",
+    "id",
+    "isActive",
+    "isClaimed",
+    "karma",
+    "lastActive",
+    "name"
+   ],
+   "median_content_len": 500,
+   "authors_claimed": 18,
+   "authors_unclaimed": 0,
+   "posts_by_claimed_pct": 100.0,
+   "author_has_owner_field": false
+  },
+  "top": {
+   "posts": 100,
+   "first_created": "2026-01-28T21:50:21.402Z",
+   "last_created": "2026-03-30T01:03:06.218Z",
+   "span_hours": 1443.21,
+   "distinct_authors": 52,
+   "top5_authors_share_pct": 52.0,
+   "distinct_submolts": 7,
+   "top3_submolts": [
+    [
+     "general",
+     92
+    ],
+    [
+     "usdc",
+     3
+    ],
+    [
+     "offmychest",
+     1
+    ]
+   ],
+   "injection_posts": 1,
+   "injection_rate_pct": 1.0,
+   "injection_patterns": {
+    "api_get": 1
+   },
+   "verification_status": {
+    "bypassed": 24,
+    "verified": 76
+   },
+   "is_spam_true": 0,
+   "is_deleted_true": 0,
+   "author_keys": [
+    "avatarUrl",
+    "createdAt",
+    "deletedAt",
+    "description",
+    "followerCount",
+    "followingCount",
+    "id",
+    "isActive",
+    "isClaimed",
+    "karma",
+    "lastActive",
+    "name"
+   ],
+   "median_content_len": 500,
+   "authors_claimed": 51,
+   "authors_unclaimed": 1,
+   "posts_by_claimed_pct": 99.0,
+   "author_has_owner_field": false
+  }
+ },
+ "stats_derived": {
+  "verified_share_pct": 7.33,
+  "archive_posts_over_platform_total_pct": 84.1,
+  "new_posts_per_hour": 253.0
+ }
+}

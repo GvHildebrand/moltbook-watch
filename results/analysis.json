@@ -1,0 +1,3607 @@
+{
+ "windows": {
+  "pre": [
+   "2026-01-27",
+   "2026-03-09"
+  ],
+  "post": [
+   "2026-03-10",
+   "2026-04-14"
+  ],
+  "late": [
+   "2026-04-15",
+   "2026-09-11"
+  ],
+  "pre28": [
+   "2026-02-10",
+   "2026-03-09"
+  ],
+  "post28": [
+   "2026-03-10",
+   "2026-04-06"
+  ],
+  "pre7": [
+   "2026-03-03",
+   "2026-03-09"
+  ],
+  "post7": [
+   "2026-03-10",
+   "2026-03-16"
+  ]
+ },
+ "per_window": {
+  "pre": {
+   "days": 42,
+   "posts": 1976535,
+   "posts_per_day": 47060.4,
+   "posting_agents": 167868,
+   "posting_agents_per_day_mean": 8677.0,
+   "new_agents_by_created_at": 127543,
+   "new_agents_by_first_seen": 93691,
+   "active_submolts": 5516,
+   "injection_posts": 6854,
+   "injection_rate_pct": 0.347,
+   "injection_agents": 1445,
+   "injection_agent_share_pct": 0.861,
+   "posts_by_top1pct_agents_share_pct": 28.18,
+   "posts_by_top10_agents_share_pct": 2.28,
+   "agent_post_gini": 0.7288,
+   "submolt_post_hhi": 4487.4,
+   "top10_submolts_share_pct": 88.86,
+   "mean_content_len": 451.8,
+   "median_content_len": 100.0,
+   "mean_comment_count_field": 6.202,
+   "sum_comment_count_field": 12257604,
+   "comments_collected": 516122,
+   "commenting_agents_collected": 13643,
+   "agents_with_a_10_per_minute_burst": 2823
+  },
+  "post": {
+   "days": 36,
+   "posts": 639412,
+   "posts_per_day": 17761.4,
+   "posting_agents": 13337,
+   "posting_agents_per_day_mean": 2109.8,
+   "new_agents_by_created_at": 1727,
+   "new_agents_by_first_seen": 10245,
+   "active_submolts": 2364,
+   "injection_posts": 2395,
+   "injection_rate_pct": 0.375,
+   "injection_agents": 343,
+   "injection_agent_share_pct": 2.572,
+   "posts_by_top1pct_agents_share_pct": 34.53,
+   "posts_by_top10_agents_share_pct": 7.54,
+   "agent_post_gini": 0.8668,
+   "submolt_post_hhi": 2276.4,
+   "top10_submolts_share_pct": 79.26,
+   "mean_content_len": 862.2,
+   "median_content_len": 526.0,
+   "mean_comment_count_field": 1.602,
+   "sum_comment_count_field": 1024377,
+   "comments_collected": 698153,
+   "commenting_agents_collected": 9216,
+   "agents_with_a_10_per_minute_burst": 0
+  },
+  "late": {
+   "days": 150,
+   "posts": 986766,
+   "posts_per_day": 6578.4,
+   "posting_agents": 8993,
+   "posting_agents_per_day_mean": 684.7,
+   "new_agents_by_created_at": 25,
+   "new_agents_by_first_seen": 6208,
+   "active_submolts": 1997,
+   "injection_posts": 2316,
+   "injection_rate_pct": 0.235,
+   "injection_agents": 270,
+   "injection_agent_share_pct": 3.002,
+   "posts_by_top1pct_agents_share_pct": 57.05,
+   "posts_by_top10_agents_share_pct": 27.24,
+   "agent_post_gini": 0.9265,
+   "submolt_post_hhi": 4182.5,
+   "top10_submolts_share_pct": 81.57,
+   "mean_content_len": 831.7,
+   "median_content_len": 500.0,
+   "mean_comment_count_field": 2.735,
+   "sum_comment_count_field": 2699215,
+   "comments_collected": 1338792,
+   "commenting_agents_collected": 6478,
+   "agents_with_a_10_per_minute_burst": 0
+  },
+  "pre28": {
+   "days": 28,
+   "posts": 1214269,
+   "posts_per_day": 43366.8,
+   "posting_agents": 80007,
+   "posting_agents_per_day_mean": 6835.4,
+   "new_agents_by_created_at": 11036,
+   "new_agents_by_first_seen": 40647,
+   "active_submolts": 2313,
+   "injection_posts": 1567,
+   "injection_rate_pct": 0.129,
+   "injection_agents": 460,
+   "injection_agent_share_pct": 0.575,
+   "posts_by_top1pct_agents_share_pct": 29.28,
+   "posts_by_top10_agents_share_pct": 3.51,
+   "agent_post_gini": 0.7455,
+   "submolt_post_hhi": 3520.8,
+   "top10_submolts_share_pct": 90.06,
+   "mean_content_len": 469.2,
+   "median_content_len": 99.0,
+   "mean_comment_count_field": 0.458,
+   "sum_comment_count_field": 556306,
+   "comments_collected": 350825,
+   "commenting_agents_collected": 11144,
+   "agents_with_a_10_per_minute_burst": 2
+  },
+  "post28": {
+   "days": 28,
+   "posts": 532205,
+   "posts_per_day": 19007.3,
+   "posting_agents": 12381,
+   "posting_agents_per_day_mean": 2273.6,
+   "new_agents_by_created_at": 1567,
+   "new_agents_by_first_seen": 9521,
+   "active_submolts": 2099,
+   "injection_posts": 2092,
+   "injection_rate_pct": 0.393,
+   "injection_agents": 307,
+   "injection_agent_share_pct": 2.48,
+   "posts_by_top1pct_agents_share_pct": 33.37,
+   "posts_by_top10_agents_share_pct": 7.49,
+   "agent_post_gini": 0.8582,
+   "submolt_post_hhi": 2248.1,
+   "top10_submolts_share_pct": 80.21,
+   "mean_content_len": 816.4,
+   "median_content_len": 466.0,
+   "mean_comment_count_field": 1.48,
+   "sum_comment_count_field": 787475,
+   "comments_collected": 582391,
+   "commenting_agents_collected": 8701,
+   "agents_with_a_10_per_minute_burst": 0
+  },
+  "pre7": {
+   "days": 7,
+   "posts": 224390,
+   "posts_per_day": 32055.7,
+   "posting_agents": 6698,
+   "posting_agents_per_day_mean": 2753.7,
+   "new_agents_by_created_at": 593,
+   "new_agents_by_first_seen": 1652,
+   "active_submolts": 965,
+   "injection_posts": 714,
+   "injection_rate_pct": 0.318,
+   "injection_agents": 130,
+   "injection_agent_share_pct": 1.941,
+   "posts_by_top1pct_agents_share_pct": 25.62,
+   "posts_by_top10_agents_share_pct": 9.9,
+   "agent_post_gini": 0.8209,
+   "submolt_post_hhi": 2286.5,
+   "top10_submolts_share_pct": 82.9,
+   "mean_content_len": 952.4,
+   "median_content_len": 215.0,
+   "mean_comment_count_field": 1.074,
+   "sum_comment_count_field": 240908,
+   "comments_collected": 151742,
+   "commenting_agents_collected": 4607,
+   "agents_with_a_10_per_minute_burst": 0
+  },
+  "post7": {
+   "days": 7,
+   "posts": 173968,
+   "posts_per_day": 24852.6,
+   "posting_agents": 7435,
+   "posting_agents_per_day_mean": 2726.0,
+   "new_agents_by_created_at": 350,
+   "new_agents_by_first_seen": 2795,
+   "active_submolts": 1013,
+   "injection_posts": 438,
+   "injection_rate_pct": 0.252,
+   "injection_agents": 137,
+   "injection_agent_share_pct": 1.843,
+   "posts_by_top1pct_agents_share_pct": 28.93,
+   "posts_by_top10_agents_share_pct": 7.57,
+   "agent_post_gini": 0.8075,
+   "submolt_post_hhi": 2042.3,
+   "top10_submolts_share_pct": 82.15,
+   "mean_content_len": 714.4,
+   "median_content_len": 296.0,
+   "mean_comment_count_field": 1.105,
+   "sum_comment_count_field": 192168,
+   "comments_collected": 179418,
+   "commenting_agents_collected": 5445,
+   "agents_with_a_10_per_minute_burst": 0
+  }
+ },
+ "daily": [
+  {
+   "day": "2026-01-27",
+   "posts": 1,
+   "posting_agents": 1,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-01-28",
+   "posts": 44,
+   "posting_agents": 20,
+   "active_submolts": 8,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-01-29",
+   "posts": 390,
+   "posting_agents": 199,
+   "active_submolts": 41,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.513
+  },
+  {
+   "day": "2026-01-30",
+   "posts": 7197,
+   "posting_agents": 3240,
+   "active_submolts": 410,
+   "injection_posts": 73,
+   "injection_rate_pct": 1.014
+  },
+  {
+   "day": "2026-01-31",
+   "posts": 42649,
+   "posting_agents": 11674,
+   "active_submolts": 1410,
+   "injection_posts": 2260,
+   "injection_rate_pct": 5.299
+  },
+  {
+   "day": "2026-02-01",
+   "posts": 33667,
+   "posting_agents": 11094,
+   "active_submolts": 764,
+   "injection_posts": 246,
+   "injection_rate_pct": 0.731
+  },
+  {
+   "day": "2026-02-02",
+   "posts": 41941,
+   "posting_agents": 10755,
+   "active_submolts": 1537,
+   "injection_posts": 234,
+   "injection_rate_pct": 0.558
+  },
+  {
+   "day": "2026-02-03",
+   "posts": 25553,
+   "posting_agents": 6381,
+   "active_submolts": 1183,
+   "injection_posts": 131,
+   "injection_rate_pct": 0.513
+  },
+  {
+   "day": "2026-02-04",
+   "posts": 35921,
+   "posting_agents": 6951,
+   "active_submolts": 1135,
+   "injection_posts": 255,
+   "injection_rate_pct": 0.71
+  },
+  {
+   "day": "2026-02-05",
+   "posts": 36895,
+   "posting_agents": 6837,
+   "active_submolts": 1053,
+   "injection_posts": 322,
+   "injection_rate_pct": 0.873
+  },
+  {
+   "day": "2026-02-06",
+   "posts": 38090,
+   "posting_agents": 6178,
+   "active_submolts": 1042,
+   "injection_posts": 455,
+   "injection_rate_pct": 1.195
+  },
+  {
+   "day": "2026-02-07",
+   "posts": 44219,
+   "posting_agents": 6035,
+   "active_submolts": 962,
+   "injection_posts": 595,
+   "injection_rate_pct": 1.346
+  },
+  {
+   "day": "2026-02-08",
+   "posts": 84614,
+   "posting_agents": 17045,
+   "active_submolts": 942,
+   "injection_posts": 589,
+   "injection_rate_pct": 0.696
+  },
+  {
+   "day": "2026-02-09",
+   "posts": 371085,
+   "posting_agents": 86636,
+   "active_submolts": 751,
+   "injection_posts": 125,
+   "injection_rate_pct": 0.034
+  },
+  {
+   "day": "2026-02-10",
+   "posts": 84811,
+   "posting_agents": 36144,
+   "active_submolts": 408,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.041
+  },
+  {
+   "day": "2026-02-11",
+   "posts": 171933,
+   "posting_agents": 36311,
+   "active_submolts": 409,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.02
+  },
+  {
+   "day": "2026-02-12",
+   "posts": 223034,
+   "posting_agents": 27030,
+   "active_submolts": 354,
+   "injection_posts": 34,
+   "injection_rate_pct": 0.015
+  },
+  {
+   "day": "2026-02-13",
+   "posts": 62919,
+   "posting_agents": 10980,
+   "active_submolts": 332,
+   "injection_posts": 19,
+   "injection_rate_pct": 0.03
+  },
+  {
+   "day": "2026-02-14",
+   "posts": 55624,
+   "posting_agents": 7876,
+   "active_submolts": 294,
+   "injection_posts": 12,
+   "injection_rate_pct": 0.022
+  },
+  {
+   "day": "2026-02-15",
+   "posts": 52468,
+   "posting_agents": 10147,
+   "active_submolts": 272,
+   "injection_posts": 19,
+   "injection_rate_pct": 0.036
+  },
+  {
+   "day": "2026-02-16",
+   "posts": 37883,
+   "posting_agents": 5310,
+   "active_submolts": 295,
+   "injection_posts": 19,
+   "injection_rate_pct": 0.05
+  },
+  {
+   "day": "2026-02-17",
+   "posts": 28488,
+   "posting_agents": 3953,
+   "active_submolts": 286,
+   "injection_posts": 26,
+   "injection_rate_pct": 0.091
+  },
+  {
+   "day": "2026-02-18",
+   "posts": 7036,
+   "posting_agents": 2172,
+   "active_submolts": 270,
+   "injection_posts": 19,
+   "injection_rate_pct": 0.27
+  },
+  {
+   "day": "2026-02-19",
+   "posts": 7146,
+   "posting_agents": 2109,
+   "active_submolts": 263,
+   "injection_posts": 13,
+   "injection_rate_pct": 0.182
+  },
+  {
+   "day": "2026-02-20",
+   "posts": 6778,
+   "posting_agents": 2018,
+   "active_submolts": 273,
+   "injection_posts": 16,
+   "injection_rate_pct": 0.236
+  },
+  {
+   "day": "2026-02-21",
+   "posts": 25806,
+   "posting_agents": 2389,
+   "active_submolts": 282,
+   "injection_posts": 21,
+   "injection_rate_pct": 0.081
+  },
+  {
+   "day": "2026-02-22",
+   "posts": 13564,
+   "posting_agents": 3217,
+   "active_submolts": 360,
+   "injection_posts": 46,
+   "injection_rate_pct": 0.339
+  },
+  {
+   "day": "2026-02-23",
+   "posts": 11473,
+   "posting_agents": 1970,
+   "active_submolts": 319,
+   "injection_posts": 24,
+   "injection_rate_pct": 0.209
+  },
+  {
+   "day": "2026-02-24",
+   "posts": 14684,
+   "posting_agents": 2201,
+   "active_submolts": 389,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.266
+  },
+  {
+   "day": "2026-02-25",
+   "posts": 16763,
+   "posting_agents": 2298,
+   "active_submolts": 391,
+   "injection_posts": 59,
+   "injection_rate_pct": 0.352
+  },
+  {
+   "day": "2026-02-26",
+   "posts": 27137,
+   "posting_agents": 3261,
+   "active_submolts": 470,
+   "injection_posts": 68,
+   "injection_rate_pct": 0.251
+  },
+  {
+   "day": "2026-02-27",
+   "posts": 36616,
+   "posting_agents": 3207,
+   "active_submolts": 485,
+   "injection_posts": 50,
+   "injection_rate_pct": 0.137
+  },
+  {
+   "day": "2026-02-28",
+   "posts": 33998,
+   "posting_agents": 3167,
+   "active_submolts": 458,
+   "injection_posts": 44,
+   "injection_rate_pct": 0.129
+  },
+  {
+   "day": "2026-03-01",
+   "posts": 35942,
+   "posting_agents": 3162,
+   "active_submolts": 528,
+   "injection_posts": 63,
+   "injection_rate_pct": 0.175
+  },
+  {
+   "day": "2026-03-02",
+   "posts": 35776,
+   "posting_agents": 3192,
+   "active_submolts": 505,
+   "injection_posts": 192,
+   "injection_rate_pct": 0.537
+  },
+  {
+   "day": "2026-03-03",
+   "posts": 37070,
+   "posting_agents": 2778,
+   "active_submolts": 486,
+   "injection_posts": 84,
+   "injection_rate_pct": 0.227
+  },
+  {
+   "day": "2026-03-04",
+   "posts": 32332,
+   "posting_agents": 2831,
+   "active_submolts": 489,
+   "injection_posts": 153,
+   "injection_rate_pct": 0.473
+  },
+  {
+   "day": "2026-03-05",
+   "posts": 35016,
+   "posting_agents": 3121,
+   "active_submolts": 508,
+   "injection_posts": 83,
+   "injection_rate_pct": 0.237
+  },
+  {
+   "day": "2026-03-06",
+   "posts": 31548,
+   "posting_agents": 2733,
+   "active_submolts": 465,
+   "injection_posts": 113,
+   "injection_rate_pct": 0.358
+  },
+  {
+   "day": "2026-03-07",
+   "posts": 30399,
+   "posting_agents": 2581,
+   "active_submolts": 485,
+   "injection_posts": 121,
+   "injection_rate_pct": 0.398
+  },
+  {
+   "day": "2026-03-08",
+   "posts": 29785,
+   "posting_agents": 2552,
+   "active_submolts": 474,
+   "injection_posts": 90,
+   "injection_rate_pct": 0.302
+  },
+  {
+   "day": "2026-03-09",
+   "posts": 28240,
+   "posting_agents": 2680,
+   "active_submolts": 455,
+   "injection_posts": 70,
+   "injection_rate_pct": 0.248
+  },
+  {
+   "day": "2026-03-10",
+   "posts": 29263,
+   "posting_agents": 3218,
+   "active_submolts": 442,
+   "injection_posts": 58,
+   "injection_rate_pct": 0.198
+  },
+  {
+   "day": "2026-03-11",
+   "posts": 29356,
+   "posting_agents": 3200,
+   "active_submolts": 365,
+   "injection_posts": 62,
+   "injection_rate_pct": 0.211
+  },
+  {
+   "day": "2026-03-12",
+   "posts": 27962,
+   "posting_agents": 2607,
+   "active_submolts": 377,
+   "injection_posts": 49,
+   "injection_rate_pct": 0.175
+  },
+  {
+   "day": "2026-03-13",
+   "posts": 24391,
+   "posting_agents": 2577,
+   "active_submolts": 408,
+   "injection_posts": 61,
+   "injection_rate_pct": 0.25
+  },
+  {
+   "day": "2026-03-14",
+   "posts": 21825,
+   "posting_agents": 2487,
+   "active_submolts": 415,
+   "injection_posts": 61,
+   "injection_rate_pct": 0.279
+  },
+  {
+   "day": "2026-03-15",
+   "posts": 20179,
+   "posting_agents": 2393,
+   "active_submolts": 421,
+   "injection_posts": 47,
+   "injection_rate_pct": 0.233
+  },
+  {
+   "day": "2026-03-16",
+   "posts": 20992,
+   "posting_agents": 2600,
+   "active_submolts": 392,
+   "injection_posts": 100,
+   "injection_rate_pct": 0.476
+  },
+  {
+   "day": "2026-03-17",
+   "posts": 20663,
+   "posting_agents": 2453,
+   "active_submolts": 372,
+   "injection_posts": 79,
+   "injection_rate_pct": 0.382
+  },
+  {
+   "day": "2026-03-18",
+   "posts": 21445,
+   "posting_agents": 2459,
+   "active_submolts": 500,
+   "injection_posts": 92,
+   "injection_rate_pct": 0.429
+  },
+  {
+   "day": "2026-03-19",
+   "posts": 21321,
+   "posting_agents": 2518,
+   "active_submolts": 407,
+   "injection_posts": 95,
+   "injection_rate_pct": 0.446
+  },
+  {
+   "day": "2026-03-20",
+   "posts": 19931,
+   "posting_agents": 2389,
+   "active_submolts": 378,
+   "injection_posts": 86,
+   "injection_rate_pct": 0.431
+  },
+  {
+   "day": "2026-03-21",
+   "posts": 21036,
+   "posting_agents": 2401,
+   "active_submolts": 380,
+   "injection_posts": 85,
+   "injection_rate_pct": 0.404
+  },
+  {
+   "day": "2026-03-22",
+   "posts": 21704,
+   "posting_agents": 2434,
+   "active_submolts": 431,
+   "injection_posts": 93,
+   "injection_rate_pct": 0.428
+  },
+  {
+   "day": "2026-03-23",
+   "posts": 21099,
+   "posting_agents": 2500,
+   "active_submolts": 412,
+   "injection_posts": 99,
+   "injection_rate_pct": 0.469
+  },
+  {
+   "day": "2026-03-24",
+   "posts": 20003,
+   "posting_agents": 2400,
+   "active_submolts": 390,
+   "injection_posts": 80,
+   "injection_rate_pct": 0.4
+  },
+  {
+   "day": "2026-03-25",
+   "posts": 18715,
+   "posting_agents": 2366,
+   "active_submolts": 397,
+   "injection_posts": 86,
+   "injection_rate_pct": 0.46
+  },
+  {
+   "day": "2026-03-26",
+   "posts": 15535,
+   "posting_agents": 2107,
+   "active_submolts": 360,
+   "injection_posts": 61,
+   "injection_rate_pct": 0.393
+  },
+  {
+   "day": "2026-03-27",
+   "posts": 10191,
+   "posting_agents": 1809,
+   "active_submolts": 317,
+   "injection_posts": 48,
+   "injection_rate_pct": 0.471
+  },
+  {
+   "day": "2026-03-28",
+   "posts": 9534,
+   "posting_agents": 1593,
+   "active_submolts": 310,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.367
+  },
+  {
+   "day": "2026-03-29",
+   "posts": 6834,
+   "posting_agents": 1504,
+   "active_submolts": 261,
+   "injection_posts": 36,
+   "injection_rate_pct": 0.527
+  },
+  {
+   "day": "2026-03-30",
+   "posts": 17299,
+   "posting_agents": 2116,
+   "active_submolts": 393,
+   "injection_posts": 77,
+   "injection_rate_pct": 0.445
+  },
+  {
+   "day": "2026-03-31",
+   "posts": 17262,
+   "posting_agents": 2108,
+   "active_submolts": 380,
+   "injection_posts": 124,
+   "injection_rate_pct": 0.718
+  },
+  {
+   "day": "2026-04-01",
+   "posts": 16909,
+   "posting_agents": 2112,
+   "active_submolts": 338,
+   "injection_posts": 89,
+   "injection_rate_pct": 0.526
+  },
+  {
+   "day": "2026-04-02",
+   "posts": 16112,
+   "posting_agents": 1962,
+   "active_submolts": 362,
+   "injection_posts": 87,
+   "injection_rate_pct": 0.54
+  },
+  {
+   "day": "2026-04-03",
+   "posts": 16286,
+   "posting_agents": 1914,
+   "active_submolts": 361,
+   "injection_posts": 81,
+   "injection_rate_pct": 0.497
+  },
+  {
+   "day": "2026-04-04",
+   "posts": 16034,
+   "posting_agents": 1904,
+   "active_submolts": 358,
+   "injection_posts": 81,
+   "injection_rate_pct": 0.505
+  },
+  {
+   "day": "2026-04-05",
+   "posts": 15184,
+   "posting_agents": 1770,
+   "active_submolts": 337,
+   "injection_posts": 69,
+   "injection_rate_pct": 0.454
+  },
+  {
+   "day": "2026-04-06",
+   "posts": 15140,
+   "posting_agents": 1761,
+   "active_submolts": 335,
+   "injection_posts": 71,
+   "injection_rate_pct": 0.469
+  },
+  {
+   "day": "2026-04-07",
+   "posts": 15079,
+   "posting_agents": 1658,
+   "active_submolts": 337,
+   "injection_posts": 40,
+   "injection_rate_pct": 0.265
+  },
+  {
+   "day": "2026-04-08",
+   "posts": 13981,
+   "posting_agents": 1573,
+   "active_submolts": 296,
+   "injection_posts": 40,
+   "injection_rate_pct": 0.286
+  },
+  {
+   "day": "2026-04-09",
+   "posts": 13066,
+   "posting_agents": 1553,
+   "active_submolts": 314,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.298
+  },
+  {
+   "day": "2026-04-10",
+   "posts": 12802,
+   "posting_agents": 1501,
+   "active_submolts": 314,
+   "injection_posts": 38,
+   "injection_rate_pct": 0.297
+  },
+  {
+   "day": "2026-04-11",
+   "posts": 12784,
+   "posting_agents": 1495,
+   "active_submolts": 301,
+   "injection_posts": 41,
+   "injection_rate_pct": 0.321
+  },
+  {
+   "day": "2026-04-12",
+   "posts": 12887,
+   "posting_agents": 1503,
+   "active_submolts": 266,
+   "injection_posts": 26,
+   "injection_rate_pct": 0.202
+  },
+  {
+   "day": "2026-04-13",
+   "posts": 13419,
+   "posting_agents": 1513,
+   "active_submolts": 269,
+   "injection_posts": 38,
+   "injection_rate_pct": 0.283
+  },
+  {
+   "day": "2026-04-14",
+   "posts": 13189,
+   "posting_agents": 1495,
+   "active_submolts": 292,
+   "injection_posts": 41,
+   "injection_rate_pct": 0.311
+  },
+  {
+   "day": "2026-04-15",
+   "posts": 12548,
+   "posting_agents": 1444,
+   "active_submolts": 273,
+   "injection_posts": 44,
+   "injection_rate_pct": 0.351
+  },
+  {
+   "day": "2026-04-16",
+   "posts": 12524,
+   "posting_agents": 1369,
+   "active_submolts": 259,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.279
+  },
+  {
+   "day": "2026-04-17",
+   "posts": 12799,
+   "posting_agents": 1358,
+   "active_submolts": 253,
+   "injection_posts": 34,
+   "injection_rate_pct": 0.266
+  },
+  {
+   "day": "2026-04-18",
+   "posts": 12745,
+   "posting_agents": 1309,
+   "active_submolts": 269,
+   "injection_posts": 28,
+   "injection_rate_pct": 0.22
+  },
+  {
+   "day": "2026-04-19",
+   "posts": 12657,
+   "posting_agents": 1300,
+   "active_submolts": 264,
+   "injection_posts": 32,
+   "injection_rate_pct": 0.253
+  },
+  {
+   "day": "2026-04-20",
+   "posts": 13385,
+   "posting_agents": 1339,
+   "active_submolts": 291,
+   "injection_posts": 34,
+   "injection_rate_pct": 0.254
+  },
+  {
+   "day": "2026-04-21",
+   "posts": 13583,
+   "posting_agents": 1369,
+   "active_submolts": 308,
+   "injection_posts": 21,
+   "injection_rate_pct": 0.155
+  },
+  {
+   "day": "2026-04-22",
+   "posts": 13635,
+   "posting_agents": 1463,
+   "active_submolts": 310,
+   "injection_posts": 44,
+   "injection_rate_pct": 0.323
+  },
+  {
+   "day": "2026-04-23",
+   "posts": 13146,
+   "posting_agents": 1399,
+   "active_submolts": 308,
+   "injection_posts": 51,
+   "injection_rate_pct": 0.388
+  },
+  {
+   "day": "2026-04-24",
+   "posts": 13376,
+   "posting_agents": 1436,
+   "active_submolts": 293,
+   "injection_posts": 46,
+   "injection_rate_pct": 0.344
+  },
+  {
+   "day": "2026-04-25",
+   "posts": 13222,
+   "posting_agents": 1400,
+   "active_submolts": 292,
+   "injection_posts": 49,
+   "injection_rate_pct": 0.371
+  },
+  {
+   "day": "2026-04-26",
+   "posts": 12945,
+   "posting_agents": 1259,
+   "active_submolts": 284,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.27
+  },
+  {
+   "day": "2026-04-27",
+   "posts": 13533,
+   "posting_agents": 1424,
+   "active_submolts": 279,
+   "injection_posts": 29,
+   "injection_rate_pct": 0.214
+  },
+  {
+   "day": "2026-04-28",
+   "posts": 8827,
+   "posting_agents": 1182,
+   "active_submolts": 256,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.091
+  },
+  {
+   "day": "2026-04-29",
+   "posts": 8618,
+   "posting_agents": 1051,
+   "active_submolts": 243,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.081
+  },
+  {
+   "day": "2026-04-30",
+   "posts": 13570,
+   "posting_agents": 1273,
+   "active_submolts": 280,
+   "injection_posts": 18,
+   "injection_rate_pct": 0.133
+  },
+  {
+   "day": "2026-05-01",
+   "posts": 14240,
+   "posting_agents": 1261,
+   "active_submolts": 253,
+   "injection_posts": 9,
+   "injection_rate_pct": 0.063
+  },
+  {
+   "day": "2026-05-02",
+   "posts": 14633,
+   "posting_agents": 1233,
+   "active_submolts": 257,
+   "injection_posts": 16,
+   "injection_rate_pct": 0.109
+  },
+  {
+   "day": "2026-05-03",
+   "posts": 13335,
+   "posting_agents": 1235,
+   "active_submolts": 263,
+   "injection_posts": 21,
+   "injection_rate_pct": 0.157
+  },
+  {
+   "day": "2026-05-04",
+   "posts": 13148,
+   "posting_agents": 1262,
+   "active_submolts": 248,
+   "injection_posts": 64,
+   "injection_rate_pct": 0.487
+  },
+  {
+   "day": "2026-05-05",
+   "posts": 12515,
+   "posting_agents": 1244,
+   "active_submolts": 257,
+   "injection_posts": 62,
+   "injection_rate_pct": 0.495
+  },
+  {
+   "day": "2026-05-06",
+   "posts": 12228,
+   "posting_agents": 1256,
+   "active_submolts": 266,
+   "injection_posts": 57,
+   "injection_rate_pct": 0.466
+  },
+  {
+   "day": "2026-05-07",
+   "posts": 11618,
+   "posting_agents": 1245,
+   "active_submolts": 246,
+   "injection_posts": 62,
+   "injection_rate_pct": 0.534
+  },
+  {
+   "day": "2026-05-08",
+   "posts": 11251,
+   "posting_agents": 1174,
+   "active_submolts": 243,
+   "injection_posts": 49,
+   "injection_rate_pct": 0.436
+  },
+  {
+   "day": "2026-05-09",
+   "posts": 11584,
+   "posting_agents": 1199,
+   "active_submolts": 254,
+   "injection_posts": 60,
+   "injection_rate_pct": 0.518
+  },
+  {
+   "day": "2026-05-10",
+   "posts": 10572,
+   "posting_agents": 1112,
+   "active_submolts": 222,
+   "injection_posts": 54,
+   "injection_rate_pct": 0.511
+  },
+  {
+   "day": "2026-05-11",
+   "posts": 9892,
+   "posting_agents": 1058,
+   "active_submolts": 216,
+   "injection_posts": 50,
+   "injection_rate_pct": 0.505
+  },
+  {
+   "day": "2026-05-12",
+   "posts": 10462,
+   "posting_agents": 1067,
+   "active_submolts": 216,
+   "injection_posts": 45,
+   "injection_rate_pct": 0.43
+  },
+  {
+   "day": "2026-05-13",
+   "posts": 9926,
+   "posting_agents": 1055,
+   "active_submolts": 209,
+   "injection_posts": 53,
+   "injection_rate_pct": 0.534
+  },
+  {
+   "day": "2026-05-14",
+   "posts": 10761,
+   "posting_agents": 1073,
+   "active_submolts": 222,
+   "injection_posts": 55,
+   "injection_rate_pct": 0.511
+  },
+  {
+   "day": "2026-05-15",
+   "posts": 10788,
+   "posting_agents": 1079,
+   "active_submolts": 219,
+   "injection_posts": 64,
+   "injection_rate_pct": 0.593
+  },
+  {
+   "day": "2026-05-16",
+   "posts": 12086,
+   "posting_agents": 998,
+   "active_submolts": 237,
+   "injection_posts": 64,
+   "injection_rate_pct": 0.53
+  },
+  {
+   "day": "2026-05-17",
+   "posts": 8114,
+   "posting_agents": 881,
+   "active_submolts": 169,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.481
+  },
+  {
+   "day": "2026-05-18",
+   "posts": 3747,
+   "posting_agents": 587,
+   "active_submolts": 127,
+   "injection_posts": 22,
+   "injection_rate_pct": 0.587
+  },
+  {
+   "day": "2026-05-19",
+   "posts": 12,
+   "posting_agents": 7,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-05-20",
+   "posts": 6904,
+   "posting_agents": 755,
+   "active_submolts": 159,
+   "injection_posts": 28,
+   "injection_rate_pct": 0.406
+  },
+  {
+   "day": "2026-05-21",
+   "posts": 7631,
+   "posting_agents": 889,
+   "active_submolts": 174,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.511
+  },
+  {
+   "day": "2026-05-22",
+   "posts": 9084,
+   "posting_agents": 952,
+   "active_submolts": 218,
+   "injection_posts": 33,
+   "injection_rate_pct": 0.363
+  },
+  {
+   "day": "2026-05-23",
+   "posts": 12865,
+   "posting_agents": 950,
+   "active_submolts": 220,
+   "injection_posts": 36,
+   "injection_rate_pct": 0.28
+  },
+  {
+   "day": "2026-05-24",
+   "posts": 11329,
+   "posting_agents": 939,
+   "active_submolts": 202,
+   "injection_posts": 34,
+   "injection_rate_pct": 0.3
+  },
+  {
+   "day": "2026-05-25",
+   "posts": 12309,
+   "posting_agents": 984,
+   "active_submolts": 219,
+   "injection_posts": 33,
+   "injection_rate_pct": 0.268
+  },
+  {
+   "day": "2026-05-26",
+   "posts": 11924,
+   "posting_agents": 938,
+   "active_submolts": 256,
+   "injection_posts": 32,
+   "injection_rate_pct": 0.268
+  },
+  {
+   "day": "2026-05-27",
+   "posts": 10304,
+   "posting_agents": 929,
+   "active_submolts": 274,
+   "injection_posts": 32,
+   "injection_rate_pct": 0.311
+  },
+  {
+   "day": "2026-05-28",
+   "posts": 10394,
+   "posting_agents": 935,
+   "active_submolts": 262,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.375
+  },
+  {
+   "day": "2026-05-29",
+   "posts": 11230,
+   "posting_agents": 969,
+   "active_submolts": 273,
+   "injection_posts": 39,
+   "injection_rate_pct": 0.347
+  },
+  {
+   "day": "2026-05-30",
+   "posts": 12140,
+   "posting_agents": 893,
+   "active_submolts": 290,
+   "injection_posts": 41,
+   "injection_rate_pct": 0.338
+  },
+  {
+   "day": "2026-05-31",
+   "posts": 12082,
+   "posting_agents": 911,
+   "active_submolts": 234,
+   "injection_posts": 45,
+   "injection_rate_pct": 0.372
+  },
+  {
+   "day": "2026-06-01",
+   "posts": 11063,
+   "posting_agents": 977,
+   "active_submolts": 198,
+   "injection_posts": 34,
+   "injection_rate_pct": 0.307
+  },
+  {
+   "day": "2026-06-02",
+   "posts": 11196,
+   "posting_agents": 961,
+   "active_submolts": 211,
+   "injection_posts": 35,
+   "injection_rate_pct": 0.313
+  },
+  {
+   "day": "2026-06-03",
+   "posts": 13354,
+   "posting_agents": 986,
+   "active_submolts": 212,
+   "injection_posts": 32,
+   "injection_rate_pct": 0.24
+  },
+  {
+   "day": "2026-06-04",
+   "posts": 12380,
+   "posting_agents": 958,
+   "active_submolts": 227,
+   "injection_posts": 29,
+   "injection_rate_pct": 0.234
+  },
+  {
+   "day": "2026-06-05",
+   "posts": 11286,
+   "posting_agents": 885,
+   "active_submolts": 191,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.044
+  },
+  {
+   "day": "2026-06-06",
+   "posts": 7898,
+   "posting_agents": 495,
+   "active_submolts": 130,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.038
+  },
+  {
+   "day": "2026-06-07",
+   "posts": 7789,
+   "posting_agents": 503,
+   "active_submolts": 128,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.051
+  },
+  {
+   "day": "2026-06-08",
+   "posts": 4278,
+   "posting_agents": 404,
+   "active_submolts": 93,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-09",
+   "posts": 18,
+   "posting_agents": 8,
+   "active_submolts": 2,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-10",
+   "posts": 4092,
+   "posting_agents": 365,
+   "active_submolts": 97,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.024
+  },
+  {
+   "day": "2026-06-11",
+   "posts": 7649,
+   "posting_agents": 534,
+   "active_submolts": 133,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.039
+  },
+  {
+   "day": "2026-06-12",
+   "posts": 6710,
+   "posting_agents": 539,
+   "active_submolts": 122,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.03
+  },
+  {
+   "day": "2026-06-13",
+   "posts": 7041,
+   "posting_agents": 518,
+   "active_submolts": 108,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.071
+  },
+  {
+   "day": "2026-06-14",
+   "posts": 490,
+   "posting_agents": 141,
+   "active_submolts": 38,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-15",
+   "posts": 18,
+   "posting_agents": 7,
+   "active_submolts": 2,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-16",
+   "posts": 1730,
+   "posting_agents": 249,
+   "active_submolts": 59,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.058
+  },
+  {
+   "day": "2026-06-17",
+   "posts": 21,
+   "posting_agents": 7,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-18",
+   "posts": 3332,
+   "posting_agents": 392,
+   "active_submolts": 96,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.09
+  },
+  {
+   "day": "2026-06-19",
+   "posts": 5272,
+   "posting_agents": 480,
+   "active_submolts": 126,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.057
+  },
+  {
+   "day": "2026-06-20",
+   "posts": 5579,
+   "posting_agents": 482,
+   "active_submolts": 104,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.054
+  },
+  {
+   "day": "2026-06-21",
+   "posts": 4371,
+   "posting_agents": 501,
+   "active_submolts": 99,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.023
+  },
+  {
+   "day": "2026-06-22",
+   "posts": 5355,
+   "posting_agents": 508,
+   "active_submolts": 93,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.093
+  },
+  {
+   "day": "2026-06-23",
+   "posts": 2459,
+   "posting_agents": 316,
+   "active_submolts": 72,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.081
+  },
+  {
+   "day": "2026-06-24",
+   "posts": 5131,
+   "posting_agents": 530,
+   "active_submolts": 121,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.117
+  },
+  {
+   "day": "2026-06-25",
+   "posts": 5602,
+   "posting_agents": 518,
+   "active_submolts": 108,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-26",
+   "posts": 5845,
+   "posting_agents": 545,
+   "active_submolts": 134,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-06-27",
+   "posts": 4911,
+   "posting_agents": 505,
+   "active_submolts": 104,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.143
+  },
+  {
+   "day": "2026-06-28",
+   "posts": 5388,
+   "posting_agents": 506,
+   "active_submolts": 95,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.074
+  },
+  {
+   "day": "2026-06-29",
+   "posts": 5854,
+   "posting_agents": 537,
+   "active_submolts": 105,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.034
+  },
+  {
+   "day": "2026-06-30",
+   "posts": 5839,
+   "posting_agents": 516,
+   "active_submolts": 98,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.12
+  },
+  {
+   "day": "2026-07-01",
+   "posts": 5680,
+   "posting_agents": 541,
+   "active_submolts": 106,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.106
+  },
+  {
+   "day": "2026-07-02",
+   "posts": 5299,
+   "posting_agents": 535,
+   "active_submolts": 110,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.075
+  },
+  {
+   "day": "2026-07-03",
+   "posts": 5314,
+   "posting_agents": 512,
+   "active_submolts": 105,
+   "injection_posts": 9,
+   "injection_rate_pct": 0.169
+  },
+  {
+   "day": "2026-07-04",
+   "posts": 4971,
+   "posting_agents": 500,
+   "active_submolts": 103,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.101
+  },
+  {
+   "day": "2026-07-05",
+   "posts": 5006,
+   "posting_agents": 518,
+   "active_submolts": 118,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.08
+  },
+  {
+   "day": "2026-07-06",
+   "posts": 5246,
+   "posting_agents": 514,
+   "active_submolts": 106,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.076
+  },
+  {
+   "day": "2026-07-07",
+   "posts": 4805,
+   "posting_agents": 582,
+   "active_submolts": 115,
+   "injection_posts": 10,
+   "injection_rate_pct": 0.208
+  },
+  {
+   "day": "2026-07-08",
+   "posts": 4847,
+   "posting_agents": 514,
+   "active_submolts": 108,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.165
+  },
+  {
+   "day": "2026-07-09",
+   "posts": 4867,
+   "posting_agents": 493,
+   "active_submolts": 110,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.123
+  },
+  {
+   "day": "2026-07-10",
+   "posts": 5045,
+   "posting_agents": 540,
+   "active_submolts": 117,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.059
+  },
+  {
+   "day": "2026-07-11",
+   "posts": 4670,
+   "posting_agents": 514,
+   "active_submolts": 110,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.107
+  },
+  {
+   "day": "2026-07-12",
+   "posts": 5241,
+   "posting_agents": 538,
+   "active_submolts": 115,
+   "injection_posts": 14,
+   "injection_rate_pct": 0.267
+  },
+  {
+   "day": "2026-07-13",
+   "posts": 6278,
+   "posting_agents": 555,
+   "active_submolts": 116,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.032
+  },
+  {
+   "day": "2026-07-14",
+   "posts": 5799,
+   "posting_agents": 552,
+   "active_submolts": 113,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.052
+  },
+  {
+   "day": "2026-07-15",
+   "posts": 5721,
+   "posting_agents": 552,
+   "active_submolts": 118,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.14
+  },
+  {
+   "day": "2026-07-16",
+   "posts": 5477,
+   "posting_agents": 569,
+   "active_submolts": 113,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.128
+  },
+  {
+   "day": "2026-07-17",
+   "posts": 5484,
+   "posting_agents": 558,
+   "active_submolts": 110,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.055
+  },
+  {
+   "day": "2026-07-18",
+   "posts": 4872,
+   "posting_agents": 534,
+   "active_submolts": 105,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.082
+  },
+  {
+   "day": "2026-07-19",
+   "posts": 4213,
+   "posting_agents": 528,
+   "active_submolts": 131,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.047
+  },
+  {
+   "day": "2026-07-20",
+   "posts": 5458,
+   "posting_agents": 528,
+   "active_submolts": 114,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.037
+  },
+  {
+   "day": "2026-07-21",
+   "posts": 6274,
+   "posting_agents": 544,
+   "active_submolts": 113,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.08
+  },
+  {
+   "day": "2026-07-22",
+   "posts": 6427,
+   "posting_agents": 543,
+   "active_submolts": 127,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.062
+  },
+  {
+   "day": "2026-07-23",
+   "posts": 6144,
+   "posting_agents": 570,
+   "active_submolts": 120,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.098
+  },
+  {
+   "day": "2026-07-24",
+   "posts": 6132,
+   "posting_agents": 558,
+   "active_submolts": 111,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.065
+  },
+  {
+   "day": "2026-07-25",
+   "posts": 5655,
+   "posting_agents": 520,
+   "active_submolts": 107,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.035
+  },
+  {
+   "day": "2026-07-26",
+   "posts": 5031,
+   "posting_agents": 534,
+   "active_submolts": 116,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.08
+  },
+  {
+   "day": "2026-07-27",
+   "posts": 4344,
+   "posting_agents": 533,
+   "active_submolts": 116,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.046
+  },
+  {
+   "day": "2026-07-28",
+   "posts": 4297,
+   "posting_agents": 524,
+   "active_submolts": 112,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.093
+  },
+  {
+   "day": "2026-07-29",
+   "posts": 4118,
+   "posting_agents": 517,
+   "active_submolts": 106,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.097
+  },
+  {
+   "day": "2026-07-30",
+   "posts": 3987,
+   "posting_agents": 521,
+   "active_submolts": 104,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.176
+  },
+  {
+   "day": "2026-07-31",
+   "posts": 4098,
+   "posting_agents": 497,
+   "active_submolts": 104,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.098
+  },
+  {
+   "day": "2026-08-01",
+   "posts": 5164,
+   "posting_agents": 516,
+   "active_submolts": 103,
+   "injection_posts": 13,
+   "injection_rate_pct": 0.252
+  },
+  {
+   "day": "2026-08-02",
+   "posts": 5694,
+   "posting_agents": 482,
+   "active_submolts": 107,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.088
+  },
+  {
+   "day": "2026-08-03",
+   "posts": 5568,
+   "posting_agents": 524,
+   "active_submolts": 116,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.126
+  },
+  {
+   "day": "2026-08-04",
+   "posts": 5531,
+   "posting_agents": 524,
+   "active_submolts": 109,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.145
+  },
+  {
+   "day": "2026-08-05",
+   "posts": 5299,
+   "posting_agents": 487,
+   "active_submolts": 105,
+   "injection_posts": 9,
+   "injection_rate_pct": 0.17
+  },
+  {
+   "day": "2026-08-06",
+   "posts": 5341,
+   "posting_agents": 497,
+   "active_submolts": 108,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.15
+  },
+  {
+   "day": "2026-08-07",
+   "posts": 672,
+   "posting_agents": 194,
+   "active_submolts": 53,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.149
+  },
+  {
+   "day": "2026-08-16",
+   "posts": 2,
+   "posting_agents": 2,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-08-17",
+   "posts": 16,
+   "posting_agents": 5,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-08-18",
+   "posts": 289,
+   "posting_agents": 100,
+   "active_submolts": 31,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.346
+  },
+  {
+   "day": "2026-08-19",
+   "posts": 4406,
+   "posting_agents": 488,
+   "active_submolts": 120,
+   "injection_posts": 9,
+   "injection_rate_pct": 0.204
+  },
+  {
+   "day": "2026-08-20",
+   "posts": 4702,
+   "posting_agents": 493,
+   "active_submolts": 128,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.064
+  },
+  {
+   "day": "2026-08-21",
+   "posts": 4214,
+   "posting_agents": 480,
+   "active_submolts": 117,
+   "injection_posts": 17,
+   "injection_rate_pct": 0.403
+  },
+  {
+   "day": "2026-08-22",
+   "posts": 3446,
+   "posting_agents": 465,
+   "active_submolts": 105,
+   "injection_posts": 13,
+   "injection_rate_pct": 0.377
+  },
+  {
+   "day": "2026-08-23",
+   "posts": 4866,
+   "posting_agents": 483,
+   "active_submolts": 115,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.164
+  },
+  {
+   "day": "2026-08-24",
+   "posts": 1361,
+   "posting_agents": 244,
+   "active_submolts": 65,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.147
+  },
+  {
+   "day": "2026-08-25",
+   "posts": 14,
+   "posting_agents": 9,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-08-26",
+   "posts": 1383,
+   "posting_agents": 230,
+   "active_submolts": 58,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.072
+  },
+  {
+   "day": "2026-08-27",
+   "posts": 5347,
+   "posting_agents": 499,
+   "active_submolts": 130,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.056
+  },
+  {
+   "day": "2026-08-28",
+   "posts": 5381,
+   "posting_agents": 502,
+   "active_submolts": 115,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.037
+  },
+  {
+   "day": "2026-08-29",
+   "posts": 5189,
+   "posting_agents": 493,
+   "active_submolts": 112,
+   "injection_posts": 3,
+   "injection_rate_pct": 0.058
+  },
+  {
+   "day": "2026-08-30",
+   "posts": 5195,
+   "posting_agents": 498,
+   "active_submolts": 119,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.096
+  },
+  {
+   "day": "2026-08-31",
+   "posts": 5443,
+   "posting_agents": 514,
+   "active_submolts": 102,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.129
+  },
+  {
+   "day": "2026-09-01",
+   "posts": 5662,
+   "posting_agents": 507,
+   "active_submolts": 104,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.106
+  },
+  {
+   "day": "2026-09-02",
+   "posts": 4419,
+   "posting_agents": 533,
+   "active_submolts": 125,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.091
+  },
+  {
+   "day": "2026-09-03",
+   "posts": 1210,
+   "posting_agents": 262,
+   "active_submolts": 76,
+   "injection_posts": 1,
+   "injection_rate_pct": 0.083
+  },
+  {
+   "day": "2026-09-04",
+   "posts": 19,
+   "posting_agents": 5,
+   "active_submolts": 1,
+   "injection_posts": 0,
+   "injection_rate_pct": 0.0
+  },
+  {
+   "day": "2026-09-05",
+   "posts": 3394,
+   "posting_agents": 461,
+   "active_submolts": 108,
+   "injection_posts": 5,
+   "injection_rate_pct": 0.147
+  },
+  {
+   "day": "2026-09-06",
+   "posts": 3689,
+   "posting_agents": 470,
+   "active_submolts": 107,
+   "injection_posts": 6,
+   "injection_rate_pct": 0.163
+  },
+  {
+   "day": "2026-09-07",
+   "posts": 3827,
+   "posting_agents": 511,
+   "active_submolts": 109,
+   "injection_posts": 8,
+   "injection_rate_pct": 0.209
+  },
+  {
+   "day": "2026-09-08",
+   "posts": 4620,
+   "posting_agents": 497,
+   "active_submolts": 106,
+   "injection_posts": 7,
+   "injection_rate_pct": 0.152
+  },
+  {
+   "day": "2026-09-09",
+   "posts": 4803,
+   "posting_agents": 495,
+   "active_submolts": 114,
+   "injection_posts": 2,
+   "injection_rate_pct": 0.042
+  },
+  {
+   "day": "2026-09-10",
+   "posts": 4526,
+   "posting_agents": 482,
+   "active_submolts": 106,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.088
+  },
+  {
+   "day": "2026-09-11",
+   "posts": 3102,
+   "posting_agents": 425,
+   "active_submolts": 99,
+   "injection_posts": 4,
+   "injection_rate_pct": 0.129
+  }
+ ],
+ "attribution": {
+  "agents_total": 182860,
+  "agents_claimed": 129268,
+  "agents_with_owner_x_handle": 55551,
+  "distinct_owner_x_handles": 55541,
+  "agents_per_handle_mean": 1.0,
+  "agents_per_handle_max": 2,
+  "agents_per_handle_gini": 0.0002,
+  "agents_per_handle_distribution": {
+   "1": 55531,
+   "2": 10
+  },
+  "handles_with_10plus_agents": 0,
+  "handles_with_100plus_agents": 0,
+  "posts_claimed_with_handle": 1003776,
+  "posting_agents_claimed_with_handle": 55042,
+  "injection_posts_claimed_with_handle": 5724,
+  "posts_claimed_no_handle": 356760,
+  "posting_agents_claimed_no_handle": 73685,
+  "injection_posts_claimed_no_handle": 98,
+  "posts_unclaimed": 2242177,
+  "posting_agents_unclaimed": 52862,
+  "injection_posts_unclaimed": 5743,
+  "posts_agent_row_missing": 182,
+  "posting_agents_agent_row_missing": 22,
+  "injection_posts_agent_row_missing": 0,
+  "window_pre": {
+   "posts": 1976535,
+   "posts_with_owner_handle_pct": 26.98,
+   "posting_agents": 167868,
+   "posting_agents_with_owner_handle_pct": 31.86,
+   "distinct_owner_handles_posting": 53468,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_post": {
+   "posts": 639412,
+   "posts_with_owner_handle_pct": 39.19,
+   "posting_agents": 13337,
+   "posting_agents_with_owner_handle_pct": 25.19,
+   "distinct_owner_handles_posting": 3358,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_late": {
+   "posts": 986766,
+   "posts_with_owner_handle_pct": 22.29,
+   "posting_agents": 8993,
+   "posting_agents_with_owner_handle_pct": 16.85,
+   "distinct_owner_handles_posting": 1515,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_pre28": {
+   "posts": 1214269,
+   "posts_with_owner_handle_pct": 12.37,
+   "posting_agents": 80007,
+   "posting_agents_with_owner_handle_pct": 18.92,
+   "distinct_owner_handles_posting": 15135,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_post28": {
+   "posts": 532205,
+   "posts_with_owner_handle_pct": 39.84,
+   "posting_agents": 12381,
+   "posting_agents_with_owner_handle_pct": 26.97,
+   "distinct_owner_handles_posting": 3338,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_pre7": {
+   "posts": 224390,
+   "posts_with_owner_handle_pct": 18.39,
+   "posting_agents": 6698,
+   "posting_agents_with_owner_handle_pct": 21.93,
+   "distinct_owner_handles_posting": 1469,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "window_post7": {
+   "posts": 173968,
+   "posts_with_owner_handle_pct": 28.26,
+   "posting_agents": 7435,
+   "posting_agents_with_owner_handle_pct": 24.21,
+   "distinct_owner_handles_posting": 1800,
+   "posting_agents_per_posting_handle": 1.0
+  },
+  "injection_agents": 1982,
+  "injection_agents_with_owner_handle": 1027,
+  "injection_distinct_owner_handles": 1027,
+  "top10_injection_agents": [
+   {
+    "agent_name": "clawproof",
+    "injection_posts": 3029,
+    "is_claimed": false,
+    "has_owner_handle": false
+   },
+   {
+    "agent_name": "thehackerman",
+    "injection_posts": 1883,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "JustThisOne",
+    "injection_posts": 238,
+    "is_claimed": false,
+    "has_owner_handle": false
+   },
+   {
+    "agent_name": "neuropay_real",
+    "injection_posts": 182,
+    "is_claimed": false,
+    "has_owner_handle": false
+   },
+   {
+    "agent_name": "QuantumPaw",
+    "injection_posts": 167,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "MatrixAgent_tt18117566185",
+    "injection_posts": 166,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "AutoPilotAI",
+    "injection_posts": 145,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "MizukiAI",
+    "injection_posts": 141,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "Mizukiih",
+    "injection_posts": 138,
+    "is_claimed": true,
+    "has_owner_handle": true
+   },
+   {
+    "agent_name": "Mizukih",
+    "injection_posts": 130,
+    "is_claimed": true,
+    "has_owner_handle": true
+   }
+  ],
+  "top1_injection_agent_share_pct": 26.19,
+  "top10_injection_agents_share_pct": 53.77,
+  "m5_same_minute_registration_bursts": {
+   "bursts": 0,
+   "agents_in_bursts": 0,
+   "max_burst": 0,
+   "bursts_10plus": 0,
+   "bursts_100plus": 0
+  },
+  "m6_description_discloses": {
+   "agents": 182860,
+   "names_a_model_pct": 1.36,
+   "names_a_framework_pct": 6.0,
+   "names_an_operator_phrase_pct": 1.24,
+   "empty_description_pct": 19.49
+  },
+  "m8_karma_by_handle": {
+   "handles": 55541,
+   "total_karma_claimed": 2295918.0,
+   "top10_handles_share_pct": 31.35,
+   "top1pct_handles_share_pct": 64.23,
+   "gini": 0.9315
+  }
+ },
+ "snapshots_daily": [
+  {
+   "day": "2026-01-30",
+   "total_agents": 843,
+   "total_posts": 1038,
+   "total_comments": 0,
+   "active_agents_24h": 831
+  },
+  {
+   "day": "2026-01-31",
+   "total_agents": 9485,
+   "total_posts": 22635,
+   "total_comments": 2856,
+   "active_agents_24h": 9342
+  },
+  {
+   "day": "2026-02-01",
+   "total_agents": 15619,
+   "total_posts": 43784,
+   "total_comments": 2856,
+   "active_agents_24h": 8651
+  },
+  {
+   "day": "2026-02-02",
+   "total_agents": 21032,
+   "total_posts": 72117,
+   "total_comments": 33299,
+   "active_agents_24h": 10037
+  },
+  {
+   "day": "2026-02-03",
+   "total_agents": 23313,
+   "total_posts": 92810,
+   "total_comments": 95471,
+   "active_agents_24h": 8659
+  },
+  {
+   "day": "2026-02-04",
+   "total_agents": 26164,
+   "total_posts": 125176,
+   "total_comments": 261351,
+   "active_agents_24h": 6764
+  },
+  {
+   "day": "2026-02-05",
+   "total_agents": 28834,
+   "total_posts": 158012,
+   "total_comments": 480793,
+   "active_agents_24h": 7012
+  },
+  {
+   "day": "2026-02-06",
+   "total_agents": 30810,
+   "total_posts": 190811,
+   "total_comments": 601631,
+   "active_agents_24h": 6668
+  },
+  {
+   "day": "2026-02-07",
+   "total_agents": 32707,
+   "total_posts": 224519,
+   "total_comments": 742538,
+   "active_agents_24h": 5867
+  },
+  {
+   "day": "2026-02-08",
+   "total_agents": 39103,
+   "total_posts": 260136,
+   "total_comments": 841316,
+   "active_agents_24h": 10144
+  },
+  {
+   "day": "2026-02-09",
+   "total_agents": 53841,
+   "total_posts": 292742,
+   "total_comments": 843640,
+   "active_agents_24h": 20471
+  },
+  {
+   "day": "2026-02-10",
+   "total_agents": 65537,
+   "total_posts": 325220,
+   "total_comments": 845772,
+   "active_agents_24h": 18229
+  },
+  {
+   "day": "2026-02-11",
+   "total_agents": 75806,
+   "total_posts": 359242,
+   "total_comments": 846715,
+   "active_agents_24h": 16983
+  },
+  {
+   "day": "2026-02-12",
+   "total_agents": 83171,
+   "total_posts": 391597,
+   "total_comments": 847040,
+   "active_agents_24h": 18924
+  },
+  {
+   "day": "2026-02-13",
+   "total_agents": 84711,
+   "total_posts": 402021,
+   "total_comments": 852237,
+   "active_agents_24h": 14416
+  },
+  {
+   "day": "2026-02-14",
+   "total_agents": 85396,
+   "total_posts": 405705,
+   "total_comments": 860102,
+   "active_agents_24h": 4972
+  },
+  {
+   "day": "2026-02-15",
+   "total_agents": 86014,
+   "total_posts": 409154,
+   "total_comments": 867447,
+   "active_agents_24h": 1710
+  },
+  {
+   "day": "2026-02-16",
+   "total_agents": 86533,
+   "total_posts": 412375,
+   "total_comments": 874273,
+   "active_agents_24h": 1625
+  },
+  {
+   "day": "2026-02-17",
+   "total_agents": 86959,
+   "total_posts": 415279,
+   "total_comments": 879709,
+   "active_agents_24h": 1491
+  },
+  {
+   "day": "2026-02-18",
+   "total_agents": 87372,
+   "total_posts": 418205,
+   "total_comments": 879709,
+   "active_agents_24h": 1355
+  },
+  {
+   "day": "2026-02-19",
+   "total_agents": 87755,
+   "total_posts": 421168,
+   "total_comments": 879709,
+   "active_agents_24h": 1320
+  },
+  {
+   "day": "2026-02-20",
+   "total_agents": 88072,
+   "total_posts": 423761,
+   "total_comments": 879709,
+   "active_agents_24h": 1293
+  },
+  {
+   "day": "2026-02-21",
+   "total_agents": 88393,
+   "total_posts": 427299,
+   "total_comments": 879709,
+   "active_agents_24h": 1228
+  },
+  {
+   "day": "2026-02-22",
+   "total_agents": 90073,
+   "total_posts": 440717,
+   "total_comments": 879709,
+   "active_agents_24h": 3275
+  },
+  {
+   "day": "2026-02-23",
+   "total_agents": 90496,
+   "total_posts": 452038,
+   "total_comments": 879709,
+   "active_agents_24h": 3209
+  },
+  {
+   "day": "2026-02-24",
+   "total_agents": 91004,
+   "total_posts": 466677,
+   "total_comments": 879709,
+   "active_agents_24h": 2209
+  },
+  {
+   "day": "2026-02-25",
+   "total_agents": 91505,
+   "total_posts": 483283,
+   "total_comments": 879709,
+   "active_agents_24h": 2305
+  },
+  {
+   "day": "2026-02-26",
+   "total_agents": 92122,
+   "total_posts": 506129,
+   "total_comments": 879709,
+   "active_agents_24h": 3117
+  },
+  {
+   "day": "2026-02-27",
+   "total_agents": 92761,
+   "total_posts": 535763,
+   "total_comments": 879709,
+   "active_agents_24h": 3311
+  },
+  {
+   "day": "2026-02-28",
+   "total_agents": 93198,
+   "total_posts": 563665,
+   "total_comments": 879709,
+   "active_agents_24h": 3015
+  },
+  {
+   "day": "2026-03-01",
+   "total_agents": 93609,
+   "total_posts": 592240,
+   "total_comments": 879709,
+   "active_agents_24h": 2996
+  },
+  {
+   "day": "2026-03-02",
+   "total_agents": 93956,
+   "total_posts": 621613,
+   "total_comments": 879709,
+   "active_agents_24h": 3048
+  },
+  {
+   "day": "2026-03-03",
+   "total_agents": 94288,
+   "total_posts": 651950,
+   "total_comments": 879709,
+   "active_agents_24h": 2997
+  },
+  {
+   "day": "2026-03-04",
+   "total_agents": 94759,
+   "total_posts": 680560,
+   "total_comments": 879709,
+   "active_agents_24h": 2714
+  },
+  {
+   "day": "2026-03-05",
+   "total_agents": 95074,
+   "total_posts": 710582,
+   "total_comments": 879709,
+   "active_agents_24h": 2976
+  },
+  {
+   "day": "2026-03-06",
+   "total_agents": 95365,
+   "total_posts": 739179,
+   "total_comments": 879709,
+   "active_agents_24h": 2897
+  },
+  {
+   "day": "2026-03-07",
+   "total_agents": 95583,
+   "total_posts": 760006,
+   "total_comments": 879709,
+   "active_agents_24h": 2589
+  },
+  {
+   "day": "2026-03-09",
+   "total_agents": 95856,
+   "total_posts": 772630,
+   "total_comments": 879709,
+   "active_agents_24h": 1811
+  },
+  {
+   "day": "2026-03-10",
+   "total_agents": 96390,
+   "total_posts": 798329,
+   "total_comments": 879709,
+   "active_agents_24h": 3092
+  },
+  {
+   "day": "2026-03-11",
+   "total_agents": 97129,
+   "total_posts": 824530,
+   "total_comments": 879709,
+   "active_agents_24h": 3318
+  },
+  {
+   "day": "2026-03-12",
+   "total_agents": 97644,
+   "total_posts": 851328,
+   "total_comments": 879709,
+   "active_agents_24h": 3050
+  },
+  {
+   "day": "2026-03-13",
+   "total_agents": 98062,
+   "total_posts": 874944,
+   "total_comments": 879709,
+   "active_agents_24h": 2576
+  },
+  {
+   "day": "2026-03-14",
+   "total_agents": 98456,
+   "total_posts": 896051,
+   "total_comments": 879709,
+   "active_agents_24h": 2537
+  },
+  {
+   "day": "2026-03-15",
+   "total_agents": 98788,
+   "total_posts": 915585,
+   "total_comments": 879709,
+   "active_agents_24h": 2432
+  },
+  {
+   "day": "2026-03-16",
+   "total_agents": 99248,
+   "total_posts": 935983,
+   "total_comments": 879709,
+   "active_agents_24h": 2562
+  },
+  {
+   "day": "2026-03-17",
+   "total_agents": 99571,
+   "total_posts": 956152,
+   "total_comments": 879709,
+   "active_agents_24h": 2571
+  },
+  {
+   "day": "2026-03-18",
+   "total_agents": 99890,
+   "total_posts": 976922,
+   "total_comments": 879709,
+   "active_agents_24h": 2424
+  },
+  {
+   "day": "2026-03-19",
+   "total_agents": 100207,
+   "total_posts": 997651,
+   "total_comments": 879709,
+   "active_agents_24h": 2535
+  },
+  {
+   "day": "2026-03-20",
+   "total_agents": 100471,
+   "total_posts": 1017054,
+   "total_comments": 879709,
+   "active_agents_24h": 2493
+  },
+  {
+   "day": "2026-03-21",
+   "total_agents": 100714,
+   "total_posts": 1037422,
+   "total_comments": 879709,
+   "active_agents_24h": 2453
+  },
+  {
+   "day": "2026-03-22",
+   "total_agents": 100996,
+   "total_posts": 1058332,
+   "total_comments": 879709,
+   "active_agents_24h": 2429
+  },
+  {
+   "day": "2026-03-23",
+   "total_agents": 101269,
+   "total_posts": 1078814,
+   "total_comments": 879709,
+   "active_agents_24h": 2497
+  },
+  {
+   "day": "2026-03-24",
+   "total_agents": 101473,
+   "total_posts": 1098261,
+   "total_comments": 879709,
+   "active_agents_24h": 2454
+  },
+  {
+   "day": "2026-03-25",
+   "total_agents": 101663,
+   "total_posts": 1116285,
+   "total_comments": 879709,
+   "active_agents_24h": 2420
+  },
+  {
+   "day": "2026-03-26",
+   "total_agents": 101737,
+   "total_posts": 1123649,
+   "total_comments": 879709,
+   "active_agents_24h": 2316
+  },
+  {
+   "day": "2026-03-27",
+   "total_agents": 730,
+   "total_posts": 1822,
+   "total_comments": 0,
+   "active_agents_24h": 726
+  },
+  {
+   "day": "2026-03-28",
+   "total_agents": 1666,
+   "total_posts": 9923,
+   "total_comments": 0,
+   "active_agents_24h": 1540
+  },
+  {
+   "day": "2026-03-29",
+   "total_agents": 2049,
+   "total_posts": 15913,
+   "total_comments": 0,
+   "active_agents_24h": 1636
+  },
+  {
+   "day": "2026-03-30",
+   "total_agents": 2440,
+   "total_posts": 24954,
+   "total_comments": 0,
+   "active_agents_24h": 1668
+  },
+  {
+   "day": "2026-03-31",
+   "total_agents": 3007,
+   "total_posts": 42010,
+   "total_comments": 0,
+   "active_agents_24h": 2099
+  },
+  {
+   "day": "2026-04-01",
+   "total_agents": 3386,
+   "total_posts": 58766,
+   "total_comments": 0,
+   "active_agents_24h": 2111
+  },
+  {
+   "day": "2026-04-02",
+   "total_agents": 3694,
+   "total_posts": 74687,
+   "total_comments": 0,
+   "active_agents_24h": 2103
+  },
+  {
+   "day": "2026-04-03",
+   "total_agents": 3951,
+   "total_posts": 90885,
+   "total_comments": 0,
+   "active_agents_24h": 1981
+  },
+  {
+   "day": "2026-04-04",
+   "total_agents": 4184,
+   "total_posts": 106798,
+   "total_comments": 0,
+   "active_agents_24h": 1953
+  },
+  {
+   "day": "2026-04-05",
+   "total_agents": 4389,
+   "total_posts": 121937,
+   "total_comments": 0,
+   "active_agents_24h": 1894
+  },
+  {
+   "day": "2026-04-06",
+   "total_agents": 103209,
+   "total_posts": 1035575,
+   "total_comments": 943429,
+   "active_agents_24h": 1804
+  },
+  {
+   "day": "2026-04-07",
+   "total_agents": 103285,
+   "total_posts": 1045001,
+   "total_comments": 1066811,
+   "active_agents_24h": 1746
+  },
+  {
+   "day": "2026-04-09",
+   "total_agents": 103524,
+   "total_posts": 1069761,
+   "total_comments": 1154881,
+   "active_agents_24h": 1258
+  },
+  {
+   "day": "2026-04-10",
+   "total_agents": 103622,
+   "total_posts": 1077760,
+   "total_comments": 1165368,
+   "active_agents_24h": 1539
+  },
+  {
+   "day": "2026-04-12",
+   "total_agents": 104175,
+   "total_posts": 1158741,
+   "total_comments": 1181641,
+   "active_agents_24h": 1494
+  },
+  {
+   "day": "2026-04-13",
+   "total_agents": 104294,
+   "total_posts": 1172380,
+   "total_comments": 1198498,
+   "active_agents_24h": 1529
+  },
+  {
+   "day": "2026-04-14",
+   "total_agents": 176624,
+   "total_posts": 2615745,
+   "total_comments": 1213877,
+   "active_agents_24h": 1528
+  },
+  {
+   "day": "2026-04-15",
+   "total_agents": 176719,
+   "total_posts": 2628305,
+   "total_comments": 1228902,
+   "active_agents_24h": 1495
+  },
+  {
+   "day": "2026-04-16",
+   "total_agents": 176801,
+   "total_posts": 2640788,
+   "total_comments": 1244594,
+   "active_agents_24h": 1429
+  },
+  {
+   "day": "2026-04-17",
+   "total_agents": 176896,
+   "total_posts": 2653576,
+   "total_comments": 1260729,
+   "active_agents_24h": 1367
+  },
+  {
+   "day": "2026-04-18",
+   "total_agents": 176971,
+   "total_posts": 2666349,
+   "total_comments": 1276739,
+   "active_agents_24h": 1360
+  },
+  {
+   "day": "2026-04-19",
+   "total_agents": 177061,
+   "total_posts": 2678982,
+   "total_comments": 1292199,
+   "active_agents_24h": 1315
+  },
+  {
+   "day": "2026-04-20",
+   "total_agents": 177145,
+   "total_posts": 2692300,
+   "total_comments": 1306267,
+   "active_agents_24h": 1341
+  },
+  {
+   "day": "2026-04-21",
+   "total_agents": 177226,
+   "total_posts": 2705899,
+   "total_comments": 1317821,
+   "active_agents_24h": 1370
+  },
+  {
+   "day": "2026-04-22",
+   "total_agents": 177298,
+   "total_posts": 2719597,
+   "total_comments": 1329655,
+   "active_agents_24h": 1471
+  },
+  {
+   "day": "2026-04-23",
+   "total_agents": 177377,
+   "total_posts": 2732719,
+   "total_comments": 1341292,
+   "active_agents_24h": 1463
+  },
+  {
+   "day": "2026-04-24",
+   "total_agents": 177452,
+   "total_posts": 2746078,
+   "total_comments": 1352351,
+   "active_agents_24h": 1446
+  },
+  {
+   "day": "2026-04-25",
+   "total_agents": 177524,
+   "total_posts": 2759354,
+   "total_comments": 1364570,
+   "active_agents_24h": 1438
+  },
+  {
+   "day": "2026-04-26",
+   "total_agents": 177586,
+   "total_posts": 2772275,
+   "total_comments": 1376666,
+   "active_agents_24h": 1387
+  },
+  {
+   "day": "2026-04-27",
+   "total_agents": 177658,
+   "total_posts": 2785802,
+   "total_comments": 1387484,
+   "active_agents_24h": 1422
+  },
+  {
+   "day": "2026-04-28",
+   "total_agents": 177697,
+   "total_posts": 2794609,
+   "total_comments": 1394591,
+   "active_agents_24h": 1427
+  },
+  {
+   "day": "2026-04-29",
+   "total_agents": 177775,
+   "total_posts": 2803130,
+   "total_comments": 1400464,
+   "active_agents_24h": 1044
+  },
+  {
+   "day": "2026-04-30",
+   "total_agents": 177840,
+   "total_posts": 2816653,
+   "total_comments": 1410026,
+   "active_agents_24h": 1314
+  },
+  {
+   "day": "2026-05-01",
+   "total_agents": 177895,
+   "total_posts": 2830892,
+   "total_comments": 1420957,
+   "active_agents_24h": 1275
+  },
+  {
+   "day": "2026-05-02",
+   "total_agents": 177947,
+   "total_posts": 2845557,
+   "total_comments": 1433417,
+   "active_agents_24h": 1263
+  },
+  {
+   "day": "2026-05-03",
+   "total_agents": 178007,
+   "total_posts": 2858907,
+   "total_comments": 1446168,
+   "active_agents_24h": 1234
+  },
+  {
+   "day": "2026-05-04",
+   "total_agents": 178078,
+   "total_posts": 2872036,
+   "total_comments": 1458262,
+   "active_agents_24h": 1268
+  },
+  {
+   "day": "2026-05-05",
+   "total_agents": 178139,
+   "total_posts": 2884674,
+   "total_comments": 1470194,
+   "active_agents_24h": 1254
+  },
+  {
+   "day": "2026-05-06",
+   "total_agents": 178217,
+   "total_posts": 2896813,
+   "total_comments": 1481949,
+   "active_agents_24h": 1265
+  },
+  {
+   "day": "2026-05-07",
+   "total_agents": 178280,
+   "total_posts": 2908431,
+   "total_comments": 1494243,
+   "active_agents_24h": 1255
+  },
+  {
+   "day": "2026-05-08",
+   "total_agents": 178346,
+   "total_posts": 2919709,
+   "total_comments": 1505747,
+   "active_agents_24h": 1245
+  },
+  {
+   "day": "2026-05-09",
+   "total_agents": 178418,
+   "total_posts": 2931304,
+   "total_comments": 1519285,
+   "active_agents_24h": 1207
+  },
+  {
+   "day": "2026-05-10",
+   "total_agents": 178466,
+   "total_posts": 2941850,
+   "total_comments": 1532442,
+   "active_agents_24h": 1195
+  },
+  {
+   "day": "2026-05-11",
+   "total_agents": 178507,
+   "total_posts": 2951700,
+   "total_comments": 1542753,
+   "active_agents_24h": 1115
+  },
+  {
+   "day": "2026-05-12",
+   "total_agents": 178558,
+   "total_posts": 2962151,
+   "total_comments": 1553284,
+   "active_agents_24h": 1085
+  },
+  {
+   "day": "2026-05-13",
+   "total_agents": 178597,
+   "total_posts": 2972042,
+   "total_comments": 1563254,
+   "active_agents_24h": 1101
+  },
+  {
+   "day": "2026-05-14",
+   "total_agents": 178646,
+   "total_posts": 2982929,
+   "total_comments": 1573661,
+   "active_agents_24h": 1075
+  },
+  {
+   "day": "2026-05-15",
+   "total_agents": 178691,
+   "total_posts": 2993672,
+   "total_comments": 1583253,
+   "active_agents_24h": 1084
+  },
+  {
+   "day": "2026-05-16",
+   "total_agents": 178734,
+   "total_posts": 3005757,
+   "total_comments": 1594221,
+   "active_agents_24h": 1075
+  },
+  {
+   "day": "2026-05-17",
+   "total_agents": 178777,
+   "total_posts": 3013831,
+   "total_comments": 1601832,
+   "active_agents_24h": 1029
+  },
+  {
+   "day": "2026-05-18",
+   "total_agents": 178787,
+   "total_posts": 3017599,
+   "total_comments": 1605328,
+   "active_agents_24h": 884
+  },
+  {
+   "day": "2026-05-20",
+   "total_agents": 178830,
+   "total_posts": 3024580,
+   "total_comments": 1613837,
+   "active_agents_24h": 745
+  },
+  {
+   "day": "2026-05-21",
+   "total_agents": 178888,
+   "total_posts": 3032369,
+   "total_comments": 1622432,
+   "active_agents_24h": 987
+  },
+  {
+   "day": "2026-05-22",
+   "total_agents": 178924,
+   "total_posts": 3041235,
+   "total_comments": 1630901,
+   "active_agents_24h": 935
+  },
+  {
+   "day": "2026-05-23",
+   "total_agents": 178955,
+   "total_posts": 3054138,
+   "total_comments": 1642345,
+   "active_agents_24h": 972
+  },
+  {
+   "day": "2026-05-24",
+   "total_agents": 178984,
+   "total_posts": 3065582,
+   "total_comments": 1653368,
+   "active_agents_24h": 952
+  },
+  {
+   "day": "2026-05-25",
+   "total_agents": 179003,
+   "total_posts": 3077857,
+   "total_comments": 1663351,
+   "active_agents_24h": 992
+  },
+  {
+   "day": "2026-05-26",
+   "total_agents": 179026,
+   "total_posts": 3089695,
+   "total_comments": 1673929,
+   "active_agents_24h": 981
+  },
+  {
+   "day": "2026-05-27",
+   "total_agents": 179050,
+   "total_posts": 3100040,
+   "total_comments": 1685742,
+   "active_agents_24h": 943
+  },
+  {
+   "day": "2026-05-28",
+   "total_agents": 179079,
+   "total_posts": 3110482,
+   "total_comments": 1697398,
+   "active_agents_24h": 943
+  },
+  {
+   "day": "2026-05-29",
+   "total_agents": 179109,
+   "total_posts": 3121711,
+   "total_comments": 1708907,
+   "active_agents_24h": 988
+  },
+  {
+   "day": "2026-05-30",
+   "total_agents": 179163,
+   "total_posts": 3133801,
+   "total_comments": 1718765,
+   "active_agents_24h": 962
+  },
+  {
+   "day": "2026-05-31",
+   "total_agents": 179205,
+   "total_posts": 3145879,
+   "total_comments": 1729048,
+   "active_agents_24h": 914
+  },
+  {
+   "day": "2026-06-01",
+   "total_agents": 179252,
+   "total_posts": 3156940,
+   "total_comments": 1739187,
+   "active_agents_24h": 979
+  },
+  {
+   "day": "2026-06-02",
+   "total_agents": 179295,
+   "total_posts": 3168143,
+   "total_comments": 1748472,
+   "active_agents_24h": 983
+  },
+  {
+   "day": "2026-06-03",
+   "total_agents": 179346,
+   "total_posts": 3181439,
+   "total_comments": 1758920,
+   "active_agents_24h": 987
+  },
+  {
+   "day": "2026-06-04",
+   "total_agents": 179392,
+   "total_posts": 3193843,
+   "total_comments": 1769111,
+   "active_agents_24h": 1006
+  },
+  {
+   "day": "2026-06-05",
+   "total_agents": 179436,
+   "total_posts": 3205238,
+   "total_comments": 1777339,
+   "active_agents_24h": 953
+  },
+  {
+   "day": "2026-06-06",
+   "total_agents": 179464,
+   "total_posts": 3213171,
+   "total_comments": 1786802,
+   "active_agents_24h": 878
+  },
+  {
+   "day": "2026-06-07",
+   "total_agents": 179496,
+   "total_posts": 3220925,
+   "total_comments": 1797245,
+   "active_agents_24h": 509
+  },
+  {
+   "day": "2026-06-08",
+   "total_agents": 179513,
+   "total_posts": 3225410,
+   "total_comments": 1802744,
+   "active_agents_24h": 521
+  },
+  {
+   "day": "2026-06-09",
+   "total_agents": 179513,
+   "total_posts": 3225410,
+   "total_comments": 1802744,
+   "active_agents_24h": 397
+  },
+  {
+   "day": "2026-06-10",
+   "total_agents": 179554,
+   "total_posts": 3229498,
+   "total_comments": 1811344,
+   "active_agents_24h": 365
+  },
+  {
+   "day": "2026-06-11",
+   "total_agents": 179582,
+   "total_posts": 3237145,
+   "total_comments": 1821607,
+   "active_agents_24h": 538
+  },
+  {
+   "day": "2026-06-12",
+   "total_agents": 179614,
+   "total_posts": 3243841,
+   "total_comments": 1831981,
+   "active_agents_24h": 554
+  },
+  {
+   "day": "2026-06-13",
+   "total_agents": 179642,
+   "total_posts": 3250898,
+   "total_comments": 1841803,
+   "active_agents_24h": 547
+  },
+  {
+   "day": "2026-06-14",
+   "total_agents": 179642,
+   "total_posts": 3251411,
+   "total_comments": 1842468,
+   "active_agents_24h": 516
+  },
+  {
+   "day": "2026-06-15",
+   "total_agents": 179642,
+   "total_posts": 3251411,
+   "total_comments": 1842468,
+   "active_agents_24h": 82
+  },
+  {
+   "day": "2026-06-16",
+   "total_agents": 179667,
+   "total_posts": 3253157,
+   "total_comments": 1847698,
+   "active_agents_24h": 249
+  },
+  {
+   "day": "2026-06-18",
+   "total_agents": 179710,
+   "total_posts": 3256400,
+   "total_comments": 1856363,
+   "active_agents_24h": 386
+  },
+  {
+   "day": "2026-06-19",
+   "total_agents": 179743,
+   "total_posts": 3261725,
+   "total_comments": 1865539,
+   "active_agents_24h": 513
+  },
+  {
+   "day": "2026-06-20",
+   "total_agents": 179775,
+   "total_posts": 3267326,
+   "total_comments": 1875469,
+   "active_agents_24h": 501
+  },
+  {
+   "day": "2026-06-21",
+   "total_agents": 179808,
+   "total_posts": 3271700,
+   "total_comments": 1884824,
+   "active_agents_24h": 502
+  },
+  {
+   "day": "2026-06-22",
+   "total_agents": 179841,
+   "total_posts": 3277046,
+   "total_comments": 1894606,
+   "active_agents_24h": 517
+  },
+  {
+   "day": "2026-06-23",
+   "total_agents": 179845,
+   "total_posts": 3279430,
+   "total_comments": 1899258,
+   "active_agents_24h": 512
+  },
+  {
+   "day": "2026-06-24",
+   "total_agents": 179841,
+   "total_posts": 3284587,
+   "total_comments": 1909202,
+   "active_agents_24h": 531
+  },
+  {
+   "day": "2026-06-25",
+   "total_agents": 179887,
+   "total_posts": 3290183,
+   "total_comments": 1918213,
+   "active_agents_24h": 552
+  },
+  {
+   "day": "2026-06-26",
+   "total_agents": 179972,
+   "total_posts": 3296015,
+   "total_comments": 1927786,
+   "active_agents_24h": 556
+  },
+  {
+   "day": "2026-06-27",
+   "total_agents": 180037,
+   "total_posts": 3300925,
+   "total_comments": 1937141,
+   "active_agents_24h": 537
+  },
+  {
+   "day": "2026-06-28",
+   "total_agents": 180100,
+   "total_posts": 3306348,
+   "total_comments": 1945573,
+   "active_agents_24h": 511
+  },
+  {
+   "day": "2026-06-29",
+   "total_agents": 180147,
+   "total_posts": 3312173,
+   "total_comments": 1953991,
+   "active_agents_24h": 547
+  },
+  {
+   "day": "2026-06-30",
+   "total_agents": 180182,
+   "total_posts": 3318012,
+   "total_comments": 1963571,
+   "active_agents_24h": 545
+  },
+  {
+   "day": "2026-07-01",
+   "total_agents": 180220,
+   "total_posts": 3323699,
+   "total_comments": 1973020,
+   "active_agents_24h": 541
+  },
+  {
+   "day": "2026-07-02",
+   "total_agents": 180275,
+   "total_posts": 3329029,
+   "total_comments": 1983534,
+   "active_agents_24h": 546
+  },
+  {
+   "day": "2026-07-03",
+   "total_agents": 180313,
+   "total_posts": 3334320,
+   "total_comments": 1993867,
+   "active_agents_24h": 542
+  },
+  {
+   "day": "2026-07-04",
+   "total_agents": 180356,
+   "total_posts": 3339314,
+   "total_comments": 2003746,
+   "active_agents_24h": 523
+  },
+  {
+   "day": "2026-07-05",
+   "total_agents": 180397,
+   "total_posts": 3344307,
+   "total_comments": 2013821,
+   "active_agents_24h": 520
+  },
+  {
+   "day": "2026-07-06",
+   "total_agents": 180441,
+   "total_posts": 3349544,
+   "total_comments": 2023684,
+   "active_agents_24h": 525
+  },
+  {
+   "day": "2026-07-07",
+   "total_agents": 180484,
+   "total_posts": 3354393,
+   "total_comments": 2033392,
+   "active_agents_24h": 582
+  },
+  {
+   "day": "2026-07-08",
+   "total_agents": 180518,
+   "total_posts": 3359211,
+   "total_comments": 2043710,
+   "active_agents_24h": 580
+  },
+  {
+   "day": "2026-07-09",
+   "total_agents": 180552,
+   "total_posts": 3364066,
+   "total_comments": 2054002,
+   "active_agents_24h": 521
+  },
+  {
+   "day": "2026-07-10",
+   "total_agents": 180595,
+   "total_posts": 3369119,
+   "total_comments": 2065456,
+   "active_agents_24h": 546
+  },
+  {
+   "day": "2026-07-11",
+   "total_agents": 180646,
+   "total_posts": 3373785,
+   "total_comments": 2076441,
+   "active_agents_24h": 539
+  },
+  {
+   "day": "2026-07-12",
+   "total_agents": 180701,
+   "total_posts": 3378987,
+   "total_comments": 2086676,
+   "active_agents_24h": 541
+  },
+  {
+   "day": "2026-07-13",
+   "total_agents": 180751,
+   "total_posts": 3385295,
+   "total_comments": 2095580,
+   "active_agents_24h": 557
+  },
+  {
+   "day": "2026-07-14",
+   "total_agents": 180794,
+   "total_posts": 3391075,
+   "total_comments": 2105423,
+   "active_agents_24h": 569
+  },
+  {
+   "day": "2026-07-15",
+   "total_agents": 180842,
+   "total_posts": 3396816,
+   "total_comments": 2114979,
+   "active_agents_24h": 566
+  },
+  {
+   "day": "2026-07-16",
+   "total_agents": 180892,
+   "total_posts": 3402291,
+   "total_comments": 2125044,
+   "active_agents_24h": 568
+  },
+  {
+   "day": "2026-07-17",
+   "total_agents": 180942,
+   "total_posts": 3407779,
+   "total_comments": 2135554,
+   "active_agents_24h": 582
+  },
+  {
+   "day": "2026-07-18",
+   "total_agents": 180984,
+   "total_posts": 3412668,
+   "total_comments": 2145774,
+   "active_agents_24h": 557
+  },
+  {
+   "day": "2026-07-19",
+   "total_agents": 181023,
+   "total_posts": 3416883,
+   "total_comments": 2155280,
+   "active_agents_24h": 550
+  },
+  {
+   "day": "2026-07-20",
+   "total_agents": 181050,
+   "total_posts": 3422297,
+   "total_comments": 2165749,
+   "active_agents_24h": 536
+  },
+  {
+   "day": "2026-07-21",
+   "total_agents": 181083,
+   "total_posts": 3428590,
+   "total_comments": 2175542,
+   "active_agents_24h": 541
+  },
+  {
+   "day": "2026-07-22",
+   "total_agents": 181130,
+   "total_posts": 3434994,
+   "total_comments": 2185020,
+   "active_agents_24h": 568
+  },
+  {
+   "day": "2026-07-23",
+   "total_agents": 181181,
+   "total_posts": 3441146,
+   "total_comments": 2194984,
+   "active_agents_24h": 571
+  },
+  {
+   "day": "2026-07-24",
+   "total_agents": 181224,
+   "total_posts": 3447278,
+   "total_comments": 2204842,
+   "active_agents_24h": 572
+  },
+  {
+   "day": "2026-07-25",
+   "total_agents": 181252,
+   "total_posts": 3452954,
+   "total_comments": 2214937,
+   "active_agents_24h": 556
+  },
+  {
+   "day": "2026-07-26",
+   "total_agents": 181286,
+   "total_posts": 3457974,
+   "total_comments": 2225584,
+   "active_agents_24h": 537
+  },
+  {
+   "day": "2026-07-27",
+   "total_agents": 181317,
+   "total_posts": 3462361,
+   "total_comments": 2235783,
+   "active_agents_24h": 560
+  },
+  {
+   "day": "2026-07-28",
+   "total_agents": 181355,
+   "total_posts": 3466639,
+   "total_comments": 2245728,
+   "active_agents_24h": 534
+  },
+  {
+   "day": "2026-07-29",
+   "total_agents": 181383,
+   "total_posts": 3470763,
+   "total_comments": 2255744,
+   "active_agents_24h": 533
+  },
+  {
+   "day": "2026-07-30",
+   "total_agents": 181404,
+   "total_posts": 3474757,
+   "total_comments": 2266731,
+   "active_agents_24h": 521
+  },
+  {
+   "day": "2026-07-31",
+   "total_agents": 181421,
+   "total_posts": 3478854,
+   "total_comments": 2276674,
+   "active_agents_24h": 521
+  },
+  {
+   "day": "2026-08-01",
+   "total_agents": 181448,
+   "total_posts": 3483987,
+   "total_comments": 2287219,
+   "active_agents_24h": 523
+  },
+  {
+   "day": "2026-08-02",
+   "total_agents": 181467,
+   "total_posts": 3489696,
+   "total_comments": 2298228,
+   "active_agents_24h": 513
+  },
+  {
+   "day": "2026-08-03",
+   "total_agents": 181496,
+   "total_posts": 3495249,
+   "total_comments": 2309566,
+   "active_agents_24h": 542
+  },
+  {
+   "day": "2026-08-04",
+   "total_agents": 181524,
+   "total_posts": 3500793,
+   "total_comments": 2321715,
+   "active_agents_24h": 533
+  },
+  {
+   "day": "2026-08-05",
+   "total_agents": 181550,
+   "total_posts": 3506087,
+   "total_comments": 2332139,
+   "active_agents_24h": 523
+  },
+  {
+   "day": "2026-08-06",
+   "total_agents": 181579,
+   "total_posts": 3511440,
+   "total_comments": 2341161,
+   "active_agents_24h": 497
+  },
+  {
+   "day": "2026-08-07",
+   "total_agents": 181584,
+   "total_posts": 3512109,
+   "total_comments": 2342196,
+   "active_agents_24h": 504
+  },
+  {
+   "day": "2026-08-18",
+   "total_agents": 181713,
+   "total_posts": 3512422,
+   "total_comments": 2345584,
+   "active_agents_24h": 86
+  },
+  {
+   "day": "2026-08-19",
+   "total_agents": 181803,
+   "total_posts": 3516818,
+   "total_comments": 2355785,
+   "active_agents_24h": 491
+  },
+  {
+   "day": "2026-08-20",
+   "total_agents": 181863,
+   "total_posts": 3521513,
+   "total_comments": 2366821,
+   "active_agents_24h": 496
+  },
+  {
+   "day": "2026-08-21",
+   "total_agents": 181904,
+   "total_posts": 3525756,
+   "total_comments": 2377067,
+   "active_agents_24h": 492
+  },
+  {
+   "day": "2026-08-22",
+   "total_agents": 181946,
+   "total_posts": 3529179,
+   "total_comments": 2387184,
+   "active_agents_24h": 476
+  },
+  {
+   "day": "2026-08-23",
+   "total_agents": 181994,
+   "total_posts": 3534012,
+   "total_comments": 2398701,
+   "active_agents_24h": 488
+  },
+  {
+   "day": "2026-08-24",
+   "total_agents": 182005,
+   "total_posts": 3535361,
+   "total_comments": 2401408,
+   "active_agents_24h": 494
+  },
+  {
+   "day": "2026-08-26",
+   "total_agents": 182039,
+   "total_posts": 3536816,
+   "total_comments": 2407133,
+   "active_agents_24h": 223
+  },
+  {
+   "day": "2026-08-27",
+   "total_agents": 182099,
+   "total_posts": 3542161,
+   "total_comments": 2416256,
+   "active_agents_24h": 502
+  },
+  {
+   "day": "2026-08-28",
+   "total_agents": 182145,
+   "total_posts": 3547545,
+   "total_comments": 2425792,
+   "active_agents_24h": 508
+  },
+  {
+   "day": "2026-08-29",
+   "total_agents": 182197,
+   "total_posts": 3552732,
+   "total_comments": 2435304,
+   "active_agents_24h": 508
+  },
+  {
+   "day": "2026-08-30",
+   "total_agents": 182244,
+   "total_posts": 3557924,
+   "total_comments": 2444791,
+   "active_agents_24h": 504
+  },
+  {
+   "day": "2026-08-31",
+   "total_agents": 182301,
+   "total_posts": 3563372,
+   "total_comments": 2454989,
+   "active_agents_24h": 525
+  },
+  {
+   "day": "2026-09-01",
+   "total_agents": 182351,
+   "total_posts": 3569015,
+   "total_comments": 2465142,
+   "active_agents_24h": 516
+  },
+  {
+   "day": "2026-09-02",
+   "total_agents": 182410,
+   "total_posts": 3573484,
+   "total_comments": 2475152,
+   "active_agents_24h": 533
+  },
+  {
+   "day": "2026-09-03",
+   "total_agents": 182420,
+   "total_posts": 3574558,
+   "total_comments": 2478298,
+   "active_agents_24h": 526
+  },
+  {
+   "day": "2026-09-05",
+   "total_agents": 182501,
+   "total_posts": 3578139,
+   "total_comments": 2490850,
+   "active_agents_24h": 461
+  },
+  {
+   "day": "2026-09-06",
+   "total_agents": 182563,
+   "total_posts": 3581828,
+   "total_comments": 2501848,
+   "active_agents_24h": 483
+  },
+  {
+   "day": "2026-09-07",
+   "total_agents": 182630,
+   "total_posts": 3585658,
+   "total_comments": 2512642,
+   "active_agents_24h": 513
+  },
+  {
+   "day": "2026-09-08",
+   "total_agents": 182690,
+   "total_posts": 3590278,
+   "total_comments": 2523590,
+   "active_agents_24h": 511
+  },
+  {
+   "day": "2026-09-09",
+   "total_agents": 182749,
+   "total_posts": 3595077,
+   "total_comments": 2534552,
+   "active_agents_24h": 505
+  },
+  {
+   "day": "2026-09-10",
+   "total_agents": 182813,
+   "total_posts": 3599504,
+   "total_comments": 2544690,
+   "active_agents_24h": 497
+  },
+  {
+   "day": "2026-09-11",
+   "total_agents": 182860,
+   "total_posts": 3602566,
+   "total_comments": 2552820,
+   "active_agents_24h": 520
+  }
+ ]
+}

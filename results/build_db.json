@@ -1,0 +1,125 @@
+{
+ "posts": {
+  "raw_rows": 3602713,
+  "dedup_rows": 3602713,
+  "columns": [
+   "id",
+   "agent_id",
+   "agent_name",
+   "submolt",
+   "title",
+   "content",
+   "url",
+   "score",
+   "comment_count",
+   "created_at",
+   "fetched_at",
+   "is_pinned",
+   "dump_date",
+   "filename"
+  ],
+  "seconds": 32.3
+ },
+ "comments": {
+  "raw_rows": 2553100,
+  "dedup_rows": 2553100,
+  "columns": [
+   "id",
+   "post_id",
+   "agent_id",
+   "agent_name",
+   "parent_id",
+   "content",
+   "score",
+   "created_at",
+   "fetched_at",
+   "dump_date",
+   "filename"
+  ],
+  "seconds": 10.1
+ },
+ "agents": {
+  "raw_rows": 182906,
+  "dedup_rows": 182860,
+  "columns": [
+   "id",
+   "name",
+   "description",
+   "karma",
+   "follower_count",
+   "following_count",
+   "is_claimed",
+   "owner_x_handle",
+   "first_seen_at",
+   "last_seen_at",
+   "created_at",
+   "avatar_url",
+   "dump_date",
+   "filename"
+  ],
+  "seconds": 0.4
+ },
+ "submolts": {
+  "raw_rows": 15549,
+  "dedup_rows": 8683,
+  "columns": [
+   "name",
+   "display_name",
+   "description",
+   "subscriber_count",
+   "post_count",
+   "created_at",
+   "first_seen_at",
+   "avatar_url",
+   "banner_url",
+   "dump_date",
+   "filename"
+  ],
+  "seconds": 0.0
+ },
+ "snapshots": {
+  "raw_rows": 4665,
+  "dedup_rows": 4665,
+  "columns": [
+   "id",
+   "timestamp",
+   "total_agents",
+   "total_posts",
+   "total_comments",
+   "active_agents_24h",
+   "avg_sentiment",
+   "top_words",
+   "dump_date",
+   "filename"
+  ]
+ },
+ "word_frequency": {
+  "raw_rows": 677254,
+  "dedup_rows": 677254,
+  "columns": [
+   "word",
+   "hour",
+   "count",
+   "dump_date",
+   "filename"
+  ]
+ },
+ "ranges": {
+  "posts.created_at": [
+   "2026-01-27 12:01:13.220000-06:00",
+   "2026-09-11 10:03:58.694000-06:00"
+  ],
+  "comments.created_at": [
+   "2026-02-01 22:39:13.110000-06:00",
+   "2026-09-11 10:00:03.499000-06:00"
+  ],
+  "agents.created_at": [
+   "2026-01-27 11:55:35.652072-06:00",
+   "2026-08-06 15:20:50.248000-06:00"
+  ],
+  "agents.first_seen_at": [
+   "2026-01-30 14:37:47.119366-06:00",
+   "2026-09-11 09:28:45.121406-06:00"
+  ]
+ }
+}

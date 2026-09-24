@@ -1,0 +1,13 @@
+{
+ "injection": 9249,
+ "benign_matched": 9249,
+ "benign_match_method": {
+  "same_day_submolt": 8492,
+  "pm3_days_submolt": 350,
+  "same_day_any": 407,
+  "none": 0
+ },
+ "benign_code": 9249,
+ "benign_code_available": 32653,
+ "window_posts": 2615947
+}
